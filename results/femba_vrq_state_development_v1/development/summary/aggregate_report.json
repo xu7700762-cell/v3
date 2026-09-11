@@ -1,0 +1,20 @@
+{
+  "status": "complete",
+  "task": "state",
+  "completed_jobs": 45,
+  "expected_jobs": 45,
+  "full_matrix_completed": true,
+  "outer_test_scored": false,
+  "evaluation_partition": "nested_source_validation",
+  "seeds": [2001, 3001, 4001],
+  "splits": ["split_1", "split_2", "split_3"],
+  "configs": ["base", "mlp", "poly", "fractional", "dog"],
+  "promotion": {
+    "evaluated": true,
+    "passed": true,
+    "dog_minus_mlp_mean_BACC": 0.002655582514745267,
+    "dog_minus_poly_mean_BACC": 0.0018861011953594181,
+    "dog_positive_runs_vs_mlp": 6,
+    "dog_minus_no_dog_mean_BACC": 0.0019886766431278634
+  }
+}
