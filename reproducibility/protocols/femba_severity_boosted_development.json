@@ -1,0 +1,58 @@
+{
+  "schema": "femba_severity_boosted_development_v1",
+  "revision": "locked_20260911",
+  "dataset": "city",
+  "task": "severity",
+  "variant": "A3_pretrained_frozen",
+  "outer_fold": "fold_1",
+  "seeds": [2001, 3001, 4001],
+  "configs": ["base", "mlp", "poly", "fractional", "dog"],
+  "development_splits": {
+    "split_1": {"val_subjects": ["acq03", "acq06", "acq16", "acq20", "acq23"]},
+    "split_2": {"val_subjects": ["acq01", "acq02", "acq11", "acq18", "acq21"]},
+    "split_3": {"val_subjects": ["acq04", "acq05", "acq09", "acq12", "acq26"]}
+  },
+  "preprocessing": "subject_unlabeled_EA_all_protocol_windows_float32",
+  "offline_transductive_subject_EA": true,
+  "reference_calibration": false,
+  "anchor_input": false,
+  "rest_identity_input": false,
+  "outer_test_eeg_loaded": false,
+  "outer_test_labels_used_for_fit_selection_or_scoring": false,
+  "severity_windows": "all_available",
+  "minimum_severity_windows": 11,
+  "base_training": "train_and_select_once_per_seed_and_split_then_freeze_exact_best_base",
+  "residual_training": "train_only_mapping_binary_residual_and_continuous_residual_on_shared_frozen_base",
+  "continuous_target": "source_train_path_score_zscore",
+  "loss": {
+    "binary_BCE": 1.0,
+    "continuous_Huber": 0.2,
+    "pairwise_rank_softplus": 0.1
+  },
+  "head_lr": 0.001,
+  "weight_decay": 0.01,
+  "grad_clip": 1.0,
+  "batch_size": {"severity": 4},
+  "microbatch_size": {"severity": 1},
+  "max_epochs": 60,
+  "patience_epochs": 10,
+  "selection": "minimum_unweighted_source_val_binary_BCE_earliest_step_tie",
+  "validation": "first_step_then_global_multiples_of_ceil_N_over_4_and_epoch_end",
+  "threshold": 0.5,
+  "primary_metric": "balanced_accuracy",
+  "development_only": true,
+  "promotion_rule": {
+    "dog_minus_mlp_mean_BACC_minimum": 0.03,
+    "dog_minus_poly_mean_BACC_positive": true,
+    "dog_positive_runs_minimum_of_nine": 6,
+    "dog_ablation_must_reduce_performance": true
+  },
+  "limits": [
+    "Only the twenty fold_1 source subjects are used for development; five outer-test subjects remain excluded.",
+    "All configurations use identical source paths, continuous targets, loss weights, shuffles and validation rules.",
+    "The base selected for a seed and split is byte-identical and frozen for all four residual comparisons.",
+    "Path sub-sequences are not counted as independent samples; each recorded path remains one target.",
+    "This three-split three-seed matrix is exploratory model development, not independent test evidence.",
+    "A failed promotion rule is retained and stops automatic outer-test evaluation."
+  ]
+}

@@ -1,0 +1,5 @@
+# Install PyTorch and mamba_ssm in the CUDA-enabled WSL environment first.
+--extra-index-url https://download.pytorch.org/whl/cu128
+torch==2.11.0+cu128
+mamba-ssm==2.3.1
+-e .

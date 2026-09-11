@@ -1,0 +1,376 @@
+{
+  "identity_audit": {
+    "folds": {
+      "fold_1": {
+        "inner": [
+          {
+            "held_subjects": [
+              "sub2",
+              "sub8",
+              "sub16"
+            ],
+            "initialization_id": "fold_1_inner_1"
+          },
+          {
+            "held_subjects": [
+              "sub4",
+              "sub7",
+              "sub12",
+              "sub15",
+              "sub17",
+              "sub18"
+            ],
+            "initialization_id": "fold_1_inner_2"
+          },
+          {
+            "held_subjects": [
+              "sub1",
+              "sub5",
+              "sub10",
+              "sub13"
+            ],
+            "initialization_id": "fold_1_inner_3"
+          }
+        ],
+        "source_outer_train_subjects": [
+          "sub1",
+          "sub2",
+          "sub4",
+          "sub5",
+          "sub7",
+          "sub8",
+          "sub10",
+          "sub12",
+          "sub13",
+          "sub15",
+          "sub16",
+          "sub17",
+          "sub18"
+        ],
+        "source_train_subjects": [
+          "sub4",
+          "sub5",
+          "sub7",
+          "sub10",
+          "sub12",
+          "sub13",
+          "sub16",
+          "sub17",
+          "sub18"
+        ],
+        "source_val_subjects": [
+          "sub1",
+          "sub2",
+          "sub8",
+          "sub15"
+        ],
+        "test_subjects": [
+          "sub3",
+          "sub6",
+          "sub9",
+          "sub11",
+          "sub14"
+        ]
+      },
+      "fold_2": {
+        "inner": [
+          {
+            "held_subjects": [
+              "sub10",
+              "sub11",
+              "sub12",
+              "sub16"
+            ],
+            "initialization_id": "fold_2_inner_1"
+          },
+          {
+            "held_subjects": [
+              "sub3",
+              "sub6",
+              "sub7",
+              "sub8",
+              "sub9"
+            ],
+            "initialization_id": "fold_2_inner_2"
+          },
+          {
+            "held_subjects": [
+              "sub1",
+              "sub2",
+              "sub4",
+              "sub14",
+              "sub17"
+            ],
+            "initialization_id": "fold_2_inner_3"
+          }
+        ],
+        "source_outer_train_subjects": [
+          "sub1",
+          "sub2",
+          "sub3",
+          "sub4",
+          "sub6",
+          "sub7",
+          "sub8",
+          "sub9",
+          "sub10",
+          "sub11",
+          "sub12",
+          "sub14",
+          "sub16",
+          "sub17"
+        ],
+        "source_train_subjects": [
+          "sub1",
+          "sub2",
+          "sub3",
+          "sub6",
+          "sub7",
+          "sub8",
+          "sub11",
+          "sub12",
+          "sub14",
+          "sub17"
+        ],
+        "source_val_subjects": [
+          "sub4",
+          "sub9",
+          "sub10",
+          "sub16"
+        ],
+        "test_subjects": [
+          "sub5",
+          "sub13",
+          "sub15",
+          "sub18"
+        ]
+      },
+      "fold_3": {
+        "inner": [
+          {
+            "held_subjects": [
+              "sub4",
+              "sub9",
+              "sub10",
+              "sub11",
+              "sub13",
+              "sub15"
+            ],
+            "initialization_id": "fold_3_inner_1"
+          },
+          {
+            "held_subjects": [
+              "sub2",
+              "sub5",
+              "sub18"
+            ],
+            "initialization_id": "fold_3_inner_2"
+          },
+          {
+            "held_subjects": [
+              "sub1",
+              "sub3",
+              "sub6",
+              "sub7",
+              "sub12",
+              "sub14"
+            ],
+            "initialization_id": "fold_3_inner_3"
+          }
+        ],
+        "source_outer_train_subjects": [
+          "sub1",
+          "sub2",
+          "sub3",
+          "sub4",
+          "sub5",
+          "sub6",
+          "sub7",
+          "sub9",
+          "sub10",
+          "sub11",
+          "sub12",
+          "sub13",
+          "sub14",
+          "sub15",
+          "sub18"
+        ],
+        "source_train_subjects": [
+          "sub1",
+          "sub2",
+          "sub3",
+          "sub5",
+          "sub6",
+          "sub7",
+          "sub10",
+          "sub12",
+          "sub13",
+          "sub14",
+          "sub18"
+        ],
+        "source_val_subjects": [
+          "sub4",
+          "sub9",
+          "sub11",
+          "sub15"
+        ],
+        "test_subjects": [
+          "sub8",
+          "sub16",
+          "sub17"
+        ]
+      },
+      "fold_4": {
+        "inner": [
+          {
+            "held_subjects": [
+              "sub3",
+              "sub5",
+              "sub9",
+              "sub13",
+              "sub15",
+              "sub17"
+            ],
+            "initialization_id": "fold_4_inner_1"
+          },
+          {
+            "held_subjects": [
+              "sub6",
+              "sub8",
+              "sub14"
+            ],
+            "initialization_id": "fold_4_inner_2"
+          },
+          {
+            "held_subjects": [
+              "sub1",
+              "sub10",
+              "sub11",
+              "sub12",
+              "sub16",
+              "sub18"
+            ],
+            "initialization_id": "fold_4_inner_3"
+          }
+        ],
+        "source_outer_train_subjects": [
+          "sub1",
+          "sub3",
+          "sub5",
+          "sub6",
+          "sub8",
+          "sub9",
+          "sub10",
+          "sub11",
+          "sub12",
+          "sub13",
+          "sub14",
+          "sub15",
+          "sub16",
+          "sub17",
+          "sub18"
+        ],
+        "source_train_subjects": [
+          "sub1",
+          "sub5",
+          "sub6",
+          "sub8",
+          "sub10",
+          "sub12",
+          "sub13",
+          "sub14",
+          "sub16",
+          "sub17",
+          "sub18"
+        ],
+        "source_val_subjects": [
+          "sub3",
+          "sub9",
+          "sub11",
+          "sub15"
+        ],
+        "test_subjects": [
+          "sub2",
+          "sub4",
+          "sub7"
+        ]
+      },
+      "fold_5": {
+        "inner": [
+          {
+            "held_subjects": [
+              "sub2",
+              "sub3",
+              "sub8",
+              "sub9",
+              "sub13",
+              "sub14"
+            ],
+            "initialization_id": "fold_5_inner_1"
+          },
+          {
+            "held_subjects": [
+              "sub4",
+              "sub15",
+              "sub16",
+              "sub17"
+            ],
+            "initialization_id": "fold_5_inner_2"
+          },
+          {
+            "held_subjects": [
+              "sub5",
+              "sub6",
+              "sub7",
+              "sub11",
+              "sub18"
+            ],
+            "initialization_id": "fold_5_inner_3"
+          }
+        ],
+        "source_outer_train_subjects": [
+          "sub2",
+          "sub3",
+          "sub4",
+          "sub5",
+          "sub6",
+          "sub7",
+          "sub8",
+          "sub9",
+          "sub11",
+          "sub13",
+          "sub14",
+          "sub15",
+          "sub16",
+          "sub17",
+          "sub18"
+        ],
+        "source_train_subjects": [
+          "sub2",
+          "sub3",
+          "sub4",
+          "sub6",
+          "sub7",
+          "sub8",
+          "sub11",
+          "sub13",
+          "sub15",
+          "sub16",
+          "sub17"
+        ],
+        "source_val_subjects": [
+          "sub5",
+          "sub9",
+          "sub14",
+          "sub18"
+        ],
+        "test_subjects": [
+          "sub1",
+          "sub10",
+          "sub12"
+        ]
+      }
+    }
+  },
+  "schema": "vestibular_fusion_monifeixing_protocol_v1"
+}

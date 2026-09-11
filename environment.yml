@@ -1,0 +1,11 @@
+name: vestibular-v27
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu128
+      - torch==2.11.0+cu128
+      - mamba-ssm==2.3.1
+      - -e .

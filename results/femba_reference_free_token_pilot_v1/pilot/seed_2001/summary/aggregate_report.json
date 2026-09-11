@@ -1,0 +1,19 @@
+{
+  "status": "complete",
+  "completed_jobs": 52,
+  "expected_jobs": 52,
+  "smoke": false,
+  "evaluation_partition": "source_val",
+  "outer_test_scored": false,
+  "full_matrix_completed": true,
+  "limits": [
+    "No known-rest calibration or anchors; offline subject-wide unlabeled EA is explicitly allowed and transductive.",
+    "State labels retain the existing dataset protocol semantics, not independent symptom measurements.",
+    "Single seed and fold_1 validation used for selection; exploratory, not independent test performance.",
+    "Pretraining sample manifest is incomplete; overlap has not been excluded.",
+    "Upstream MAT processing is hash-locked but not a complete raw-acquisition provenance audit.",
+    "Design informed by previous test results; all positive and negative results retained.",
+    "Frozen pretrained encoder only; no claim about pretraining versus random initialization.",
+    "Equal sample exposure rules and budget ceilings, not equal FLOPs or actual selected steps."
+  ]
+}

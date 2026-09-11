@@ -1,0 +1,46 @@
+{
+  "checkpoint_schema": "femba_kan_mtl_v27",
+  "pretrained_femba": {
+    "bytes": 114186218,
+    "download_url": "https://github.com/xu7700762-cell/v2/releases/download/v27-repro-assets/pretrained_femba_v27.ckpt",
+    "filename": "pretrained_femba_v27.ckpt",
+    "sha256": "0e2ab9109d87a32c6b25f0c307fb8b1102ef5e0e83e86b9b07f7dee166daaa27",
+    "tensor_count": 83
+  },
+  "protocol_files": {
+    "protocols/city/audit_manifest.json": {
+      "bytes": 184408,
+      "sha256": "de3d1f99af1e5e7a9d0f950c0b38cfe9904fc3f27655864f631f812e8919d876"
+    },
+    "protocols/monifeixing/data_manifest.json": {
+      "bytes": 5830,
+      "sha256": "6a5a1bb50a6e5cdd2794ac47125410f3fc5b2b5acba9429aefaded5b3155a33c"
+    },
+    "protocols/monifeixing/report.json": {
+      "bytes": 7679,
+      "sha256": "2f3d60e5912815f641b22c83867e2b3f166dea7fb444575eab3c493116710574"
+    },
+    "protocols/monifeixing/severity_labels.csv": {
+      "bytes": 153,
+      "sha256": "7617ea5633ebf5adaa46b1684e66698600dbcd9b8f27b5854aaaa7fc7410af82"
+    },
+    "protocols/vrq/audit_manifest.json": {
+      "bytes": 20737,
+      "sha256": "088c4d3b974755934698de715d28c4d66d42f2cc42a57151ab8dc0f4ebcaa2e3"
+    }
+  },
+  "questionnaires": {
+    "city_source_vrsq_workbook_sha256": "9be7c41295a0b684157dbbe73062237449dccd7a911e9bd242f4bd76b40460ee",
+    "monifeixing_workbook_sha256": "9be7c41295a0b684157dbbe73062237449dccd7a911e9bd242f4bd76b40460ee"
+  },
+  "schema": "vestibular_fusion_protocol_bundle_v1",
+  "source_artifacts": {
+    "city_manifest_sha256": "70248714f9cd479d870d9d1c98111d63234b9ff73deace0df627aec92ac84dac",
+    "monifeixing_data_manifest_sha256": "0946bc424eb8c3833c3aa215e781996caf816f4d5cd6148b4be643ceae7c01c1",
+    "monifeixing_report_sha256": "8adbf94a77955e23886bd2082ae0cb73fd750032fbf02ffb60f0bb12949e4409",
+    "monifeixing_severity_predictions_sha256": "0ca71b1f7524d6ab4ca98314ffd3acaba4d007a8f17947774e9a9b9c95b69117",
+    "vrq_manifest_sha256": "42a2ad12fca401a777de9ec6b4c29d8ec5b034e16a00f6c57fe40be4bbd175a3"
+  },
+  "split_seed": 42,
+  "training_seed": 2001
+}

@@ -1,0 +1,83 @@
+{
+  "checkpoint_schema": "femba_kan_mtl_v27",
+  "files": {
+    "reference/expected_metrics.json": {
+      "bytes": 4983,
+      "sha256": "40d50ebdc18c374441c44ca544839bae7c7a2edf0bde69ffc764450280f7ac21"
+    },
+    "reference/fractional_dog_polykan/city/aggregate_report.json": {
+      "bytes": 11701,
+      "sha256": "77dc7e043a8ec04ed238af48a91398ba36aed6ab01b66ef0dcb228d01194a2cd"
+    },
+    "reference/fractional_dog_polykan/city/severity_predictions.csv": {
+      "bytes": 13333,
+      "sha256": "04c8de416522061f09bbc40fe155e2fd686147e27ace4333ff30f860847550db"
+    },
+    "reference/fractional_dog_polykan/city/state_predictions.csv": {
+      "bytes": 1983238,
+      "sha256": "79dc551779a2852a200b4f6b82a5672516e5c067869ee9db96ce99265ca1325d"
+    },
+    "reference/fractional_dog_polykan/monifeixing/aggregate_report.json": {
+      "bytes": 10913,
+      "sha256": "aa77b57fe32719205a1023fb9d6c7212d04c048ebd125f1e4984e640639a9646"
+    },
+    "reference/fractional_dog_polykan/monifeixing/severity_predictions.csv": {
+      "bytes": 1553,
+      "sha256": "e59b832b972b7c96443f4798e769718b5d4c77b2764ebbfc0855b1c0c25cd387"
+    },
+    "reference/fractional_dog_polykan/monifeixing/state_predictions.csv": {
+      "bytes": 436831,
+      "sha256": "de97d0481038f04ce649dcb23105e8d71be85be7f532371c5992f0cdb9eefb94"
+    },
+    "reference/fractional_dog_polykan/vrq/aggregate_report.json": {
+      "bytes": 11328,
+      "sha256": "f563a8fd24aef67ae102967f1702cacbc1e676f68d3cf9edd9f4c81a027ec62f"
+    },
+    "reference/fractional_dog_polykan/vrq/severity_predictions.csv": {
+      "bytes": 1982,
+      "sha256": "9c48e7fa886f31a356715865e219c19c964c2f0bb020af8111ff63b23ed2a3cf"
+    },
+    "reference/fractional_dog_polykan/vrq/state_predictions.csv": {
+      "bytes": 483174,
+      "sha256": "4815896951215f3dd688ae1409f34c92d68806a8e9e27fa4438b93eda61df525"
+    },
+    "reference/mlp/city/aggregate_report.json": {
+      "bytes": 11584,
+      "sha256": "57834822edc8b2aa5c8fdc80ead86e3ec21ee01b75c210a55cd69112bd9057a7"
+    },
+    "reference/mlp/city/severity_predictions.csv": {
+      "bytes": 13345,
+      "sha256": "1c1943e2c09bc3f97fc429ffa394717edd87dbca4fd89f55550db9d654ae3b9c"
+    },
+    "reference/mlp/city/state_predictions.csv": {
+      "bytes": 1980558,
+      "sha256": "2476900eb0ebf36b7dde7a5a93c967089be6c5a40b6f3d990b8b0aa74c87133d"
+    },
+    "reference/mlp/monifeixing/aggregate_report.json": {
+      "bytes": 10769,
+      "sha256": "3fa35b10cf2d3c4ccd88dd88b1f64ababf755249992597bf7adc6de23755e1d1"
+    },
+    "reference/mlp/monifeixing/severity_predictions.csv": {
+      "bytes": 1546,
+      "sha256": "d24ae91449526b58a8511c51410ea94899519a56f38b05639787d4a1d6d95c36"
+    },
+    "reference/mlp/monifeixing/state_predictions.csv": {
+      "bytes": 436574,
+      "sha256": "0cadeacae65c59d1911f34a1bd475c6e3cec2780e22c8909cb98d5ccebafb1ff"
+    },
+    "reference/mlp/vrq/aggregate_report.json": {
+      "bytes": 11176,
+      "sha256": "3c4e660d1cadaebc913d766e0ef6fc5fc59a109283b7a484ced9b74035f85238"
+    },
+    "reference/mlp/vrq/severity_predictions.csv": {
+      "bytes": 1989,
+      "sha256": "cd067b43695d3ae3a46eb6d34803c59e4d80ee90cf70ad4022788e4625202cc8"
+    },
+    "reference/mlp/vrq/state_predictions.csv": {
+      "bytes": 483662,
+      "sha256": "333782b058ccbdd955582b108411359235b28255eeb1f0c235ee3a079995decf"
+    }
+  },
+  "schema": "vestibular_fusion_reference_bundle_v1",
+  "training_seed": 2001
+}

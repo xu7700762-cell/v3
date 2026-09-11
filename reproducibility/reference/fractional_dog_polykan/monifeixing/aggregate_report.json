@@ -1,0 +1,394 @@
+{
+  "dataset": "monifeixing",
+  "evaluation": "femba_kan_mtl_v27",
+  "folds": [
+    {
+      "adaptive_basis_lr": 0.0002,
+      "best_epoch": 30,
+      "checkpoint_sha256": "b7a329cb8fcdaae39c45c6762778453ed9b232a279a33639a8b34d12676c1913",
+      "fold_id": "fold_1",
+      "parameter_deltas": {
+        "encoder_delta_l2": 0.0,
+        "kan_delta_l2": 2.0943148136138916,
+        "severity_head_delta_l2": 1.2216447591781616,
+        "state_head_delta_l2": 0.08522968739271164
+      },
+      "projection_variant": "fractional_dog_polykan",
+      "severity_base_normalization": {
+        "center": [
+          0.11670540215877387,
+          1.253451746243697,
+          -0.03667155595926138
+        ],
+        "method": "source_only_frozen_femba_token_dynamics_zscore_v2",
+        "scale": [
+          0.025849736521453972,
+          0.38223883097499717,
+          0.0882257469669884
+        ],
+        "source_examples": 13
+      },
+      "severity_bias_calibration": {
+        "logit_shift": 0.1935725212097168,
+        "method": "source_balanced_accuracy_bias_shift_v1",
+        "source_balanced_accuracy": 0.8333333333333333,
+        "source_examples": 13,
+        "source_sensitivity": 0.6666666666666666,
+        "source_specificity": 1.0
+      },
+      "severity_threshold": 0.5,
+      "source_subjects": [
+        "sub1",
+        "sub2",
+        "sub4",
+        "sub5",
+        "sub7",
+        "sub8",
+        "sub10",
+        "sub12",
+        "sub13",
+        "sub15",
+        "sub16",
+        "sub17",
+        "sub18"
+      ],
+      "state_decision": "anchor_oriented_subject_kmeans_160d",
+      "test_subjects": [
+        "sub3",
+        "sub6",
+        "sub9",
+        "sub11",
+        "sub14"
+      ],
+      "training_seed": 2001
+    },
+    {
+      "adaptive_basis_lr": 0.0002,
+      "best_epoch": 21,
+      "checkpoint_sha256": "f87a34a5663ddb0364144fd690852c823529e8bfe7dc1f474513170707b2ffba",
+      "fold_id": "fold_2",
+      "parameter_deltas": {
+        "encoder_delta_l2": 0.0,
+        "kan_delta_l2": 1.6820508241653442,
+        "severity_head_delta_l2": 1.0837568044662476,
+        "state_head_delta_l2": 0.06555907428264618
+      },
+      "projection_variant": "fractional_dog_polykan",
+      "severity_base_normalization": {
+        "center": [
+          0.11546682247093745,
+          1.3869727977684565,
+          -0.01404077879020146
+        ],
+        "method": "source_only_frozen_femba_token_dynamics_zscore_v2",
+        "scale": [
+          0.023292088920248706,
+          0.34383333541292616,
+          0.09223709448698195
+        ],
+        "source_examples": 14
+      },
+      "severity_bias_calibration": {
+        "logit_shift": 0.3877558782696724,
+        "method": "source_balanced_accuracy_bias_shift_v1",
+        "source_balanced_accuracy": 0.8125,
+        "source_examples": 14,
+        "source_sensitivity": 0.625,
+        "source_specificity": 1.0
+      },
+      "severity_threshold": 0.5,
+      "source_subjects": [
+        "sub1",
+        "sub2",
+        "sub3",
+        "sub4",
+        "sub6",
+        "sub7",
+        "sub8",
+        "sub9",
+        "sub10",
+        "sub11",
+        "sub12",
+        "sub14",
+        "sub16",
+        "sub17"
+      ],
+      "state_decision": "anchor_oriented_subject_kmeans_160d",
+      "test_subjects": [
+        "sub5",
+        "sub13",
+        "sub15",
+        "sub18"
+      ],
+      "training_seed": 2001
+    },
+    {
+      "adaptive_basis_lr": 0.0002,
+      "best_epoch": 26,
+      "checkpoint_sha256": "b1ba0688dd88eb0d099421ee0921fa857fd19c22173a40adeaa289c2ecb4b42f",
+      "fold_id": "fold_3",
+      "parameter_deltas": {
+        "encoder_delta_l2": 0.0,
+        "kan_delta_l2": 2.05056095123291,
+        "severity_head_delta_l2": 1.2137537002563477,
+        "state_head_delta_l2": 0.08009342849254608
+      },
+      "projection_variant": "fractional_dog_polykan",
+      "severity_base_normalization": {
+        "center": [
+          0.11530499309301376,
+          1.4010271350542705,
+          -0.013994856675465902
+        ],
+        "method": "source_only_frozen_femba_token_dynamics_zscore_v2",
+        "scale": [
+          0.026239734538111396,
+          0.3680510086822712,
+          0.09650049400767426
+        ],
+        "source_examples": 15
+      },
+      "severity_bias_calibration": {
+        "logit_shift": 0.22089553624391556,
+        "method": "source_balanced_accuracy_bias_shift_v1",
+        "source_balanced_accuracy": 0.875,
+        "source_examples": 15,
+        "source_sensitivity": 0.75,
+        "source_specificity": 1.0
+      },
+      "severity_threshold": 0.5,
+      "source_subjects": [
+        "sub1",
+        "sub2",
+        "sub3",
+        "sub4",
+        "sub5",
+        "sub6",
+        "sub7",
+        "sub9",
+        "sub10",
+        "sub11",
+        "sub12",
+        "sub13",
+        "sub14",
+        "sub15",
+        "sub18"
+      ],
+      "state_decision": "anchor_oriented_subject_kmeans_160d",
+      "test_subjects": [
+        "sub8",
+        "sub16",
+        "sub17"
+      ],
+      "training_seed": 2001
+    },
+    {
+      "adaptive_basis_lr": 0.0002,
+      "best_epoch": 41,
+      "checkpoint_sha256": "90b1e8dcead499b186f28e7e22f81d5feacc46431387000bb1d7ab14bd31fb1c",
+      "fold_id": "fold_4",
+      "parameter_deltas": {
+        "encoder_delta_l2": 0.0,
+        "kan_delta_l2": 2.755514621734619,
+        "severity_head_delta_l2": 1.2756394147872925,
+        "state_head_delta_l2": 0.1455547958612442
+      },
+      "projection_variant": "fractional_dog_polykan",
+      "severity_base_normalization": {
+        "center": [
+          0.11659148285786311,
+          1.3368338505427042,
+          -0.02147101561228434
+        ],
+        "method": "source_only_frozen_femba_token_dynamics_zscore_v2",
+        "scale": [
+          0.026439496734651815,
+          0.4037146488002312,
+          0.09465817895223025
+        ],
+        "source_examples": 15
+      },
+      "severity_bias_calibration": {
+        "logit_shift": 0.21891294792294502,
+        "method": "source_balanced_accuracy_bias_shift_v1",
+        "source_balanced_accuracy": 0.8125,
+        "source_examples": 15,
+        "source_sensitivity": 0.625,
+        "source_specificity": 1.0
+      },
+      "severity_threshold": 0.5,
+      "source_subjects": [
+        "sub1",
+        "sub3",
+        "sub5",
+        "sub6",
+        "sub8",
+        "sub9",
+        "sub10",
+        "sub11",
+        "sub12",
+        "sub13",
+        "sub14",
+        "sub15",
+        "sub16",
+        "sub17",
+        "sub18"
+      ],
+      "state_decision": "anchor_oriented_subject_kmeans_160d",
+      "test_subjects": [
+        "sub2",
+        "sub4",
+        "sub7"
+      ],
+      "training_seed": 2001
+    },
+    {
+      "adaptive_basis_lr": 0.0002,
+      "best_epoch": 33,
+      "checkpoint_sha256": "dfca0e3d7cf359cad5d9ce219ebde8b77141c2e05d7224d5896f7c75b9e15df1",
+      "fold_id": "fold_5",
+      "parameter_deltas": {
+        "encoder_delta_l2": 0.0,
+        "kan_delta_l2": 2.343018054962158,
+        "severity_head_delta_l2": 1.1852465867996216,
+        "state_head_delta_l2": 0.1161651760339737
+      },
+      "projection_variant": "fractional_dog_polykan",
+      "severity_base_normalization": {
+        "center": [
+          0.12520214865605037,
+          1.2677332599957785,
+          -0.02786637345949809
+        ],
+        "method": "source_only_frozen_femba_token_dynamics_zscore_v2",
+        "scale": [
+          0.019502231768625148,
+          0.3862413401418367,
+          0.10022668364388808
+        ],
+        "source_examples": 15
+      },
+      "severity_bias_calibration": {
+        "logit_shift": 0.12157944962382317,
+        "method": "source_balanced_accuracy_bias_shift_v1",
+        "source_balanced_accuracy": 0.8333333333333333,
+        "source_examples": 15,
+        "source_sensitivity": 0.6666666666666666,
+        "source_specificity": 1.0
+      },
+      "severity_threshold": 0.5,
+      "source_subjects": [
+        "sub2",
+        "sub3",
+        "sub4",
+        "sub5",
+        "sub6",
+        "sub7",
+        "sub8",
+        "sub9",
+        "sub11",
+        "sub13",
+        "sub14",
+        "sub15",
+        "sub16",
+        "sub17",
+        "sub18"
+      ],
+      "state_decision": "anchor_oriented_subject_kmeans_160d",
+      "test_subjects": [
+        "sub1",
+        "sub10",
+        "sub12"
+      ],
+      "training_seed": 2001
+    }
+  ],
+  "protocol": {
+    "anchor_calibration": "U3-U6 shared FRACTIONAL_DOG_POLYKAN embedding mean",
+    "encoder_trainable": false,
+    "outer_labels_attached_after_scoring": true,
+    "projection_variant": "fractional_dog_polykan",
+    "raw_windows": true,
+    "severity_base_normalization": "source_only_frozen_femba_token_dynamics_zscore_v2",
+    "severity_bias_calibration": "source_balanced_accuracy_bias_shift_v1",
+    "severity_gradient_scope": "shared_kan_and_severity_head",
+    "severity_task_sampling": "train_jittered_uniform_eval_locked_uniform_11",
+    "severity_task_windows": 11,
+    "severity_threshold": 0.5,
+    "state_decision": "anchor_oriented_subject_kmeans_160d",
+    "state_smoothing": "secondary [t,t+1,t+2] within subject/session",
+    "temporal_context": "[t,t+1,t+2] embedding mean within session",
+    "training_pooled_cache": "frozen_FEMBA_eval_token_mean_525_plus_token_dynamics_2",
+    "training_seed": 2001
+  },
+  "severity_metrics": {
+    "AUPRC": 0.7608465608465609,
+    "AUROC": 0.6296296296296295,
+    "F1": 0.5714285714285714,
+    "MCC": 0.3721042037676254,
+    "accuracy": 0.6666666666666666,
+    "balanced_accuracy": 0.6666666666666666,
+    "confusion_matrix": [
+      [
+        8,
+        1
+      ],
+      [
+        5,
+        4
+      ]
+    ],
+    "n_samples": 18,
+    "n_subjects": 18,
+    "sensitivity": 0.4444444444444444,
+    "specificity": 0.8888888888888888,
+    "subject_macro_balanced_accuracy": 0.6666666666666666
+  },
+  "smoothed_state_metrics": {
+    "AUPRC": 0.8756811592107774,
+    "AUROC": 0.8776095111993821,
+    "F1": 0.8065153010858835,
+    "MCC": 0.6307530156077963,
+    "accuracy": 0.812170579779588,
+    "balanced_accuracy": 0.8141891022104528,
+    "confusion_matrix": [
+      [
+        878,
+        129
+      ],
+      [
+        263,
+        817
+      ]
+    ],
+    "n_samples": 2087,
+    "n_subjects": 18,
+    "sensitivity": 0.7564814814814815,
+    "specificity": 0.871896722939424,
+    "subject_macro_balanced_accuracy": 0.8142874547479811
+  },
+  "state_metrics": {
+    "AUPRC": 0.8531581736498821,
+    "AUROC": 0.8594762587811248,
+    "F1": 0.8011840157868771,
+    "MCC": 0.620069358811891,
+    "accuracy": 0.8068998562529948,
+    "balanced_accuracy": 0.808895141417485,
+    "confusion_matrix": [
+      [
+        872,
+        135
+      ],
+      [
+        268,
+        812
+      ]
+    ],
+    "n_samples": 2087,
+    "n_subjects": 18,
+    "sensitivity": 0.7518518518518519,
+    "specificity": 0.8659384309831182,
+    "subject_macro_balanced_accuracy": 0.8090051517683098
+  },
+  "status": "complete"
+}

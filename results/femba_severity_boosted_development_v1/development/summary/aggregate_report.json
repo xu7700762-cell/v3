@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "completed_jobs": 45,
+  "expected_jobs": 45,
+  "full_matrix_completed": true,
+  "outer_test_scored": false,
+  "evaluation_partition": "nested_source_validation",
+  "smoke": false,
+  "limits": [
+    "Only the twenty fold_1 source subjects are used for development; five outer-test subjects remain excluded.",
+    "All configurations use identical source paths, continuous targets, loss weights, shuffles and validation rules.",
+    "The base selected for a seed and split is byte-identical and frozen for all four residual comparisons.",
+    "Path sub-sequences are not counted as independent samples; each recorded path remains one target.",
+    "This three-split three-seed matrix is exploratory model development, not independent test evidence.",
+    "A failed promotion rule is retained and stops automatic outer-test evaluation."
+  ],
+  "promotion": {
+    "evaluated": true,
+    "passed": false,
+    "dog_minus_mlp_mean_BACC": 0.033691254279489595,
+    "dog_minus_poly_mean_BACC": 0.014568655745126342,
+    "dog_positive_runs_vs_mlp": 5,
+    "dog_minus_no_dog_mean_BACC": 0.008053928642163933
+  }
+}

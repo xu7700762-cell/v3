@@ -1,0 +1,977 @@
+{
+  "status": "complete",
+  "jobs": 240,
+  "full_fivefold_completed": true,
+  "protocol": {
+    "schema": "femba_ssl_fivefold_v3",
+    "training_seed_default": 2001,
+    "split_seed": 42,
+    "folds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "conditions": {
+      "C0": "pooled_features",
+      "C1": "pooled_features_minus_subject_U3_U6_mean"
+    },
+    "encoder": "TemporalEncoder_native_four_block_bidirectional",
+    "head": "Linear(525,1,bias=True)",
+    "input_shape": [
+      30,
+      1280
+    ],
+    "token_shape": [
+      80,
+      525
+    ],
+    "severity_windows": 11,
+    "anchor_count": 4,
+    "anchor_selection": "reference_session_uniform_8_slots_U3_U6_single_windows",
+    "anchor_gradient": "shared_encoder_full_graph_no_detach",
+    "state_exclusion": "U3_U6_in_both_conditions",
+    "preprocessing": "existing_window_normalization_offline_transductive_subject_EA",
+    "head_lr": 0.001,
+    "encoder_lr": 1e-05,
+    "weight_decay": 0.01,
+    "grad_clip": 1.0,
+    "batch_size": {
+      "state": 32,
+      "severity": 4
+    },
+    "microbatch_size": {
+      "state": 4,
+      "severity": 1
+    },
+    "precision": "cuda_bfloat16_autocast_fp32_pooling_and_BCE",
+    "loss": "BCEWithLogitsLoss_train_partition_pos_weight",
+    "selection": "minimum_unweighted_source_val_BCE_earliest_step_tie",
+    "validation": "step_1_global_step_multiple_of_ceil_N_over_4_and_epoch_end",
+    "max_epochs": 60,
+    "patience_epochs": 10,
+    "threshold": 0.5,
+    "refit": "original_initialization_all_source",
+    "outer_test_scoring": true,
+    "primary_metric": "balanced_accuracy",
+    "limits": [
+      "Single seed and fixed optimization budget; no claim of optimal hyperparameters.",
+      "Fivefold splits are fixed and identity-disjoint within each fold; training sets across folds overlap.",
+      "Known personal reference session is required for C1; EA uses all unlabeled subject windows offline.",
+      "Pretraining scripts include monifeixing, but the complete sample manifest is missing; overlap is not excluded.",
+      "Design was informed by previous test and pilot results and remains exploratory.",
+      "All groups use FEMBA; no comparison against other architectures.",
+      "Paired sample exposure rules and maximum optimization budget, not equal FLOPs."
+    ],
+    "training_seed": 2001,
+    "condition_order": [
+      "C0",
+      "C1"
+    ],
+    "selection_base_protocol": "femba_ssl_anchor_pilot_v2",
+    "refit_budget": "ceil(best_selection_step * source_steps_per_epoch / selection_steps_per_epoch)",
+    "frozen_storage": "lossless_shared_full_encoder_plus_independent_head",
+    "trainable_storage": "independent_full_encoder_and_head",
+    "retention": "retain_final_model_predictions_histories_and_audits; remove_new_intermediate_weights_only_after_verified_completion"
+  },
+  "comparisons": {
+    "state": {
+      "monifeixing": {
+        "accuracy": {
+          "anchor_gain_pp": {
+            "A1": -1.245807379012942,
+            "A2": 0.14374700527073347,
+            "A3": -2.683277431720177,
+            "A4": -5.74988021082895
+          },
+          "frozen_pretraining_gain_pp": {
+            "C0": 0.5749880210828895,
+            "C1": -0.8624820316243453
+          },
+          "trainable_pretraining_gain_pp": {
+            "C0": 1.5812170579779683,
+            "C1": -4.312410158121716
+          },
+          "interaction_pp": {
+            "frozen": -1.4374700527072348,
+            "trainable": -5.893627216099684
+          },
+          "finetune_minus_frozen_pp": {
+            "C0": 1.245807379012942,
+            "C1": -1.8207954000958315
+          },
+          "random_supervised_gain_pp": {
+            "C0": 0.23957834211786322,
+            "C1": 1.6291327264015387
+          },
+          "improvement_and_amplification": {
+            "frozen": false,
+            "trainable": false
+          },
+          "pretrained_beats_random_with_anchors": {
+            "frozen": false,
+            "trainable": false
+          }
+        },
+        "balanced_accuracy": {
+          "anchor_gain_pp": {
+            "A1": -0.5895306925594812,
+            "A2": 0.7094321232851475,
+            "A3": -2.559031225863395,
+            "A4": -6.126098789951817
+          },
+          "frozen_pretraining_gain_pp": {
+            "C0": 0.8240464893890853,
+            "C1": -1.1454540439148286
+          },
+          "trainable_pretraining_gain_pp": {
+            "C0": 2.3332505792783786,
+            "C1": -4.502280333958586
+          },
+          "interaction_pp": {
+            "frozen": -1.969500533303914,
+            "trainable": -6.835530913236965
+          },
+          "finetune_minus_frozen_pp": {
+            "C0": 1.619864651145686,
+            "C1": -1.947202912942736
+          },
+          "random_supervised_gain_pp": {
+            "C0": 0.11066056125639268,
+            "C1": 1.4096233771010214
+          },
+          "improvement_and_amplification": {
+            "frozen": false,
+            "trainable": false
+          },
+          "pretrained_beats_random_with_anchors": {
+            "frozen": false,
+            "trainable": false
+          }
+        },
+        "AUROC": {
+          "anchor_gain_pp": {
+            "A1": -1.7718102909264788,
+            "A2": -1.691906653426023,
+            "A3": -3.4971863621317434,
+            "A4": -6.117225716282315
+          },
+          "frozen_pretraining_gain_pp": {
+            "C0": 0.1929088969803927,
+            "C1": -1.5324671742248719
+          },
+          "trainable_pretraining_gain_pp": {
+            "C0": 2.1151936444885777,
+            "C1": -2.3101254183677145
+          },
+          "interaction_pp": {
+            "frozen": -1.7253760712052646,
+            "trainable": -4.425319062856293
+          },
+          "finetune_minus_frozen_pp": {
+            "C0": 1.33045533120012,
+            "C1": -1.2895840229504518
+          },
+          "random_supervised_gain_pp": {
+            "C0": -0.5918294163080651,
+            "C1": -0.5119257788076093
+          },
+          "improvement_and_amplification": {
+            "frozen": false,
+            "trainable": false
+          },
+          "pretrained_beats_random_with_anchors": {
+            "frozen": false,
+            "trainable": false
+          }
+        }
+      },
+      "vrq": {
+        "accuracy": {
+          "anchor_gain_pp": {
+            "A1": 1.3537117903930196,
+            "A2": -5.7205240174672545,
+            "A3": -3.5371179039301315,
+            "A4": -7.598253275109168
+          },
+          "frozen_pretraining_gain_pp": {
+            "C0": 6.375545851528386,
+            "C1": 1.4847161572052348
+          },
+          "trainable_pretraining_gain_pp": {
+            "C0": -0.5240174672489162,
+            "C1": -2.4017467248908297
+          },
+          "interaction_pp": {
+            "frozen": -4.890829694323152,
+            "trainable": -1.8777292576419136
+          },
+          "finetune_minus_frozen_pp": {
+            "C0": 0.9606986899563297,
+            "C1": -3.100436681222707
+          },
+          "random_supervised_gain_pp": {
+            "C0": 7.860262008733631,
+            "C1": 0.7860262008733576
+          },
+          "improvement_and_amplification": {
+            "frozen": false,
+            "trainable": false
+          },
+          "pretrained_beats_random_with_anchors": {
+            "frozen": true,
+            "trainable": false
+          }
+        },
+        "balanced_accuracy": {
+          "anchor_gain_pp": {
+            "A1": 1.166337644446902,
+            "A2": -7.236720724709866,
+            "A3": -3.856017416652824,
+            "A4": -9.13305720066665
+          },
+          "frozen_pretraining_gain_pp": {
+            "C0": 5.385125120692724,
+            "C1": 0.36277005959299835
+          },
+          "trainable_pretraining_gain_pp": {
+            "C0": -0.9241065662995096,
+            "C1": -2.820443042256293
+          },
+          "interaction_pp": {
+            "frozen": -5.022355061099725,
+            "trainable": -1.8963364759567836
+          },
+          "finetune_minus_frozen_pp": {
+            "C0": 1.5272627196300181,
+            "C1": -3.749777064383808
+          },
+          "random_supervised_gain_pp": {
+            "C0": 7.836494406622252,
+            "C1": -0.5665639625345165
+          },
+          "improvement_and_amplification": {
+            "frozen": false,
+            "trainable": false
+          },
+          "pretrained_beats_random_with_anchors": {
+            "frozen": true,
+            "trainable": false
+          }
+        },
+        "AUROC": {
+          "anchor_gain_pp": {
+            "A1": 1.8959521042047123,
+            "A2": -3.053641384230299,
+            "A3": 0.16800889282483356,
+            "A4": -0.5729829707939005
+          },
+          "frozen_pretraining_gain_pp": {
+            "C0": 5.610136344347893,
+            "C1": 3.882193132968015
+          },
+          "trainable_pretraining_gain_pp": {
+            "C0": -1.8037797580610415,
+            "C1": 0.676878655375357
+          },
+          "interaction_pp": {
+            "frozen": -1.7279432113798783,
+            "trainable": 2.4806584134363985
+          },
+          "finetune_minus_frozen_pp": {
+            "C0": 2.968964287251774,
+            "C1": 2.22797242363304
+          },
+          "random_supervised_gain_pp": {
+            "C0": 10.38288038966071,
+            "C1": 5.4332869012256975
+          },
+          "improvement_and_amplification": {
+            "frozen": false,
+            "trainable": false
+          },
+          "pretrained_beats_random_with_anchors": {
+            "frozen": true,
+            "trainable": true
+          }
+        }
+      },
+      "city": {
+        "accuracy": {
+          "anchor_gain_pp": {
+            "A1": 5.929572942309747,
+            "A2": -10.125227443005457,
+            "A3": -1.4770416354490057,
+            "A4": -10.135930643262336
+          },
+          "frozen_pretraining_gain_pp": {
+            "C0": 25.762603018302478,
+            "C1": 18.355988440543726
+          },
+          "trainable_pretraining_gain_pp": {
+            "C0": 3.3501016804024397,
+            "C1": 3.339398480145561
+          },
+          "interaction_pp": {
+            "frozen": -7.406614577758752,
+            "trainable": -0.010703200256878542
+          },
+          "finetune_minus_frozen_pp": {
+            "C0": 2.2048592529166133,
+            "C1": -6.454029754896718
+          },
+          "random_supervised_gain_pp": {
+            "C0": 24.617360590816652,
+            "C1": 8.562560205501446
+          },
+          "improvement_and_amplification": {
+            "frozen": false,
+            "trainable": false
+          },
+          "pretrained_beats_random_with_anchors": {
+            "frozen": true,
+            "trainable": true
+          }
+        },
+        "balanced_accuracy": {
+          "anchor_gain_pp": {
+            "A1": 3.932318119150646,
+            "A2": -8.983892570996721,
+            "A3": -2.270784111252655,
+            "A4": -9.924158243961934
+          },
+          "frozen_pretraining_gain_pp": {
+            "C0": 25.999778792929607,
+            "C1": 19.796676562526304
+          },
+          "trainable_pretraining_gain_pp": {
+            "C0": 4.156031891231593,
+            "C1": 3.2157662182663804
+          },
+          "interaction_pp": {
+            "frozen": -6.203102230403303,
+            "trainable": -0.9402656729652126
+          },
+          "finetune_minus_frozen_pp": {
+            "C0": 2.4612560259050786,
+            "C1": -5.1921181068042
+          },
+          "random_supervised_gain_pp": {
+            "C0": 24.30500292760309,
+            "C1": 11.388792237455725
+          },
+          "improvement_and_amplification": {
+            "frozen": false,
+            "trainable": false
+          },
+          "pretrained_beats_random_with_anchors": {
+            "frozen": true,
+            "trainable": true
+          }
+        },
+        "AUROC": {
+          "anchor_gain_pp": {
+            "A1": 3.3930919791158143,
+            "A2": -8.74299199164933,
+            "A3": -2.6895716533194225,
+            "A4": -6.1008372196562854
+          },
+          "frozen_pretraining_gain_pp": {
+            "C0": 30.790043624092036,
+            "C1": 24.707379991656797
+          },
+          "trainable_pretraining_gain_pp": {
+            "C0": 3.4353832166968856,
+            "C1": 6.0775379886899294
+          },
+          "interaction_pp": {
+            "frozen": -6.0826636324352386,
+            "trainable": 2.642154771993044
+          },
+          "finetune_minus_frozen_pp": {
+            "C0": 1.4137657206673815,
+            "C1": -1.9974998456694815
+          },
+          "random_supervised_gain_pp": {
+            "C0": 28.76842612806253,
+            "C1": 16.632342157297387
+          },
+          "improvement_and_amplification": {
+            "frozen": false,
+            "trainable": false
+          },
+          "pretrained_beats_random_with_anchors": {
+            "frozen": true,
+            "trainable": true
+          }
+        }
+      },
+      "dataset_macro": {
+        "accuracy": {
+          "anchor_gain_pp": {
+            "A1": 2.0124924512299303,
+            "A2": -5.234001485067319,
+            "A3": -2.5658123236997676,
+            "A4": -7.828021376400162
+          },
+          "frozen_pretraining_gain_pp": {
+            "C0": 10.904378963637907,
+            "C1": 6.326074188708208
+          },
+          "trainable_pretraining_gain_pp": {
+            "C0": 1.469100423710512,
+            "C1": -1.1249194676223317
+          },
+          "interaction_pp": {
+            "frozen": -4.578304774929698,
+            "trainable": -2.594019891332844
+          },
+          "finetune_minus_frozen_pp": {
+            "C0": 1.4704551072953098,
+            "C1": -3.7917539454050853
+          },
+          "random_supervised_gain_pp": {
+            "C0": 10.905733647222704,
+            "C1": 3.659239710925455
+          },
+          "improvement_and_amplification": {
+            "frozen": false,
+            "trainable": false
+          },
+          "pretrained_beats_random_with_anchors": {
+            "frozen": true,
+            "trainable": false
+          }
+        },
+        "balanced_accuracy": {
+          "anchor_gain_pp": {
+            "A1": 1.5030416903460186,
+            "A2": -5.170393724140476,
+            "A3": -2.8952775845896284,
+            "A4": -8.394438078193478
+          },
+          "frozen_pretraining_gain_pp": {
+            "C0": 10.73631680100381,
+            "C1": 6.337997526068162
+          },
+          "trainable_pretraining_gain_pp": {
+            "C0": 1.855058634736828,
+            "C1": -1.3689857193161736
+          },
+          "interaction_pp": {
+            "frozen": -4.3983192749356474,
+            "trainable": -3.2240443540530017
+          },
+          "finetune_minus_frozen_pp": {
+            "C0": 1.869461132226924,
+            "C1": -3.6296993613769257
+          },
+          "random_supervised_gain_pp": {
+            "C0": 10.750719298493905,
+            "C1": 4.07728388400741
+          },
+          "improvement_and_amplification": {
+            "frozen": false,
+            "trainable": false
+          },
+          "pretrained_beats_random_with_anchors": {
+            "frozen": true,
+            "trainable": false
+          }
+        },
+        "AUROC": {
+          "anchor_gain_pp": {
+            "A1": 1.1724112641313567,
+            "A2": -4.496180009768547,
+            "A3": -2.006249707542107,
+            "A4": -4.263681968910826
+          },
+          "frozen_pretraining_gain_pp": {
+            "C0": 12.197696288473448,
+            "C1": 9.019035316799984
+          },
+          "trainable_pretraining_gain_pp": {
+            "C0": 1.2489323677081332,
+            "C1": 1.4814304085658536
+          },
+          "interaction_pp": {
+            "frozen": -3.178660971673464,
+            "trainable": 0.2324980408577204
+          },
+          "finetune_minus_frozen_pp": {
+            "C0": 1.9043951130397474,
+            "C1": -0.3530371483289718
+          },
+          "random_supervised_gain_pp": {
+            "C0": 12.853159033805062,
+            "C1": 7.184567759905159
+          },
+          "improvement_and_amplification": {
+            "frozen": false,
+            "trainable": false
+          },
+          "pretrained_beats_random_with_anchors": {
+            "frozen": true,
+            "trainable": true
+          }
+        }
+      }
+    },
+    "severity": {
+      "monifeixing": {
+        "accuracy": {
+          "anchor_gain_pp": {
+            "A1": 27.777777777777786,
+            "A2": 27.777777777777786,
+            "A3": -16.666666666666664,
+            "A4": -5.555555555555558
+          },
+          "frozen_pretraining_gain_pp": {
+            "C0": 33.33333333333333,
+            "C1": -11.111111111111116
+          },
+          "trainable_pretraining_gain_pp": {
+            "C0": 22.222222222222225,
+            "C1": -11.111111111111116
+          },
+          "interaction_pp": {
+            "frozen": -44.44444444444444,
+            "trainable": -33.33333333333334
+          },
+          "finetune_minus_frozen_pp": {
+            "C0": -11.111111111111105,
+            "C1": 0.0
+          },
+          "random_supervised_gain_pp": {
+            "C0": 0.0,
+            "C1": 0.0
+          },
+          "improvement_and_amplification": {
+            "frozen": false,
+            "trainable": false
+          },
+          "pretrained_beats_random_with_anchors": {
+            "frozen": false,
+            "trainable": false
+          }
+        },
+        "balanced_accuracy": {
+          "anchor_gain_pp": {
+            "A1": 27.777777777777786,
+            "A2": 27.777777777777786,
+            "A3": -16.666666666666664,
+            "A4": -5.555555555555558
+          },
+          "frozen_pretraining_gain_pp": {
+            "C0": 33.33333333333333,
+            "C1": -11.111111111111116
+          },
+          "trainable_pretraining_gain_pp": {
+            "C0": 22.222222222222225,
+            "C1": -11.111111111111116
+          },
+          "interaction_pp": {
+            "frozen": -44.44444444444444,
+            "trainable": -33.33333333333334
+          },
+          "finetune_minus_frozen_pp": {
+            "C0": -11.111111111111105,
+            "C1": 0.0
+          },
+          "random_supervised_gain_pp": {
+            "C0": 0.0,
+            "C1": 0.0
+          },
+          "improvement_and_amplification": {
+            "frozen": false,
+            "trainable": false
+          },
+          "pretrained_beats_random_with_anchors": {
+            "frozen": false,
+            "trainable": false
+          }
+        },
+        "AUROC": {
+          "anchor_gain_pp": {
+            "A1": 41.35802469135803,
+            "A2": 40.74074074074075,
+            "A3": -14.81481481481482,
+            "A4": 0.0
+          },
+          "frozen_pretraining_gain_pp": {
+            "C0": 25.308641975308642,
+            "C1": -30.864197530864207
+          },
+          "trainable_pretraining_gain_pp": {
+            "C0": 19.753086419753092,
+            "C1": -20.98765432098766
+          },
+          "interaction_pp": {
+            "frozen": -56.17283950617285,
+            "trainable": -40.74074074074075
+          },
+          "finetune_minus_frozen_pp": {
+            "C0": -9.876543209876543,
+            "C1": 4.938271604938277
+          },
+          "random_supervised_gain_pp": {
+            "C0": -4.32098765432099,
+            "C1": -4.938271604938271
+          },
+          "improvement_and_amplification": {
+            "frozen": false,
+            "trainable": false
+          },
+          "pretrained_beats_random_with_anchors": {
+            "frozen": false,
+            "trainable": false
+          }
+        }
+      },
+      "vrq": {
+        "accuracy": {
+          "anchor_gain_pp": {
+            "A1": -8.695652173913038,
+            "A2": -4.347826086956524,
+            "A3": -17.391304347826082,
+            "A4": -17.391304347826086
+          },
+          "frozen_pretraining_gain_pp": {
+            "C0": 0.0,
+            "C1": -8.695652173913043
+          },
+          "trainable_pretraining_gain_pp": {
+            "C0": 17.391304347826086,
+            "C1": 4.347826086956524
+          },
+          "interaction_pp": {
+            "frozen": -8.695652173913043,
+            "trainable": -13.043478260869563
+          },
+          "finetune_minus_frozen_pp": {
+            "C0": 8.695652173913048,
+            "C1": 8.695652173913043
+          },
+          "random_supervised_gain_pp": {
+            "C0": -8.695652173913038,
+            "C1": -4.347826086956524
+          },
+          "improvement_and_amplification": {
+            "frozen": false,
+            "trainable": false
+          },
+          "pretrained_beats_random_with_anchors": {
+            "frozen": false,
+            "trainable": true
+          }
+        },
+        "balanced_accuracy": {
+          "anchor_gain_pp": {
+            "A1": -6.818181818181812,
+            "A2": -2.272727272727276,
+            "A3": -16.666666666666664,
+            "A4": -17.803030303030305
+          },
+          "frozen_pretraining_gain_pp": {
+            "C0": 0.7575757575757569,
+            "C1": -9.090909090909093
+          },
+          "trainable_pretraining_gain_pp": {
+            "C0": 18.181818181818176,
+            "C1": 2.651515151515149
+          },
+          "interaction_pp": {
+            "frozen": -9.848484848484851,
+            "trainable": -15.530303030303028
+          },
+          "finetune_minus_frozen_pp": {
+            "C0": 8.712121212121215,
+            "C1": 7.575757575757574
+          },
+          "random_supervised_gain_pp": {
+            "C0": -8.712121212121204,
+            "C1": -4.166666666666669
+          },
+          "improvement_and_amplification": {
+            "frozen": false,
+            "trainable": false
+          },
+          "pretrained_beats_random_with_anchors": {
+            "frozen": false,
+            "trainable": true
+          }
+        },
+        "AUROC": {
+          "anchor_gain_pp": {
+            "A1": -2.272727272727282,
+            "A2": 3.0303030303030276,
+            "A3": -19.696969696969695,
+            "A4": -40.15151515151516
+          },
+          "frozen_pretraining_gain_pp": {
+            "C0": -1.515151515151525,
+            "C1": -18.939393939393938
+          },
+          "trainable_pretraining_gain_pp": {
+            "C0": 25.00000000000001,
+            "C1": -18.181818181818176
+          },
+          "interaction_pp": {
+            "frozen": -17.42424242424241,
+            "trainable": -43.18181818181819
+          },
+          "finetune_minus_frozen_pp": {
+            "C0": 16.666666666666675,
+            "C1": -3.78787878787879
+          },
+          "random_supervised_gain_pp": {
+            "C0": -9.848484848484862,
+            "C1": -4.545454545454552
+          },
+          "improvement_and_amplification": {
+            "frozen": false,
+            "trainable": false
+          },
+          "pretrained_beats_random_with_anchors": {
+            "frozen": false,
+            "trainable": false
+          }
+        }
+      },
+      "city": {
+        "accuracy": {
+          "anchor_gain_pp": {
+            "A1": 16.233766233766232,
+            "A2": 5.1948051948051965,
+            "A3": -11.688311688311682,
+            "A4": -1.9480519480519431
+          },
+          "frozen_pretraining_gain_pp": {
+            "C0": 22.077922077922075,
+            "C1": -5.844155844155841
+          },
+          "trainable_pretraining_gain_pp": {
+            "C0": 1.9480519480519431,
+            "C1": -5.1948051948051965
+          },
+          "interaction_pp": {
+            "frozen": -27.922077922077918,
+            "trainable": -7.14285714285714
+          },
+          "finetune_minus_frozen_pp": {
+            "C0": -6.493506493506496,
+            "C1": 3.2467532467532423
+          },
+          "random_supervised_gain_pp": {
+            "C0": 13.636363636363635,
+            "C1": 2.5974025974025983
+          },
+          "improvement_and_amplification": {
+            "frozen": false,
+            "trainable": false
+          },
+          "pretrained_beats_random_with_anchors": {
+            "frozen": false,
+            "trainable": false
+          }
+        },
+        "balanced_accuracy": {
+          "anchor_gain_pp": {
+            "A1": 16.233766233766232,
+            "A2": 5.1948051948051965,
+            "A3": -11.688311688311682,
+            "A4": -1.9480519480519543
+          },
+          "frozen_pretraining_gain_pp": {
+            "C0": 22.077922077922075,
+            "C1": -5.844155844155841
+          },
+          "trainable_pretraining_gain_pp": {
+            "C0": 1.9480519480519543,
+            "C1": -5.1948051948051965
+          },
+          "interaction_pp": {
+            "frozen": -27.922077922077918,
+            "trainable": -7.142857142857151
+          },
+          "finetune_minus_frozen_pp": {
+            "C0": -6.493506493506485,
+            "C1": 3.2467532467532423
+          },
+          "random_supervised_gain_pp": {
+            "C0": 13.636363636363635,
+            "C1": 2.5974025974025983
+          },
+          "improvement_and_amplification": {
+            "frozen": false,
+            "trainable": false
+          },
+          "pretrained_beats_random_with_anchors": {
+            "frozen": false,
+            "trainable": false
+          }
+        },
+        "AUROC": {
+          "anchor_gain_pp": {
+            "A1": 17.954123798279632,
+            "A2": 2.293810086017878,
+            "A3": -9.731826614943495,
+            "A4": -1.3240006746500277
+          },
+          "frozen_pretraining_gain_pp": {
+            "C0": 23.08989711587114,
+            "C1": -4.596053297351988
+          },
+          "trainable_pretraining_gain_pp": {
+            "C0": -0.11806375442738881,
+            "C1": -3.7358745150952943
+          },
+          "interaction_pp": {
+            "frozen": -27.685950413223125,
+            "trainable": -3.6178107606679055
+          },
+          "finetune_minus_frozen_pp": {
+            "C0": -6.164614606173046,
+            "C1": 2.2432113341204207
+          },
+          "random_supervised_gain_pp": {
+            "C0": 17.043346264125482,
+            "C1": 1.3830325518637276
+          },
+          "improvement_and_amplification": {
+            "frozen": false,
+            "trainable": false
+          },
+          "pretrained_beats_random_with_anchors": {
+            "frozen": false,
+            "trainable": false
+          }
+        }
+      },
+      "dataset_macro": {
+        "accuracy": {
+          "anchor_gain_pp": {
+            "A1": 11.771963945876983,
+            "A2": 9.541585628542137,
+            "A3": -15.24876090093481,
+            "A4": -8.298303950477859
+          },
+          "frozen_pretraining_gain_pp": {
+            "C0": 18.47041847041847,
+            "C1": -8.550306376393324
+          },
+          "trainable_pretraining_gain_pp": {
+            "C0": 13.853859506033405,
+            "C1": -3.9860300729865905
+          },
+          "interaction_pp": {
+            "frozen": -27.020724846811795,
+            "trainable": -17.839889579019996
+          },
+          "finetune_minus_frozen_pp": {
+            "C0": -2.969655143568195,
+            "C1": 3.9808018068887563
+          },
+          "random_supervised_gain_pp": {
+            "C0": 1.6469038208168696,
+            "C1": -0.5834744965179772
+          },
+          "improvement_and_amplification": {
+            "frozen": false,
+            "trainable": false
+          },
+          "pretrained_beats_random_with_anchors": {
+            "frozen": false,
+            "trainable": false
+          }
+        },
+        "balanced_accuracy": {
+          "anchor_gain_pp": {
+            "A1": 12.397787397787397,
+            "A2": 10.233285233285223,
+            "A3": -15.007215007215002,
+            "A4": -8.43554593554593
+          },
+          "frozen_pretraining_gain_pp": {
+            "C0": 18.722943722943718,
+            "C1": -8.68205868205868
+          },
+          "trainable_pretraining_gain_pp": {
+            "C0": 14.117364117364112,
+            "C1": -4.551467051467039
+          },
+          "interaction_pp": {
+            "frozen": -27.4050024050024,
+            "trainable": -18.66883116883115
+          },
+          "finetune_minus_frozen_pp": {
+            "C0": -2.964165464165458,
+            "C1": 3.607503607503615
+          },
+          "random_supervised_gain_pp": {
+            "C0": 1.6414141414141492,
+            "C1": -0.5230880230880253
+          },
+          "improvement_and_amplification": {
+            "frozen": false,
+            "trainable": false
+          },
+          "pretrained_beats_random_with_anchors": {
+            "frozen": false,
+            "trainable": false
+          }
+        },
+        "AUROC": {
+          "anchor_gain_pp": {
+            "A1": 19.013140405636797,
+            "A2": 15.354951285687225,
+            "A3": -14.747870375576,
+            "A4": -13.825171942055059
+          },
+          "frozen_pretraining_gain_pp": {
+            "C0": 15.627795858676086,
+            "C1": -18.133214922536713
+          },
+          "trainable_pretraining_gain_pp": {
+            "C0": 14.8783408884419,
+            "C1": -14.301782339300384
+          },
+          "interaction_pp": {
+            "frozen": -33.761010781212796,
+            "trainable": -29.180123227742286
+          },
+          "finetune_minus_frozen_pp": {
+            "C0": 0.2085029502056912,
+            "C1": 1.1312013837266321
+          },
+          "random_supervised_gain_pp": {
+            "C0": 0.957957920439878,
+            "C1": -2.700231199509695
+          },
+          "improvement_and_amplification": {
+            "frozen": false,
+            "trainable": false
+          },
+          "pretrained_beats_random_with_anchors": {
+            "frozen": false,
+            "trainable": false
+          }
+        }
+      }
+    }
+  },
+  "condition_summary_sha256": {
+    "C0": "391db478ea3481a634696d8725075541a80c347d4a02916729a67648cade7ec8",
+    "C1": "c7f697cac6b15008a026830306444729b2e396fb04d2e346f3a6e00813dda805"
+  },
+  "limits": [
+    "Single seed and fixed optimization budget; no claim of optimal hyperparameters.",
+    "Fivefold splits are fixed and identity-disjoint within each fold; training sets across folds overlap.",
+    "Known personal reference session is required for C1; EA uses all unlabeled subject windows offline.",
+    "Pretraining scripts include monifeixing, but the complete sample manifest is missing; overlap is not excluded.",
+    "Design was informed by previous test and pilot results and remains exploratory.",
+    "All groups use FEMBA; no comparison against other architectures.",
+    "Paired sample exposure rules and maximum optimization budget, not equal FLOPs."
+  ]
+}

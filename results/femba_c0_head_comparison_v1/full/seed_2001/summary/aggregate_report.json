@@ -1,0 +1,4541 @@
+{
+  "status": "complete",
+  "new_jobs": 80,
+  "linear_baseline_jobs": 40,
+  "full_fivefold_completed": true,
+  "schema": "femba_c0_head_comparison_v1",
+  "protocol": {
+    "schema": "femba_c0_head_comparison_v1",
+    "training_seed_default": 2001,
+    "split_seed": 42,
+    "folds": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "conditions": {
+      "C0": "pooled_features_without_reference_calibration"
+    },
+    "encoder": "TemporalEncoder_native_four_block_bidirectional",
+    "head": "LayerNorm525_projection525to160_LayerNorm160_Linear160to1",
+    "input_shape": [
+      30,
+      1280
+    ],
+    "token_shape": [
+      80,
+      525
+    ],
+    "severity_windows": 11,
+    "anchor_count": 0,
+    "anchor_selection": "none; legacy C0 excluded target IDs retained",
+    "anchor_gradient": "none",
+    "state_exclusion": "U3_U6_in_both_conditions",
+    "preprocessing": "existing_window_normalization_offline_transductive_subject_EA",
+    "head_lr": 0.001,
+    "encoder_lr": 1e-05,
+    "weight_decay": 0.01,
+    "grad_clip": 1.0,
+    "batch_size": {
+      "state": 32,
+      "severity": 4
+    },
+    "microbatch_size": {
+      "state": 4,
+      "severity": 1
+    },
+    "precision": "cuda_bfloat16_autocast_fp32_pooling_and_BCE",
+    "loss": "BCEWithLogitsLoss_train_partition_pos_weight",
+    "selection": "minimum_unweighted_source_val_BCE_earliest_step_tie",
+    "validation": "step_1_global_step_multiple_of_ceil_N_over_4_and_epoch_end",
+    "max_epochs": 60,
+    "patience_epochs": 10,
+    "threshold": 0.5,
+    "refit": "original_initialization_all_source",
+    "outer_test_scoring": true,
+    "primary_metric": "balanced_accuracy",
+    "limits": [
+      "Single seed and fixed training settings; numeric gains are not statistical significance.",
+      "No anchors or known-rest calibration enter inference. Legacy C0 target exclusions remain.",
+      "EA uses all unlabeled windows of each subject offline and is transductive, not strictly inductive.",
+      "The complete pretraining sample manifest is missing; pretraining overlap has not been excluded.",
+      "Design was informed by existing test results and is exploratory.",
+      "Only pretrained frozen and finetuned encoders are tested; this does not establish a pretraining-versus-random effect.",
+      "DoG-versus-MLP compares the complete mappings; it does not isolate fractional and DoG components.",
+      "Same selection rules and maximum epochs, not equal actual updates or FLOPs."
+    ],
+    "training_seed": 2001,
+    "condition_order": [
+      "C0"
+    ],
+    "selection_base_protocol": "femba_ssl_anchor_pilot_v2",
+    "refit_budget": "ceil(best_selection_step * source_steps_per_epoch / selection_steps_per_epoch)",
+    "frozen_storage": "lossless_shared_full_encoder_plus_independent_head",
+    "trainable_storage": "independent_full_encoder_and_head",
+    "retention": "retain_final_model_predictions_histories_and_audits; remove_new_intermediate_weights_only_after_verified_completion",
+    "heads": [
+      "fractional_dog_polykan",
+      "mlp"
+    ],
+    "variants": [
+      "A3",
+      "A4"
+    ],
+    "datasets": [
+      "vrq",
+      "city"
+    ],
+    "tasks": [
+      "state",
+      "severity"
+    ],
+    "condition": "C0",
+    "projection_seed_offset": 101,
+    "output_seed_offset": 211,
+    "head_parameters": {
+      "fractional_dog_polykan": 170749,
+      "mlp": 170447
+    },
+    "mlp_hidden_dim": 246,
+    "kan_degree": 2,
+    "linear_baseline_schema": "femba_ssl_fivefold_v3",
+    "new_jobs": 80,
+    "linear_baseline_jobs": 40,
+    "tuning": false,
+    "improvement_threshold": null
+  },
+  "binding": {
+    "protocol_sha256": "9587c66c09c5574505b6cb9b91045516a7c940a6699efa52e2e686171f6dcbc9",
+    "bundle_sha256": "a15fa71c008690a07e944846189f657100b31ee500f803d42e1e2665085a9449",
+    "data_sha256": "eee66f146c179c451569f6d72fbfc748096c187becacb59f313cfb5d45a27c63",
+    "selection_base_file_sha256": "4ff368087a127cfc87422fd0d1121030c04b8da55586b3378c238f0db75446a0",
+    "protocol_file_sha256": "41c2b7f9403831703c5af3d4690bd1c6828030a2baa9a132d4bfd89505235a3d",
+    "implementation_sha256": "db97e957af590e0d213fae3bbb0229f0c8458816d1f9abe9d8cf79d87b2bdde3",
+    "fivefold_base_file_sha256": "d993862e4145c1aa3eff3497e670cfec80010e8c02f0c11d7116916a65c6dfc8",
+    "baseline_manifest_sha256": "4af2ad3291e88d127789475b7f39cd12d0d82b7735c7e08ffc90ac5e0f64499a",
+    "entrypoint_sha256": "7b181e4102c5fbe43e6e0485f61773fbdbe46177a8994eab3adf3c32f9eb2622"
+  },
+  "folds": [
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_1",
+      "n_samples": 30,
+      "accuracy": 0.6333333333333333,
+      "balanced_accuracy": 0.6333333333333333,
+      "AUROC": 0.6444444444444445,
+      "BCE": 1.1218241453170776
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_2",
+      "n_samples": 29,
+      "accuracy": 0.7931034482758621,
+      "balanced_accuracy": 0.7857142857142857,
+      "AUROC": 0.9380952380952382,
+      "BCE": 0.5249959826469421
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_3",
+      "n_samples": 30,
+      "accuracy": 0.7,
+      "balanced_accuracy": 0.7,
+      "AUROC": 0.9000000000000001,
+      "BCE": 0.8646240234375
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_4",
+      "n_samples": 33,
+      "accuracy": 0.696969696969697,
+      "balanced_accuracy": 0.7022058823529411,
+      "AUROC": 0.724264705882353,
+      "BCE": 0.6566894054412842
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_5",
+      "n_samples": 32,
+      "accuracy": 0.625,
+      "balanced_accuracy": 0.6392156862745098,
+      "AUROC": 0.7745098039215687,
+      "BCE": 0.6288084387779236
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_1",
+      "n_samples": 5,
+      "accuracy": 0.4,
+      "balanced_accuracy": 0.3333333333333333,
+      "AUROC": 0.3333333333333333,
+      "BCE": 1.9658550024032593
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_2",
+      "n_samples": 5,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "AUROC": 1.0,
+      "BCE": 0.048013705760240555
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_3",
+      "n_samples": 5,
+      "accuracy": 0.6,
+      "balanced_accuracy": 0.5,
+      "AUROC": 1.0,
+      "BCE": 0.6247165203094482
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_4",
+      "n_samples": 4,
+      "accuracy": 0.5,
+      "balanced_accuracy": 0.5,
+      "AUROC": 0.5,
+      "BCE": 0.8742519021034241
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_5",
+      "n_samples": 4,
+      "accuracy": 0.5,
+      "balanced_accuracy": 0.5,
+      "AUROC": 0.5,
+      "BCE": 1.0555877685546875
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_1",
+      "n_samples": 30,
+      "accuracy": 0.6,
+      "balanced_accuracy": 0.6,
+      "AUROC": 0.5177777777777778,
+      "BCE": 1.7514728307724
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_2",
+      "n_samples": 29,
+      "accuracy": 0.8275862068965517,
+      "balanced_accuracy": 0.8238095238095238,
+      "AUROC": 0.9095238095238094,
+      "BCE": 0.6941764950752258
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_3",
+      "n_samples": 30,
+      "accuracy": 0.8333333333333334,
+      "balanced_accuracy": 0.8333333333333334,
+      "AUROC": 0.8933333333333334,
+      "BCE": 0.4160921275615692
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_4",
+      "n_samples": 33,
+      "accuracy": 0.6060606060606061,
+      "balanced_accuracy": 0.6139705882352942,
+      "AUROC": 0.71875,
+      "BCE": 0.7330083250999451
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_5",
+      "n_samples": 32,
+      "accuracy": 0.625,
+      "balanced_accuracy": 0.6431372549019608,
+      "AUROC": 0.7666666666666667,
+      "BCE": 0.6336277723312378
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_1",
+      "n_samples": 5,
+      "accuracy": 0.8,
+      "balanced_accuracy": 0.75,
+      "AUROC": 0.6666666666666666,
+      "BCE": 1.5530388355255127
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_2",
+      "n_samples": 5,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "AUROC": 1.0,
+      "BCE": 0.09423158317804337
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_3",
+      "n_samples": 5,
+      "accuracy": 0.6,
+      "balanced_accuracy": 0.5,
+      "AUROC": 1.0,
+      "BCE": 0.5870772004127502
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_4",
+      "n_samples": 4,
+      "accuracy": 0.5,
+      "balanced_accuracy": 0.5,
+      "AUROC": 0.25,
+      "BCE": 0.9313706159591675
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_5",
+      "n_samples": 4,
+      "accuracy": 0.5,
+      "balanced_accuracy": 0.5,
+      "AUROC": 0.75,
+      "BCE": 0.8956063389778137
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_1",
+      "n_samples": 1820,
+      "accuracy": 0.8214285714285714,
+      "balanced_accuracy": 0.8283753394120622,
+      "AUROC": 0.8937695484162407,
+      "BCE": 0.37449949979782104
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_2",
+      "n_samples": 1671,
+      "accuracy": 0.8653500897666068,
+      "balanced_accuracy": 0.8739100655936356,
+      "AUROC": 0.9222718345436399,
+      "BCE": 0.3285593092441559
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_3",
+      "n_samples": 1784,
+      "accuracy": 0.6782511210762332,
+      "balanced_accuracy": 0.7074897959183674,
+      "AUROC": 0.8064234693877551,
+      "BCE": 0.5969356894493103
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_4",
+      "n_samples": 2102,
+      "accuracy": 0.774976213130352,
+      "balanced_accuracy": 0.7926686818928199,
+      "AUROC": 0.8426803440812061,
+      "BCE": 0.4586396813392639
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_5",
+      "n_samples": 1966,
+      "accuracy": 0.7263479145473042,
+      "balanced_accuracy": 0.7518690898345153,
+      "AUROC": 0.8225272289766971,
+      "BCE": 0.6100887656211853
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_1",
+      "n_samples": 507,
+      "accuracy": 0.6272189349112426,
+      "balanced_accuracy": 0.6117374736245395,
+      "AUROC": 0.7193178597297891,
+      "BCE": 0.6972414255142212
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_2",
+      "n_samples": 512,
+      "accuracy": 0.814453125,
+      "balanced_accuracy": 0.8107037582903464,
+      "AUROC": 0.8257415254237288,
+      "BCE": 0.4965772032737732
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_3",
+      "n_samples": 474,
+      "accuracy": 0.8059071729957806,
+      "balanced_accuracy": 0.8103793843951324,
+      "AUROC": 0.8620257695060846,
+      "BCE": 0.5084525942802429
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_4",
+      "n_samples": 418,
+      "accuracy": 0.7751196172248804,
+      "balanced_accuracy": 0.7719717748552406,
+      "AUROC": 0.8476334482031085,
+      "BCE": 0.5212583541870117
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_5",
+      "n_samples": 379,
+      "accuracy": 0.9234828496042217,
+      "balanced_accuracy": 0.9238785176929507,
+      "AUROC": 0.9740596266369463,
+      "BCE": 0.358722060918808
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_1",
+      "n_samples": 1820,
+      "accuracy": 0.7824175824175824,
+      "balanced_accuracy": 0.7715615655427401,
+      "AUROC": 0.8963062392898001,
+      "BCE": 0.4968006908893585
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_2",
+      "n_samples": 1671,
+      "accuracy": 0.8521843207660084,
+      "balanced_accuracy": 0.8501466417287918,
+      "AUROC": 0.9206115047900038,
+      "BCE": 0.35207635164260864
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_3",
+      "n_samples": 1784,
+      "accuracy": 0.7365470852017937,
+      "balanced_accuracy": 0.7461275510204082,
+      "AUROC": 0.8190682397959185,
+      "BCE": 0.5242397785186768
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_4",
+      "n_samples": 2102,
+      "accuracy": 0.7873453853472883,
+      "balanced_accuracy": 0.7787346992088371,
+      "AUROC": 0.8820420958351995,
+      "BCE": 0.41084960103034973
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_5",
+      "n_samples": 1966,
+      "accuracy": 0.6871820956256358,
+      "balanced_accuracy": 0.7241451367781155,
+      "AUROC": 0.8075027440054034,
+      "BCE": 0.6776523590087891
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_1",
+      "n_samples": 507,
+      "accuracy": 0.6153846153846154,
+      "balanced_accuracy": 0.6123200957389854,
+      "AUROC": 0.724758290555223,
+      "BCE": 0.751936674118042
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_2",
+      "n_samples": 512,
+      "accuracy": 0.775390625,
+      "balanced_accuracy": 0.7643392286907393,
+      "AUROC": 0.8316675878162614,
+      "BCE": 0.565449059009552
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_3",
+      "n_samples": 474,
+      "accuracy": 0.7827004219409283,
+      "balanced_accuracy": 0.7875089477451682,
+      "AUROC": 0.8588851109520401,
+      "BCE": 0.5397884249687195
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_4",
+      "n_samples": 418,
+      "accuracy": 0.7703349282296651,
+      "balanced_accuracy": 0.7730735869845512,
+      "AUROC": 0.8301568324073423,
+      "BCE": 0.605178713798523
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_5",
+      "n_samples": 379,
+      "accuracy": 0.9182058047493403,
+      "balanced_accuracy": 0.9185984954026192,
+      "AUROC": 0.9776121482307049,
+      "BCE": 0.25885123014450073
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_1",
+      "n_samples": 30,
+      "accuracy": 0.6333333333333333,
+      "balanced_accuracy": 0.6333333333333333,
+      "AUROC": 0.6822222222222222,
+      "BCE": 0.6816364526748657
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_2",
+      "n_samples": 29,
+      "accuracy": 0.8620689655172413,
+      "balanced_accuracy": 0.8595238095238096,
+      "AUROC": 0.9238095238095237,
+      "BCE": 0.3944556713104248
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_3",
+      "n_samples": 30,
+      "accuracy": 0.8,
+      "balanced_accuracy": 0.8,
+      "AUROC": 0.8888888888888888,
+      "BCE": 0.45355305075645447
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_4",
+      "n_samples": 33,
+      "accuracy": 0.7272727272727273,
+      "balanced_accuracy": 0.7316176470588236,
+      "AUROC": 0.7205882352941178,
+      "BCE": 0.6508111953735352
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_5",
+      "n_samples": 32,
+      "accuracy": 0.71875,
+      "balanced_accuracy": 0.723529411764706,
+      "AUROC": 0.7568627450980392,
+      "BCE": 0.5938531160354614
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_1",
+      "n_samples": 5,
+      "accuracy": 0.6,
+      "balanced_accuracy": 0.5833333333333333,
+      "AUROC": 0.5,
+      "BCE": 0.6544339060783386
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_2",
+      "n_samples": 5,
+      "accuracy": 0.8,
+      "balanced_accuracy": 0.8333333333333333,
+      "AUROC": 1.0,
+      "BCE": 0.4640992283821106
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_3",
+      "n_samples": 5,
+      "accuracy": 0.4,
+      "balanced_accuracy": 0.5,
+      "AUROC": 0.33333333333333337,
+      "BCE": 0.7187025547027588
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_4",
+      "n_samples": 4,
+      "accuracy": 0.5,
+      "balanced_accuracy": 0.5,
+      "AUROC": 0.5,
+      "BCE": 0.811416506767273
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_5",
+      "n_samples": 4,
+      "accuracy": 0.5,
+      "balanced_accuracy": 0.5,
+      "AUROC": 0.75,
+      "BCE": 0.6292023658752441
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_1",
+      "n_samples": 30,
+      "accuracy": 0.5666666666666667,
+      "balanced_accuracy": 0.5666666666666667,
+      "AUROC": 0.6044444444444445,
+      "BCE": 1.0192570686340332
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_2",
+      "n_samples": 29,
+      "accuracy": 0.8620689655172413,
+      "balanced_accuracy": 0.8595238095238096,
+      "AUROC": 0.9476190476190476,
+      "BCE": 0.45985057950019836
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_3",
+      "n_samples": 30,
+      "accuracy": 0.8333333333333334,
+      "balanced_accuracy": 0.8333333333333334,
+      "AUROC": 0.8711111111111112,
+      "BCE": 0.5031062364578247
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_4",
+      "n_samples": 33,
+      "accuracy": 0.5757575757575758,
+      "balanced_accuracy": 0.5845588235294118,
+      "AUROC": 0.7169117647058824,
+      "BCE": 0.8659554719924927
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_5",
+      "n_samples": 32,
+      "accuracy": 0.59375,
+      "balanced_accuracy": 0.6137254901960785,
+      "AUROC": 0.7509803921568627,
+      "BCE": 0.6735858917236328
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_1",
+      "n_samples": 5,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "AUROC": 1.0,
+      "BCE": 0.09585697948932648
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_2",
+      "n_samples": 5,
+      "accuracy": 0.8,
+      "balanced_accuracy": 0.8333333333333333,
+      "AUROC": 1.0,
+      "BCE": 0.26478078961372375
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_3",
+      "n_samples": 5,
+      "accuracy": 0.4,
+      "balanced_accuracy": 0.5,
+      "AUROC": 0.5,
+      "BCE": 0.7436755895614624
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_4",
+      "n_samples": 4,
+      "accuracy": 0.5,
+      "balanced_accuracy": 0.5,
+      "AUROC": 0.5,
+      "BCE": 0.7861015796661377
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_5",
+      "n_samples": 4,
+      "accuracy": 0.5,
+      "balanced_accuracy": 0.5,
+      "AUROC": 0.75,
+      "BCE": 1.0361382961273193
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_1",
+      "n_samples": 1820,
+      "accuracy": 0.8148351648351648,
+      "balanced_accuracy": 0.8201066969130074,
+      "AUROC": 0.8852836330961745,
+      "BCE": 0.3891587257385254
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_2",
+      "n_samples": 1671,
+      "accuracy": 0.8384201077199281,
+      "balanced_accuracy": 0.8361739680198098,
+      "AUROC": 0.9156385647257858,
+      "BCE": 0.36395519971847534
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_3",
+      "n_samples": 1784,
+      "accuracy": 0.6821748878923767,
+      "balanced_accuracy": 0.7067193877551021,
+      "AUROC": 0.7886307397959184,
+      "BCE": 0.5950581431388855
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_4",
+      "n_samples": 2102,
+      "accuracy": 0.7664129400570885,
+      "balanced_accuracy": 0.7689832437677265,
+      "AUROC": 0.8360184355874012,
+      "BCE": 0.47935381531715393
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_5",
+      "n_samples": 1966,
+      "accuracy": 0.7360122075279756,
+      "balanced_accuracy": 0.7600620567375886,
+      "AUROC": 0.8302589918946301,
+      "BCE": 0.5372347831726074
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_1",
+      "n_samples": 507,
+      "accuracy": 0.7021696252465484,
+      "balanced_accuracy": 0.6823843416370107,
+      "AUROC": 0.6724089062450792,
+      "BCE": 0.7871161699295044
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_2",
+      "n_samples": 512,
+      "accuracy": 0.7890625,
+      "balanced_accuracy": 0.7816261360845,
+      "AUROC": 0.8259257553426677,
+      "BCE": 0.49620842933654785
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_3",
+      "n_samples": 474,
+      "accuracy": 0.8185654008438819,
+      "balanced_accuracy": 0.8185397279885469,
+      "AUROC": 0.8605851825340014,
+      "BCE": 0.45825645327568054
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_4",
+      "n_samples": 418,
+      "accuracy": 0.7966507177033493,
+      "balanced_accuracy": 0.7883934641442202,
+      "AUROC": 0.8456994162739996,
+      "BCE": 0.47771406173706055
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_5",
+      "n_samples": 379,
+      "accuracy": 0.8179419525065963,
+      "balanced_accuracy": 0.8145165784341042,
+      "AUROC": 0.9574672610755085,
+      "BCE": 0.47396448254585266
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_1",
+      "n_samples": 1820,
+      "accuracy": 0.8313186813186814,
+      "balanced_accuracy": 0.8335874320562111,
+      "AUROC": 0.9039476139270652,
+      "BCE": 0.3595277667045593
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_2",
+      "n_samples": 1671,
+      "accuracy": 0.8503889886295631,
+      "balanced_accuracy": 0.846089846596946,
+      "AUROC": 0.9239826547128779,
+      "BCE": 0.3601195216178894
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_3",
+      "n_samples": 1784,
+      "accuracy": 0.7247757847533632,
+      "balanced_accuracy": 0.7480255102040816,
+      "AUROC": 0.839610969387755,
+      "BCE": 0.6321678757667542
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_4",
+      "n_samples": 2102,
+      "accuracy": 0.801617507136061,
+      "balanced_accuracy": 0.8216440886699508,
+      "AUROC": 0.8992979362591431,
+      "BCE": 0.39477410912513733
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_5",
+      "n_samples": 1966,
+      "accuracy": 0.7390640895218719,
+      "balanced_accuracy": 0.7662107396149949,
+      "AUROC": 0.8109902693346842,
+      "BCE": 0.7877118587493896
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_1",
+      "n_samples": 507,
+      "accuracy": 0.6745562130177515,
+      "balanced_accuracy": 0.6613705791578748,
+      "AUROC": 0.7419771360186438,
+      "BCE": 0.7245712876319885
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_2",
+      "n_samples": 512,
+      "accuracy": 0.79296875,
+      "balanced_accuracy": 0.7886268730041759,
+      "AUROC": 0.8310304593465979,
+      "BCE": 0.5294057130813599
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_3",
+      "n_samples": 474,
+      "accuracy": 0.8037974683544303,
+      "balanced_accuracy": 0.8062813171080887,
+      "AUROC": 0.8627236936292055,
+      "BCE": 0.48059797286987305
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_4",
+      "n_samples": 418,
+      "accuracy": 0.8086124401913876,
+      "balanced_accuracy": 0.8040180978502942,
+      "AUROC": 0.8501652718193965,
+      "BCE": 0.4864169657230377
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_5",
+      "n_samples": 379,
+      "accuracy": 0.9129287598944591,
+      "balanced_accuracy": 0.9136946224575091,
+      "AUROC": 0.9779465032042352,
+      "BCE": 0.2630634009838104
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_1",
+      "n_samples": 30,
+      "accuracy": 0.6333333333333333,
+      "balanced_accuracy": 0.6333333333333333,
+      "AUROC": 0.6622222222222223,
+      "BCE": 0.8550311923027039
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_2",
+      "n_samples": 29,
+      "accuracy": 0.7931034482758621,
+      "balanced_accuracy": 0.7857142857142857,
+      "AUROC": 0.9095238095238096,
+      "BCE": 0.5535129904747009
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_3",
+      "n_samples": 30,
+      "accuracy": 0.8333333333333334,
+      "balanced_accuracy": 0.8333333333333334,
+      "AUROC": 0.8755555555555555,
+      "BCE": 0.4324757158756256
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_4",
+      "n_samples": 33,
+      "accuracy": 0.6363636363636364,
+      "balanced_accuracy": 0.6415441176470589,
+      "AUROC": 0.7224264705882353,
+      "BCE": 0.722009539604187
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_5",
+      "n_samples": 32,
+      "accuracy": 0.6875,
+      "balanced_accuracy": 0.6941176470588235,
+      "AUROC": 0.7588235294117647,
+      "BCE": 0.6688491106033325
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_1",
+      "n_samples": 5,
+      "accuracy": 0.6,
+      "balanced_accuracy": 0.5,
+      "AUROC": 0.8333333333333333,
+      "BCE": 1.4292657375335693
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_2",
+      "n_samples": 5,
+      "accuracy": 0.8,
+      "balanced_accuracy": 0.8333333333333333,
+      "AUROC": 1.0,
+      "BCE": 0.4139919877052307
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_3",
+      "n_samples": 5,
+      "accuracy": 0.6,
+      "balanced_accuracy": 0.5,
+      "AUROC": 0.33333333333333337,
+      "BCE": 0.7074430584907532
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_4",
+      "n_samples": 4,
+      "accuracy": 0.5,
+      "balanced_accuracy": 0.5,
+      "AUROC": 0.5,
+      "BCE": 0.7337891459465027
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_5",
+      "n_samples": 4,
+      "accuracy": 0.5,
+      "balanced_accuracy": 0.5,
+      "AUROC": 0.75,
+      "BCE": 3.336905002593994
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_1",
+      "n_samples": 30,
+      "accuracy": 0.5666666666666667,
+      "balanced_accuracy": 0.5666666666666667,
+      "AUROC": 0.5422222222222222,
+      "BCE": 1.3186373710632324
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_2",
+      "n_samples": 29,
+      "accuracy": 0.8275862068965517,
+      "balanced_accuracy": 0.8238095238095238,
+      "AUROC": 0.9000000000000001,
+      "BCE": 0.39499175548553467
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_3",
+      "n_samples": 30,
+      "accuracy": 0.8,
+      "balanced_accuracy": 0.8,
+      "AUROC": 0.9066666666666667,
+      "BCE": 0.46714073419570923
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_4",
+      "n_samples": 33,
+      "accuracy": 0.48484848484848486,
+      "balanced_accuracy": 0.4963235294117647,
+      "AUROC": 0.7352941176470589,
+      "BCE": 1.0703853368759155
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_5",
+      "n_samples": 32,
+      "accuracy": 0.53125,
+      "balanced_accuracy": 0.5,
+      "AUROC": 0.7529411764705882,
+      "BCE": 0.6865753531455994
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_1",
+      "n_samples": 5,
+      "accuracy": 0.8,
+      "balanced_accuracy": 0.75,
+      "AUROC": 1.0,
+      "BCE": 1.1949818134307861
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_2",
+      "n_samples": 5,
+      "accuracy": 1.0,
+      "balanced_accuracy": 1.0,
+      "AUROC": 1.0,
+      "BCE": 0.012225494720041752
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_3",
+      "n_samples": 5,
+      "accuracy": 0.6,
+      "balanced_accuracy": 0.5,
+      "AUROC": 0.5,
+      "BCE": 0.6876242756843567
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_4",
+      "n_samples": 4,
+      "accuracy": 0.5,
+      "balanced_accuracy": 0.5,
+      "AUROC": 0.5,
+      "BCE": 0.8043475151062012
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_5",
+      "n_samples": 4,
+      "accuracy": 0.5,
+      "balanced_accuracy": 0.5,
+      "AUROC": 0.75,
+      "BCE": 2.5386290550231934
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_1",
+      "n_samples": 1820,
+      "accuracy": 0.8192307692307692,
+      "balanced_accuracy": 0.8264260216732708,
+      "AUROC": 0.9001968958219786,
+      "BCE": 0.38825470209121704
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_2",
+      "n_samples": 1671,
+      "accuracy": 0.8432076600837821,
+      "balanced_accuracy": 0.8421318370608432,
+      "AUROC": 0.9134455245002913,
+      "BCE": 0.3502916693687439
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_3",
+      "n_samples": 1784,
+      "accuracy": 0.649103139013453,
+      "balanced_accuracy": 0.6838316326530612,
+      "AUROC": 0.7972551020408164,
+      "BCE": 0.6378282904624939
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_4",
+      "n_samples": 2102,
+      "accuracy": 0.7497621313035204,
+      "balanced_accuracy": 0.7799401030004478,
+      "AUROC": 0.8459331616659203,
+      "BCE": 0.5065034031867981
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "city",
+      "fold": "fold_5",
+      "n_samples": 1966,
+      "accuracy": 0.7222787385554426,
+      "balanced_accuracy": 0.7509002448497129,
+      "AUROC": 0.8226269630192503,
+      "BCE": 0.5888283848762512
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_1",
+      "n_samples": 507,
+      "accuracy": 0.6627218934911243,
+      "balanced_accuracy": 0.648962302774541,
+      "AUROC": 0.6957137908229143,
+      "BCE": 0.7780521512031555
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_2",
+      "n_samples": 512,
+      "accuracy": 0.80859375,
+      "balanced_accuracy": 0.8006632277081798,
+      "AUROC": 0.8238147875214935,
+      "BCE": 0.5330379605293274
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_3",
+      "n_samples": 474,
+      "accuracy": 0.7932489451476793,
+      "balanced_accuracy": 0.799176807444524,
+      "AUROC": 0.8590372226198998,
+      "BCE": 0.5263041257858276
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_4",
+      "n_samples": 418,
+      "accuracy": 0.7918660287081339,
+      "balanced_accuracy": 0.7789928968281876,
+      "AUROC": 0.8462737651499168,
+      "BCE": 0.5659328699111938
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "vrq",
+      "fold": "fold_5",
+      "n_samples": 379,
+      "accuracy": 0.9234828496042217,
+      "balanced_accuracy": 0.9240039008080245,
+      "AUROC": 0.9765254945667318,
+      "BCE": 0.2787032425403595
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_1",
+      "n_samples": 1820,
+      "accuracy": 0.771978021978022,
+      "balanced_accuracy": 0.7577457146925528,
+      "AUROC": 0.890789719190223,
+      "BCE": 0.5498034358024597
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_2",
+      "n_samples": 1671,
+      "accuracy": 0.8641532016756434,
+      "balanced_accuracy": 0.8673528972717613,
+      "AUROC": 0.9197634121569211,
+      "BCE": 0.3722933530807495
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_3",
+      "n_samples": 1784,
+      "accuracy": 0.7326233183856502,
+      "balanced_accuracy": 0.7508928571428571,
+      "AUROC": 0.8206862244897959,
+      "BCE": 0.5668678879737854
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_4",
+      "n_samples": 2102,
+      "accuracy": 0.7921027592768791,
+      "balanced_accuracy": 0.7883658008658009,
+      "AUROC": 0.8796518137035376,
+      "BCE": 0.4230988323688507
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "city",
+      "fold": "fold_5",
+      "n_samples": 1966,
+      "accuracy": 0.6683621566632757,
+      "balanced_accuracy": 0.7079164555893279,
+      "AUROC": 0.7844377955082742,
+      "BCE": 0.7240241169929504
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_1",
+      "n_samples": 507,
+      "accuracy": 0.5798816568047337,
+      "balanced_accuracy": 0.5885191950366895,
+      "AUROC": 0.6804160236828016,
+      "BCE": 0.8473303914070129
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_2",
+      "n_samples": 512,
+      "accuracy": 0.787109375,
+      "balanced_accuracy": 0.7764369933677229,
+      "AUROC": 0.8306850282485876,
+      "BCE": 0.494810551404953
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_3",
+      "n_samples": 474,
+      "accuracy": 0.7616033755274262,
+      "balanced_accuracy": 0.769649248389406,
+      "AUROC": 0.8629652827487475,
+      "BCE": 0.5700405240058899
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_4",
+      "n_samples": 418,
+      "accuracy": 0.784688995215311,
+      "balanced_accuracy": 0.7840213798438709,
+      "AUROC": 0.8397566636191013,
+      "BCE": 0.5348034501075745
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "vrq",
+      "fold": "fold_5",
+      "n_samples": 379,
+      "accuracy": 0.9102902374670184,
+      "balanced_accuracy": 0.9114934522151017,
+      "AUROC": 0.9794371691278907,
+      "BCE": 0.23658116161823273
+    }
+  ],
+  "datasets": [
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "city",
+      "n_samples": 154,
+      "n_subjects": 25,
+      "negative_count": 77,
+      "positive_count": 77,
+      "positive_fraction": 0.5,
+      "majority_accuracy": 0.5,
+      "accuracy": 0.6883116883116883,
+      "accuracy_fold_mean": 0.6896812957157785,
+      "accuracy_fold_std": 0.06748055455320069,
+      "balanced_accuracy": 0.6883116883116883,
+      "balanced_accuracy_fold_mean": 0.6920938375350139,
+      "balanced_accuracy_fold_std": 0.06160041580089927,
+      "AUROC": 0.7151290268173385,
+      "AUROC_fold_mean": 0.7962628384687209,
+      "AUROC_fold_std": 0.12204873886938271,
+      "BCE": 0.7572138905525208,
+      "BCE_fold_mean": 0.7593883991241455,
+      "BCE_fold_std": 0.23715618323826443
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "vrq",
+      "n_samples": 23,
+      "n_subjects": 23,
+      "negative_count": 11,
+      "positive_count": 12,
+      "positive_fraction": 0.5217391304347826,
+      "majority_accuracy": 0.5217391304347826,
+      "accuracy": 0.6086956521739131,
+      "accuracy_fold_mean": 0.6,
+      "accuracy_fold_std": 0.2345207879911715,
+      "balanced_accuracy": 0.6136363636363636,
+      "balanced_accuracy_fold_mean": 0.5666666666666667,
+      "balanced_accuracy_fold_std": 0.25276251480171835,
+      "AUROC": 0.6818181818181819,
+      "AUROC_fold_mean": 0.6666666666666666,
+      "AUROC_fold_std": 0.3118047822311618,
+      "BCE": 0.9092297554016113,
+      "BCE_fold_mean": 0.9136849798262119,
+      "BCE_fold_std": 0.7002932690694463
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "city",
+      "n_samples": 154,
+      "n_subjects": 25,
+      "negative_count": 77,
+      "positive_count": 77,
+      "positive_fraction": 0.5,
+      "majority_accuracy": 0.5,
+      "accuracy": 0.6948051948051948,
+      "accuracy_fold_mean": 0.6983960292580982,
+      "accuracy_fold_std": 0.12092638679277545,
+      "balanced_accuracy": 0.6948051948051948,
+      "balanced_accuracy_fold_mean": 0.7028501400560224,
+      "balanced_accuracy_fold_std": 0.11586672402019701,
+      "AUROC": 0.7364648338674313,
+      "AUROC_fold_mean": 0.7612103174603175,
+      "AUROC_fold_std": 0.1585445007980666,
+      "BCE": 0.8417104482650757,
+      "BCE_fold_mean": 0.8456755101680755,
+      "BCE_fold_std": 0.5209656317629363
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "vrq",
+      "n_samples": 23,
+      "n_subjects": 23,
+      "negative_count": 11,
+      "positive_count": 12,
+      "positive_fraction": 0.5217391304347826,
+      "majority_accuracy": 0.5217391304347826,
+      "accuracy": 0.6956521739130435,
+      "accuracy_fold_mean": 0.6799999999999999,
+      "accuracy_fold_std": 0.21679483388678802,
+      "balanced_accuracy": 0.6931818181818181,
+      "balanced_accuracy_fold_mean": 0.65,
+      "balanced_accuracy_fold_std": 0.22360679774997896,
+      "AUROC": 0.7765151515151515,
+      "AUROC_fold_mean": 0.7333333333333333,
+      "AUROC_fold_std": 0.3084459253886958,
+      "BCE": 0.8034629225730896,
+      "BCE_fold_mean": 0.8122649148106575,
+      "BCE_fold_std": 0.5329538757460001
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "city",
+      "n_samples": 9343,
+      "n_subjects": 25,
+      "negative_count": 5335,
+      "positive_count": 4008,
+      "positive_fraction": 0.4289842662956224,
+      "majority_accuracy": 0.5710157337043776,
+      "accuracy": 0.7714866745156802,
+      "accuracy_fold_mean": 0.7732707819898135,
+      "accuracy_fold_std": 0.07421450590823764,
+      "balanced_accuracy": 0.789759539028784,
+      "balanced_accuracy_fold_mean": 0.7908625945302801,
+      "balanced_accuracy_fold_std": 0.06476663374567736,
+      "AUROC": 0.8475137587991776,
+      "AUROC_fold_mean": 0.8575344850811077,
+      "AUROC_fold_std": 0.04889374612449431,
+      "BCE": 0.4772599935531616,
+      "BCE_fold_mean": 0.4737445890903473,
+      "BCE_fold_std": 0.12739926721962688
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "vrq",
+      "n_samples": 2290,
+      "n_subjects": 23,
+      "negative_count": 1044,
+      "positive_count": 1246,
+      "positive_fraction": 0.5441048034934498,
+      "majority_accuracy": 0.5441048034934498,
+      "accuracy": 0.7820960698689956,
+      "accuracy_fold_mean": 0.7892363399472251,
+      "accuracy_fold_std": 0.10651860127816867,
+      "balanced_accuracy": 0.7796496682103036,
+      "balanced_accuracy_fold_mean": 0.7857341817716419,
+      "balanced_accuracy_fold_std": 0.11267096076760008,
+      "AUROC": 0.8172861970566349,
+      "AUROC_fold_mean": 0.8457556458999314,
+      "AUROC_fold_std": 0.09099070464428796,
+      "BCE": 0.5251516103744507,
+      "BCE_fold_mean": 0.5164503276348114,
+      "BCE_fold_std": 0.12046332338484168
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "city",
+      "n_samples": 9343,
+      "n_subjects": 25,
+      "negative_count": 5335,
+      "positive_count": 4008,
+      "positive_fraction": 0.4289842662956224,
+      "majority_accuracy": 0.5710157337043776,
+      "accuracy": 0.7672053944129295,
+      "accuracy_fold_mean": 0.7691352938716617,
+      "accuracy_fold_std": 0.06161064343059765,
+      "balanced_accuracy": 0.7729471703266382,
+      "balanced_accuracy_fold_mean": 0.7741431188557785,
+      "balanced_accuracy_fold_std": 0.04766799966888651,
+      "AUROC": 0.8403671803534448,
+      "AUROC_fold_mean": 0.8651061647432652,
+      "AUROC_fold_std": 0.049443800929754624,
+      "BCE": 0.49487438797950745,
+      "BCE_fold_mean": 0.49232375621795654,
+      "BCE_fold_std": 0.12419011523628783
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "vrq",
+      "n_samples": 2290,
+      "n_subjects": 23,
+      "negative_count": 1044,
+      "positive_count": 1246,
+      "positive_fraction": 0.5441048034934498,
+      "majority_accuracy": 0.5441048034934498,
+      "accuracy": 0.7641921397379913,
+      "accuracy_fold_mean": 0.7724032790609099,
+      "accuracy_fold_std": 0.107275895128201,
+      "balanced_accuracy": 0.7628088042656039,
+      "balanced_accuracy_fold_mean": 0.7711680709124127,
+      "balanced_accuracy_fold_std": 0.10872637400294514,
+      "AUROC": 0.8308183889596135,
+      "AUROC_fold_mean": 0.8446159939923144,
+      "AUROC_fold_std": 0.09032466771384522,
+      "BCE": 0.5579348206520081,
+      "BCE_fold_mean": 0.5442408204078675,
+      "BCE_fold_std": 0.1794211706709342
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "city",
+      "n_samples": 154,
+      "n_subjects": 25,
+      "negative_count": 77,
+      "positive_count": 77,
+      "positive_fraction": 0.5,
+      "majority_accuracy": 0.5,
+      "accuracy": 0.7467532467532467,
+      "accuracy_fold_mean": 0.7482850052246605,
+      "accuracy_fold_std": 0.08681726431626138,
+      "balanced_accuracy": 0.7467532467532467,
+      "balanced_accuracy_fold_mean": 0.7496008403361344,
+      "balanced_accuracy_fold_std": 0.08535862912252783,
+      "AUROC": 0.7927137797267667,
+      "AUROC_fold_mean": 0.7944743230625584,
+      "AUROC_fold_std": 0.10620266392399033,
+      "BCE": 0.5582789778709412,
+      "BCE_fold_mean": 0.5548618972301483,
+      "BCE_fold_std": 0.12529167026779744
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "vrq",
+      "n_samples": 23,
+      "n_subjects": 23,
+      "negative_count": 11,
+      "positive_count": 12,
+      "positive_fraction": 0.5217391304347826,
+      "majority_accuracy": 0.5217391304347826,
+      "accuracy": 0.5652173913043478,
+      "accuracy_fold_mean": 0.5599999999999999,
+      "accuracy_fold_std": 0.15165750888103102,
+      "balanced_accuracy": 0.5606060606060606,
+      "balanced_accuracy_fold_mean": 0.5833333333333333,
+      "balanced_accuracy_fold_std": 0.1443375672974064,
+      "AUROC": 0.6287878787878788,
+      "AUROC_fold_mean": 0.6166666666666667,
+      "AUROC_fold_std": 0.2608745973749755,
+      "BCE": 0.6499414443969727,
+      "BCE_fold_mean": 0.6555709123611451,
+      "BCE_fold_std": 0.12809318127185992
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "city",
+      "n_samples": 154,
+      "n_subjects": 25,
+      "negative_count": 77,
+      "positive_count": 77,
+      "positive_fraction": 0.5,
+      "majority_accuracy": 0.5,
+      "accuracy": 0.6818181818181818,
+      "accuracy_fold_mean": 0.6863153082549635,
+      "accuracy_fold_std": 0.14799560270514414,
+      "balanced_accuracy": 0.6818181818181819,
+      "balanced_accuracy_fold_mean": 0.6915616246498599,
+      "balanced_accuracy_fold_std": 0.14266860791237104,
+      "AUROC": 0.7310676336650362,
+      "AUROC_fold_mean": 0.7782133520074697,
+      "AUROC_fold_std": 0.13418591142113886,
+      "BCE": 0.7086873650550842,
+      "BCE_fold_mean": 0.7043510496616363,
+      "BCE_fold_std": 0.23796440899611696
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "vrq",
+      "n_samples": 23,
+      "n_subjects": 23,
+      "negative_count": 11,
+      "positive_count": 12,
+      "positive_fraction": 0.5217391304347826,
+      "majority_accuracy": 0.5217391304347826,
+      "accuracy": 0.6521739130434783,
+      "accuracy_fold_mean": 0.64,
+      "accuracy_fold_std": 0.25099800796022265,
+      "balanced_accuracy": 0.6477272727272727,
+      "balanced_accuracy_fold_mean": 0.6666666666666666,
+      "balanced_accuracy_fold_std": 0.2357022603955158,
+      "AUROC": 0.7954545454545455,
+      "AUROC_fold_mean": 0.75,
+      "AUROC_fold_std": 0.25,
+      "BCE": 0.5569793581962585,
+      "BCE_fold_mean": 0.585310646891594,
+      "BCE_fold_std": 0.39081527126214427
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "city",
+      "n_samples": 9343,
+      "n_subjects": 25,
+      "negative_count": 5335,
+      "positive_count": 4008,
+      "positive_fraction": 0.4289842662956224,
+      "majority_accuracy": 0.5710157337043776,
+      "accuracy": 0.7662421063898106,
+      "accuracy_fold_mean": 0.7675710616065068,
+      "accuracy_fold_std": 0.06233636938112069,
+      "balanced_accuracy": 0.7781234625407105,
+      "balanced_accuracy_fold_mean": 0.7784090706386468,
+      "balanced_accuracy_fold_std": 0.05157602439506637,
+      "AUROC": 0.8409259503486,
+      "AUROC_fold_mean": 0.8511660730199819,
+      "AUROC_fold_std": 0.04974418296324502,
+      "BCE": 0.4754176437854767,
+      "BCE_fold_mean": 0.4729521334171295,
+      "BCE_fold_std": 0.09744842857507462
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "vrq",
+      "n_samples": 2290,
+      "n_subjects": 23,
+      "negative_count": 1044,
+      "positive_count": 1246,
+      "positive_fraction": 0.5441048034934498,
+      "majority_accuracy": 0.5441048034934498,
+      "accuracy": 0.7820960698689956,
+      "accuracy_fold_mean": 0.7848780392600752,
+      "accuracy_fold_std": 0.048023036419246934,
+      "balanced_accuracy": 0.7737487930726985,
+      "balanced_accuracy_fold_mean": 0.7770920496576764,
+      "balanced_accuracy_fold_std": 0.05530898494098229,
+      "AUROC": 0.8100061960726432,
+      "AUROC_fold_mean": 0.8324173042942512,
+      "AUROC_fold_std": 0.10277665494680609,
+      "BCE": 0.5457018613815308,
+      "BCE_fold_mean": 0.5386519193649292,
+      "BCE_fold_std": 0.13955039555355017
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "city",
+      "n_samples": 9343,
+      "n_subjects": 25,
+      "negative_count": 5335,
+      "positive_count": 4008,
+      "positive_fraction": 0.4289842662956224,
+      "majority_accuracy": 0.5710157337043776,
+      "accuracy": 0.7882906989189767,
+      "accuracy_fold_mean": 0.7894330102719082,
+      "accuracy_fold_std": 0.0555339708864974,
+      "balanced_accuracy": 0.8027360227997613,
+      "balanced_accuracy_fold_mean": 0.803111523428437,
+      "balanced_accuracy_fold_std": 0.04334602041276814,
+      "AUROC": 0.8550636075552738,
+      "AUROC_fold_mean": 0.8755658887243051,
+      "AUROC_fold_std": 0.04789489137299516,
+      "BCE": 0.5097232460975647,
+      "BCE_fold_mean": 0.506860226392746,
+      "BCE_fold_std": 0.19389599801746268
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "vrq",
+      "n_samples": 2290,
+      "n_subjects": 23,
+      "negative_count": 1044,
+      "positive_count": 1246,
+      "positive_fraction": 0.5441048034934498,
+      "majority_accuracy": 0.5441048034934498,
+      "accuracy": 0.7917030567685589,
+      "accuracy_fold_mean": 0.7985727262916056,
+      "accuracy_fold_std": 0.08458264644871073,
+      "balanced_accuracy": 0.7890214202689987,
+      "balanced_accuracy_fold_mean": 0.7947982979155885,
+      "balanced_accuracy_fold_std": 0.0897137713070209,
+      "AUROC": 0.839695838945161,
+      "AUROC_fold_mean": 0.8527686128036157,
+      "AUROC_fold_std": 0.08444330036715385,
+      "BCE": 0.5105851888656616,
+      "BCE_fold_mean": 0.4968110680580139,
+      "BCE_fold_std": 0.16427568458702693
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "city",
+      "n_samples": 154,
+      "n_subjects": 25,
+      "negative_count": 77,
+      "positive_count": 77,
+      "positive_fraction": 0.5,
+      "majority_accuracy": 0.5,
+      "accuracy": 0.7142857142857143,
+      "accuracy_fold_mean": 0.716726750261233,
+      "accuracy_fold_std": 0.09178424457447691,
+      "balanced_accuracy": 0.7142857142857143,
+      "balanced_accuracy_fold_mean": 0.717608543417367,
+      "balanced_accuracy_fold_std": 0.08869970299994162,
+      "AUROC": 0.7440546466520492,
+      "AUROC_fold_mean": 0.7857103174603175,
+      "AUROC_fold_std": 0.10413813174982575,
+      "BCE": 0.6487439274787903,
+      "BCE_fold_mean": 0.64637570977211,
+      "BCE_fold_std": 0.16135313165096052
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "vrq",
+      "n_samples": 23,
+      "n_subjects": 23,
+      "negative_count": 11,
+      "positive_count": 12,
+      "positive_fraction": 0.5217391304347826,
+      "majority_accuracy": 0.5217391304347826,
+      "accuracy": 0.6086956521739131,
+      "accuracy_fold_mean": 0.6,
+      "accuracy_fold_std": 0.12247448713915893,
+      "balanced_accuracy": 0.606060606060606,
+      "balanced_accuracy_fold_mean": 0.5666666666666667,
+      "balanced_accuracy_fold_std": 0.14907119849998596,
+      "AUROC": 0.6363636363636364,
+      "AUROC_fold_mean": 0.6833333333333333,
+      "AUROC_fold_std": 0.2661453237111885,
+      "BCE": 1.2624469995498657,
+      "BCE_fold_mean": 1.32427898645401,
+      "BCE_fold_std": 1.1852713753193482
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "city",
+      "n_samples": 154,
+      "n_subjects": 25,
+      "negative_count": 77,
+      "positive_count": 77,
+      "positive_fraction": 0.5,
+      "majority_accuracy": 0.5,
+      "accuracy": 0.6363636363636364,
+      "accuracy_fold_mean": 0.6420702716823408,
+      "accuracy_fold_std": 0.15972123201474422,
+      "balanced_accuracy": 0.6363636363636364,
+      "balanced_accuracy_fold_mean": 0.637359943977591,
+      "balanced_accuracy_fold_std": 0.16199675733062255,
+      "AUROC": 0.7181649519311856,
+      "AUROC_fold_mean": 0.7674248366013072,
+      "AUROC_fold_std": 0.14909966316579537,
+      "BCE": 0.7942937016487122,
+      "BCE_fold_mean": 0.7875461101531982,
+      "BCE_fold_std": 0.39655061961551896
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "vrq",
+      "n_samples": 23,
+      "n_subjects": 23,
+      "negative_count": 11,
+      "positive_count": 12,
+      "positive_fraction": 0.5217391304347826,
+      "majority_accuracy": 0.5217391304347826,
+      "accuracy": 0.6956521739130435,
+      "accuracy_fold_mean": 0.6799999999999999,
+      "accuracy_fold_std": 0.21679483388678802,
+      "balanced_accuracy": 0.6931818181818181,
+      "balanced_accuracy_fold_mean": 0.65,
+      "balanced_accuracy_fold_std": 0.22360679774997896,
+      "AUROC": 0.7613636363636364,
+      "AUROC_fold_mean": 0.75,
+      "AUROC_fold_std": 0.25,
+      "BCE": 0.9933071136474609,
+      "BCE_fold_mean": 1.0475616307929159,
+      "BCE_fold_std": 0.936168213274172
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "city",
+      "n_samples": 9343,
+      "n_subjects": 25,
+      "negative_count": 5335,
+      "positive_count": 4008,
+      "positive_fraction": 0.4289842662956224,
+      "majority_accuracy": 0.5710157337043776,
+      "accuracy": 0.7550037461200899,
+      "accuracy_fold_mean": 0.7567164876373935,
+      "accuracy_fold_std": 0.0777877123172331,
+      "balanced_accuracy": 0.7758540557123803,
+      "balanced_accuracy_fold_mean": 0.7766459678474671,
+      "balanced_accuracy_fold_std": 0.0633534671943731,
+      "AUROC": 0.8420951676777655,
+      "AUROC_fold_mean": 0.8558915294096513,
+      "AUROC_fold_std": 0.04979798922563394,
+      "BCE": 0.49792933464050293,
+      "BCE_fold_mean": 0.4943412899971008,
+      "BCE_fold_std": 0.1241661233340063
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "vrq",
+      "n_samples": 2290,
+      "n_subjects": 23,
+      "negative_count": 1044,
+      "positive_count": 1246,
+      "positive_fraction": 0.5441048034934498,
+      "majority_accuracy": 0.5441048034934498,
+      "accuracy": 0.7890829694323144,
+      "accuracy_fold_mean": 0.7959826933902318,
+      "accuracy_fold_std": 0.09246376274075571,
+      "balanced_accuracy": 0.7852937830175335,
+      "balanced_accuracy_fold_mean": 0.7903598271126914,
+      "balanced_accuracy_fold_std": 0.09768201553118319,
+      "AUROC": 0.8180676248285702,
+      "AUROC_fold_mean": 0.8402730121361912,
+      "AUROC_fold_std": 0.10015124215962355,
+      "BCE": 0.5498010516166687,
+      "BCE_fold_mean": 0.5364060699939728,
+      "BCE_fold_std": 0.17733358480054168
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "city",
+      "n_samples": 9343,
+      "n_subjects": 25,
+      "negative_count": 5335,
+      "positive_count": 4008,
+      "positive_fraction": 0.4289842662956224,
+      "majority_accuracy": 0.5710157337043776,
+      "accuracy": 0.7636733383281601,
+      "accuracy_fold_mean": 0.765843891595894,
+      "accuracy_fold_std": 0.07245372879583073,
+      "balanced_accuracy": 0.7729883952806664,
+      "balanced_accuracy_fold_mean": 0.77445474511246,
+      "balanced_accuracy_fold_std": 0.05934071616882229,
+      "AUROC": 0.8355723417270426,
+      "AUROC_fold_mean": 0.8590657930097503,
+      "AUROC_fold_std": 0.05512876291307089,
+      "BCE": 0.5294682383537292,
+      "BCE_fold_mean": 0.5272175252437592,
+      "BCE_fold_std": 0.13752937004754157
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "vrq",
+      "n_samples": 2290,
+      "n_subjects": 23,
+      "negative_count": 1044,
+      "positive_count": 1246,
+      "positive_fraction": 0.5441048034934498,
+      "majority_accuracy": 0.5441048034934498,
+      "accuracy": 0.7558951965065502,
+      "accuracy_fold_mean": 0.7647147280028979,
+      "accuracy_fold_std": 0.1186019237231296,
+      "balanced_accuracy": 0.757668985197075,
+      "balanced_accuracy_fold_mean": 0.7660240537705583,
+      "balanced_accuracy_fold_std": 0.11523323723086139,
+      "AUROC": 0.8340786301605752,
+      "AUROC_fold_mean": 0.8386520334854257,
+      "AUROC_fold_std": 0.10667112623156261,
+      "BCE": 0.5529915690422058,
+      "BCE_fold_mean": 0.5367132157087326,
+      "BCE_fold_std": 0.2176192027890114
+    }
+  ],
+  "dataset_macros": [
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "dataset_macro",
+      "accuracy": 0.7741690881294031,
+      "balanced_accuracy": 0.7759361278067045,
+      "AUROC": 0.8254660732106216,
+      "BCE": 0.5105597525835037
+    },
+    {
+      "head": "linear",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "dataset_macro",
+      "accuracy": 0.7899968778437678,
+      "balanced_accuracy": 0.79587872153438,
+      "AUROC": 0.8473797232502174,
+      "BCE": 0.5101542174816132
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "dataset_macro",
+      "accuracy": 0.6559853190287972,
+      "balanced_accuracy": 0.6536796536796536,
+      "AUROC": 0.7107508292573228,
+      "BCE": 0.6041102111339569
+    },
+    {
+      "head": "linear",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "dataset_macro",
+      "accuracy": 0.6669960474308301,
+      "balanced_accuracy": 0.6647727272727273,
+      "AUROC": 0.7632610895597909,
+      "BCE": 0.6328333616256714
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "dataset_macro",
+      "accuracy": 0.7767913721923378,
+      "balanced_accuracy": 0.7847046036195438,
+      "AUROC": 0.8323999779279062,
+      "BCE": 0.5012058019638062
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "dataset_macro",
+      "accuracy": 0.7656987670754604,
+      "balanced_accuracy": 0.767877987296121,
+      "AUROC": 0.8355927846565292,
+      "BCE": 0.5264046043157578
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "dataset_macro",
+      "accuracy": 0.6485036702428006,
+      "balanced_accuracy": 0.650974025974026,
+      "AUROC": 0.6984736043177602,
+      "BCE": 0.833221822977066
+    },
+    {
+      "head": "fractional_dog_polykan",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "dataset_macro",
+      "accuracy": 0.6952286843591191,
+      "balanced_accuracy": 0.6939935064935064,
+      "AUROC": 0.7564899926912914,
+      "BCE": 0.8225866854190826
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A3",
+      "dataset": "dataset_macro",
+      "accuracy": 0.7720433577762021,
+      "balanced_accuracy": 0.7805739193649569,
+      "AUROC": 0.8300813962531679,
+      "BCE": 0.5238651931285858
+    },
+    {
+      "head": "mlp",
+      "task": "state",
+      "variant": "A4",
+      "dataset": "dataset_macro",
+      "accuracy": 0.7597842674173552,
+      "balanced_accuracy": 0.7653286902388707,
+      "AUROC": 0.8348254859438089,
+      "BCE": 0.5412299036979675
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A3",
+      "dataset": "dataset_macro",
+      "accuracy": 0.6614906832298137,
+      "balanced_accuracy": 0.6601731601731602,
+      "AUROC": 0.6902091415078428,
+      "BCE": 0.955595463514328
+    },
+    {
+      "head": "mlp",
+      "task": "severity",
+      "variant": "A4",
+      "dataset": "dataset_macro",
+      "accuracy": 0.6660079051383399,
+      "balanced_accuracy": 0.6647727272727273,
+      "AUROC": 0.739764294147411,
+      "BCE": 0.8938004076480865
+    }
+  ],
+  "comparisons": [
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A3",
+      "metric": "accuracy",
+      "difference": 0.0,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A3",
+      "metric": "balanced_accuracy",
+      "difference": 0.5900875137605066,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A3",
+      "metric": "AUROC",
+      "difference": 0.7280000983991619,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A3",
+      "metric": "BCE",
+      "difference": -0.020550251007080078,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A3",
+      "metric": "accuracy",
+      "difference": 0.6986899563318771,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A3",
+      "metric": "balanced_accuracy",
+      "difference": 1.1544989944834994,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A3",
+      "metric": "AUROC",
+      "difference": 0.8061428755926969,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A3",
+      "metric": "BCE",
+      "difference": 0.0040991902351379395,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A3",
+      "metric": "accuracy",
+      "difference": -0.6986899563318771,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A3",
+      "metric": "balanced_accuracy",
+      "difference": -0.5644114807229927,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A3",
+      "metric": "AUROC",
+      "difference": -0.07814277719353502,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A3",
+      "metric": "BCE",
+      "difference": -0.024649441242218018,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A4",
+      "metric": "accuracy",
+      "difference": -2.7510917030567628,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A4",
+      "metric": "balanced_accuracy",
+      "difference": -2.621261600339475,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A4",
+      "metric": "AUROC",
+      "difference": -0.8877449985547514,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A4",
+      "metric": "BCE",
+      "difference": 0.047349631786346436,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A4",
+      "metric": "accuracy",
+      "difference": -3.580786026200866,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A4",
+      "metric": "balanced_accuracy",
+      "difference": -3.1352435071923646,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A4",
+      "metric": "AUROC",
+      "difference": -0.5617208784585825,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A4",
+      "metric": "BCE",
+      "difference": 0.04240638017654419,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A4",
+      "metric": "accuracy",
+      "difference": 0.8296943231441034,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A4",
+      "metric": "balanced_accuracy",
+      "difference": 0.5139819068528895,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A4",
+      "metric": "AUROC",
+      "difference": -0.3260241200961689,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A4",
+      "metric": "BCE",
+      "difference": 0.004943251609802246,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A3",
+      "metric": "accuracy",
+      "difference": 0.5244568125869598,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A3",
+      "metric": "balanced_accuracy",
+      "difference": 1.1636076488073521,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A3",
+      "metric": "AUROC",
+      "difference": 0.6587808450577604,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A3",
+      "metric": "BCE",
+      "difference": 0.0018423497676849365,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A3",
+      "metric": "accuracy",
+      "difference": -1.1238360269720693,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A3",
+      "metric": "balanced_accuracy",
+      "difference": -0.22694068283302116,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A3",
+      "metric": "AUROC",
+      "difference": 0.11692173291655283,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A3",
+      "metric": "BCE",
+      "difference": 0.022511690855026245,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A3",
+      "metric": "accuracy",
+      "difference": 1.648292839559029,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A3",
+      "metric": "balanced_accuracy",
+      "difference": 1.3905483316403733,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A3",
+      "metric": "AUROC",
+      "difference": 0.5418591121412075,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A3",
+      "metric": "BCE",
+      "difference": -0.02066934108734131,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A4",
+      "metric": "accuracy",
+      "difference": -2.1085304506047287,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A4",
+      "metric": "balanced_accuracy",
+      "difference": -2.978885247312313,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A4",
+      "metric": "AUROC",
+      "difference": -1.4696427201828954,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A4",
+      "metric": "BCE",
+      "difference": -0.014848858118057251,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A4",
+      "metric": "accuracy",
+      "difference": -2.461736059081665,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A4",
+      "metric": "balanced_accuracy",
+      "difference": -2.9747627519094877,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A4",
+      "metric": "AUROC",
+      "difference": -1.949126582823113,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A4",
+      "metric": "BCE",
+      "difference": 0.01974499225616455,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A4",
+      "metric": "accuracy",
+      "difference": 0.3532056084769364,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A4",
+      "metric": "balanced_accuracy",
+      "difference": -0.004122495402825166,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A4",
+      "metric": "AUROC",
+      "difference": 0.4794838626402176,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A4",
+      "metric": "BCE",
+      "difference": -0.0345938503742218,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A3",
+      "metric": "accuracy",
+      "difference": 0.2622284062934743,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A3",
+      "metric": "balanced_accuracy",
+      "difference": 0.8768475812839238,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A3",
+      "metric": "AUROC",
+      "difference": 0.6933904717284611,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A3",
+      "metric": "BCE",
+      "difference": -0.00935395061969757,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A3",
+      "metric": "accuracy",
+      "difference": -0.21257303532009608,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A3",
+      "metric": "balanced_accuracy",
+      "difference": 0.4637791558252391,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A3",
+      "metric": "AUROC",
+      "difference": 0.46153230425463043,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A3",
+      "metric": "BCE",
+      "difference": 0.013305440545082092,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A3",
+      "metric": "accuracy",
+      "difference": 0.4748014416135704,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A3",
+      "metric": "balanced_accuracy",
+      "difference": 0.4130684254586847,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A3",
+      "metric": "AUROC",
+      "difference": 0.2318581674738307,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A3",
+      "metric": "BCE",
+      "difference": -0.022659391164779663,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A4",
+      "metric": "accuracy",
+      "difference": -2.4298110768307457,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A4",
+      "metric": "balanced_accuracy",
+      "difference": -2.8000734238258995,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A4",
+      "metric": "AUROC",
+      "difference": -1.1786938593688179,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A4",
+      "metric": "BCE",
+      "difference": 0.016250386834144592,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A4",
+      "metric": "accuracy",
+      "difference": -3.0212610426412656,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A4",
+      "metric": "balanced_accuracy",
+      "difference": -3.055003129550926,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A4",
+      "metric": "AUROC",
+      "difference": -1.2554237306408478,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A4",
+      "metric": "BCE",
+      "difference": 0.03107568621635437,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A4",
+      "metric": "accuracy",
+      "difference": 0.5914499658105199,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A4",
+      "metric": "balanced_accuracy",
+      "difference": 0.2549297057250266,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A4",
+      "metric": "AUROC",
+      "difference": 0.0767298712720299,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A4",
+      "metric": "BCE",
+      "difference": -0.014825299382209778,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A3",
+      "metric": "accuracy",
+      "difference": 4.34782608695653,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A3",
+      "metric": "balanced_accuracy",
+      "difference": 5.30303030303031,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A3",
+      "metric": "AUROC",
+      "difference": 5.30303030303031,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A3",
+      "metric": "BCE",
+      "difference": 0.25928831100463867,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A3",
+      "metric": "accuracy",
+      "difference": 4.34782608695653,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A3",
+      "metric": "balanced_accuracy",
+      "difference": 4.545454545454541,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A3",
+      "metric": "AUROC",
+      "difference": 0.7575757575757569,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A3",
+      "metric": "BCE",
+      "difference": 0.6125055551528931,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A3",
+      "metric": "accuracy",
+      "difference": 0.0,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A3",
+      "metric": "balanced_accuracy",
+      "difference": 0.757575757575768,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A3",
+      "metric": "AUROC",
+      "difference": 4.545454545454552,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A3",
+      "metric": "BCE",
+      "difference": -0.3532172441482544,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A4",
+      "metric": "accuracy",
+      "difference": 4.347826086956519,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A4",
+      "metric": "balanced_accuracy",
+      "difference": 4.545454545454541,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A4",
+      "metric": "AUROC",
+      "difference": -1.8939393939394034,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A4",
+      "metric": "BCE",
+      "difference": 0.24648356437683105,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A4",
+      "metric": "accuracy",
+      "difference": 4.347826086956519,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A4",
+      "metric": "balanced_accuracy",
+      "difference": 4.545454545454541,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A4",
+      "metric": "AUROC",
+      "difference": -3.409090909090917,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A4",
+      "metric": "BCE",
+      "difference": 0.4363277554512024,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A4",
+      "metric": "accuracy",
+      "difference": 0.0,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A4",
+      "metric": "balanced_accuracy",
+      "difference": 0.0,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A4",
+      "metric": "AUROC",
+      "difference": 1.5151515151515138,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A4",
+      "metric": "BCE",
+      "difference": -0.18984419107437134,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A3",
+      "metric": "accuracy",
+      "difference": -5.844155844155841,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A3",
+      "metric": "balanced_accuracy",
+      "difference": -5.844155844155841,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A3",
+      "metric": "AUROC",
+      "difference": -7.758475290942823,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A3",
+      "metric": "BCE",
+      "difference": 0.1989349126815796,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A3",
+      "metric": "accuracy",
+      "difference": -3.2467532467532423,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A3",
+      "metric": "balanced_accuracy",
+      "difference": -3.2467532467532423,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A3",
+      "metric": "AUROC",
+      "difference": -4.8659133074717476,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A3",
+      "metric": "BCE",
+      "difference": 0.09046494960784912,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A3",
+      "metric": "accuracy",
+      "difference": -2.5974025974025983,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A3",
+      "metric": "balanced_accuracy",
+      "difference": -2.5974025974025983,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A3",
+      "metric": "AUROC",
+      "difference": -2.892561983471076,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A3",
+      "metric": "BCE",
+      "difference": 0.10846996307373047,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A4",
+      "metric": "accuracy",
+      "difference": 1.2987012987012991,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A4",
+      "metric": "balanced_accuracy",
+      "difference": 1.298701298701288,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A4",
+      "metric": "AUROC",
+      "difference": 0.5397200202395092,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A4",
+      "metric": "BCE",
+      "difference": 0.13302308320999146,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A4",
+      "metric": "accuracy",
+      "difference": -4.545454545454541,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A4",
+      "metric": "balanced_accuracy",
+      "difference": -4.545454545454552,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A4",
+      "metric": "AUROC",
+      "difference": -1.2902681733850674,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A4",
+      "metric": "BCE",
+      "difference": 0.08560633659362793,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A4",
+      "metric": "accuracy",
+      "difference": 5.844155844155841,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A4",
+      "metric": "balanced_accuracy",
+      "difference": 5.844155844155841,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A4",
+      "metric": "AUROC",
+      "difference": 1.8299881936245765,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A4",
+      "metric": "BCE",
+      "difference": 0.047416746616363525,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A3",
+      "metric": "accuracy",
+      "difference": -0.7481648785996553,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A3",
+      "metric": "balanced_accuracy",
+      "difference": -0.27056277056276556,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A3",
+      "metric": "AUROC",
+      "difference": -1.2277224939562625,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A3",
+      "metric": "BCE",
+      "difference": 0.22911161184310913,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A3",
+      "metric": "accuracy",
+      "difference": 0.5505364201016549,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A3",
+      "metric": "balanced_accuracy",
+      "difference": 0.6493506493506551,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A3",
+      "metric": "AUROC",
+      "difference": -2.0541687749479953,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A3",
+      "metric": "BCE",
+      "difference": 0.3514852523803711,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A3",
+      "metric": "accuracy",
+      "difference": -1.2987012987013102,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A3",
+      "metric": "balanced_accuracy",
+      "difference": -0.9199134199134207,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A3",
+      "metric": "AUROC",
+      "difference": 0.8264462809917328,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A3",
+      "metric": "BCE",
+      "difference": -0.12237364053726196,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A4",
+      "metric": "accuracy",
+      "difference": 2.8232636928289034,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A4",
+      "metric": "balanced_accuracy",
+      "difference": 2.9220779220779147,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A4",
+      "metric": "AUROC",
+      "difference": -0.6771096868499527,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-linear",
+      "variant_or_head": "A4",
+      "metric": "BCE",
+      "difference": 0.18975332379341125,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A4",
+      "metric": "accuracy",
+      "difference": -0.09881422924902239,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A4",
+      "metric": "balanced_accuracy",
+      "difference": 0.0,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A4",
+      "metric": "AUROC",
+      "difference": -2.3496795412379923,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "mlp-linear",
+      "variant_or_head": "A4",
+      "metric": "BCE",
+      "difference": 0.26096704602241516,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A4",
+      "metric": "accuracy",
+      "difference": 2.922077922077926,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A4",
+      "metric": "balanced_accuracy",
+      "difference": 2.9220779220779147,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A4",
+      "metric": "AUROC",
+      "difference": 1.6725698543880396,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "fractional_dog_polykan-mlp",
+      "variant_or_head": "A4",
+      "metric": "BCE",
+      "difference": -0.0712137222290039,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "A4-A3",
+      "variant_or_head": "linear",
+      "metric": "accuracy",
+      "difference": 0.9606986899563297,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "A4-A3",
+      "variant_or_head": "linear",
+      "metric": "balanced_accuracy",
+      "difference": 1.5272627196300181,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "A4-A3",
+      "variant_or_head": "linear",
+      "metric": "AUROC",
+      "difference": 2.968964287251774,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "A4-A3",
+      "variant_or_head": "linear",
+      "metric": "BCE",
+      "difference": -0.03511667251586914,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "A4-A3",
+      "variant_or_head": "fractional_dog_polykan",
+      "metric": "accuracy",
+      "difference": -1.790393013100433,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "A4-A3",
+      "variant_or_head": "fractional_dog_polykan",
+      "metric": "balanced_accuracy",
+      "difference": -1.6840863944699636,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "A4-A3",
+      "variant_or_head": "fractional_dog_polykan",
+      "metric": "AUROC",
+      "difference": 1.3532191902978608,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "A4-A3",
+      "variant_or_head": "fractional_dog_polykan",
+      "metric": "BCE",
+      "difference": 0.03278321027755737,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "A4-A3",
+      "variant_or_head": "mlp",
+      "metric": "accuracy",
+      "difference": -3.3187772925764136,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "A4-A3",
+      "variant_or_head": "mlp",
+      "metric": "balanced_accuracy",
+      "difference": -2.7624797820458458,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "A4-A3",
+      "variant_or_head": "mlp",
+      "metric": "AUROC",
+      "difference": 1.6011005332004946,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "vrq",
+      "comparison": "A4-A3",
+      "variant_or_head": "mlp",
+      "metric": "BCE",
+      "difference": 0.0031905174255371094,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "A4-A3",
+      "variant_or_head": "linear",
+      "metric": "accuracy",
+      "difference": 2.2048592529166133,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "A4-A3",
+      "variant_or_head": "linear",
+      "metric": "balanced_accuracy",
+      "difference": 2.4612560259050786,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "A4-A3",
+      "variant_or_head": "linear",
+      "metric": "AUROC",
+      "difference": 1.4137657206673815,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "A4-A3",
+      "variant_or_head": "linear",
+      "metric": "BCE",
+      "difference": 0.03430560231208801,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "A4-A3",
+      "variant_or_head": "fractional_dog_polykan",
+      "metric": "accuracy",
+      "difference": -0.4281280102750751,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "A4-A3",
+      "variant_or_head": "fractional_dog_polykan",
+      "metric": "balanced_accuracy",
+      "difference": -1.6812368702145863,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "A4-A3",
+      "variant_or_head": "fractional_dog_polykan",
+      "metric": "AUROC",
+      "difference": -0.7146578445732743,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "A4-A3",
+      "variant_or_head": "fractional_dog_polykan",
+      "metric": "BCE",
+      "difference": 0.017614394426345825,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "A4-A3",
+      "variant_or_head": "mlp",
+      "metric": "accuracy",
+      "difference": 0.8669592208070176,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "A4-A3",
+      "variant_or_head": "mlp",
+      "metric": "balanced_accuracy",
+      "difference": -0.2865660431713879,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "A4-A3",
+      "variant_or_head": "mlp",
+      "metric": "AUROC",
+      "difference": -0.6522825950722844,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "city",
+      "comparison": "A4-A3",
+      "variant_or_head": "mlp",
+      "metric": "BCE",
+      "difference": 0.03153890371322632,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "A4-A3",
+      "variant_or_head": "linear",
+      "metric": "accuracy",
+      "difference": 1.5827789714364715,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "A4-A3",
+      "variant_or_head": "linear",
+      "metric": "balanced_accuracy",
+      "difference": 1.9942593727675484,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "A4-A3",
+      "variant_or_head": "linear",
+      "metric": "AUROC",
+      "difference": 2.191365003959578,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "A4-A3",
+      "variant_or_head": "linear",
+      "metric": "BCE",
+      "difference": -0.00040553510189056396,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "A4-A3",
+      "variant_or_head": "fractional_dog_polykan",
+      "metric": "accuracy",
+      "difference": -1.1092605116877485,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "A4-A3",
+      "variant_or_head": "fractional_dog_polykan",
+      "metric": "balanced_accuracy",
+      "difference": -1.682661632342275,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "A4-A3",
+      "variant_or_head": "fractional_dog_polykan",
+      "metric": "AUROC",
+      "difference": 0.3192806728622988,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "A4-A3",
+      "variant_or_head": "fractional_dog_polykan",
+      "metric": "BCE",
+      "difference": 0.0251988023519516,
+      "unit": "BCE"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "A4-A3",
+      "variant_or_head": "mlp",
+      "metric": "accuracy",
+      "difference": -1.225909035884698,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "A4-A3",
+      "variant_or_head": "mlp",
+      "metric": "balanced_accuracy",
+      "difference": -1.5245229126086168,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "A4-A3",
+      "variant_or_head": "mlp",
+      "metric": "AUROC",
+      "difference": 0.4744089690640996,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "state",
+      "dataset": "dataset_macro",
+      "comparison": "A4-A3",
+      "variant_or_head": "mlp",
+      "metric": "BCE",
+      "difference": 0.017364710569381714,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "A4-A3",
+      "variant_or_head": "linear",
+      "metric": "accuracy",
+      "difference": 8.695652173913048,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "A4-A3",
+      "variant_or_head": "linear",
+      "metric": "balanced_accuracy",
+      "difference": 8.712121212121215,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "A4-A3",
+      "variant_or_head": "linear",
+      "metric": "AUROC",
+      "difference": 16.666666666666675,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "A4-A3",
+      "variant_or_head": "linear",
+      "metric": "BCE",
+      "difference": -0.09296208620071411,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "A4-A3",
+      "variant_or_head": "fractional_dog_polykan",
+      "metric": "accuracy",
+      "difference": 8.695652173913038,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "A4-A3",
+      "variant_or_head": "fractional_dog_polykan",
+      "metric": "balanced_accuracy",
+      "difference": 7.954545454545448,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "A4-A3",
+      "variant_or_head": "fractional_dog_polykan",
+      "metric": "AUROC",
+      "difference": 9.469696969696962,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "A4-A3",
+      "variant_or_head": "fractional_dog_polykan",
+      "metric": "BCE",
+      "difference": -0.10576683282852173,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "A4-A3",
+      "variant_or_head": "mlp",
+      "metric": "accuracy",
+      "difference": 8.695652173913038,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "A4-A3",
+      "variant_or_head": "mlp",
+      "metric": "balanced_accuracy",
+      "difference": 8.712121212121215,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "A4-A3",
+      "variant_or_head": "mlp",
+      "metric": "AUROC",
+      "difference": 12.5,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "vrq",
+      "comparison": "A4-A3",
+      "variant_or_head": "mlp",
+      "metric": "BCE",
+      "difference": -0.2691398859024048,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "A4-A3",
+      "variant_or_head": "linear",
+      "metric": "accuracy",
+      "difference": -6.493506493506496,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "A4-A3",
+      "variant_or_head": "linear",
+      "metric": "balanced_accuracy",
+      "difference": -6.493506493506485,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "A4-A3",
+      "variant_or_head": "linear",
+      "metric": "AUROC",
+      "difference": -6.164614606173046,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "A4-A3",
+      "variant_or_head": "linear",
+      "metric": "BCE",
+      "difference": 0.15040838718414307,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "A4-A3",
+      "variant_or_head": "fractional_dog_polykan",
+      "metric": "accuracy",
+      "difference": 0.649350649350644,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "A4-A3",
+      "variant_or_head": "fractional_dog_polykan",
+      "metric": "balanced_accuracy",
+      "difference": 0.649350649350644,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "A4-A3",
+      "variant_or_head": "fractional_dog_polykan",
+      "metric": "AUROC",
+      "difference": 2.133580705009286,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "A4-A3",
+      "variant_or_head": "fractional_dog_polykan",
+      "metric": "BCE",
+      "difference": 0.08449655771255493,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "A4-A3",
+      "variant_or_head": "mlp",
+      "metric": "accuracy",
+      "difference": -7.792207792207795,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "A4-A3",
+      "variant_or_head": "mlp",
+      "metric": "balanced_accuracy",
+      "difference": -7.792207792207795,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "A4-A3",
+      "variant_or_head": "mlp",
+      "metric": "AUROC",
+      "difference": -2.5889694720863665,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "city",
+      "comparison": "A4-A3",
+      "variant_or_head": "mlp",
+      "metric": "BCE",
+      "difference": 0.14554977416992188,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "A4-A3",
+      "variant_or_head": "linear",
+      "metric": "accuracy",
+      "difference": 1.1010728402032877,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "A4-A3",
+      "variant_or_head": "linear",
+      "metric": "balanced_accuracy",
+      "difference": 1.1093073593073655,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "A4-A3",
+      "variant_or_head": "linear",
+      "metric": "AUROC",
+      "difference": 5.251026030246808,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "A4-A3",
+      "variant_or_head": "linear",
+      "metric": "BCE",
+      "difference": 0.028723150491714478,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "A4-A3",
+      "variant_or_head": "fractional_dog_polykan",
+      "metric": "accuracy",
+      "difference": 4.672501411631846,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "A4-A3",
+      "variant_or_head": "fractional_dog_polykan",
+      "metric": "balanced_accuracy",
+      "difference": 4.301948051948045,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "A4-A3",
+      "variant_or_head": "fractional_dog_polykan",
+      "metric": "AUROC",
+      "difference": 5.801638837353118,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "A4-A3",
+      "variant_or_head": "fractional_dog_polykan",
+      "metric": "BCE",
+      "difference": -0.010635137557983398,
+      "unit": "BCE"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "A4-A3",
+      "variant_or_head": "mlp",
+      "metric": "accuracy",
+      "difference": 0.45172219085261034,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "A4-A3",
+      "variant_or_head": "mlp",
+      "metric": "balanced_accuracy",
+      "difference": 0.45995670995671034,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "A4-A3",
+      "variant_or_head": "mlp",
+      "metric": "AUROC",
+      "difference": 4.955515263956811,
+      "unit": "percentage_points"
+    },
+    {
+      "task": "severity",
+      "dataset": "dataset_macro",
+      "comparison": "A4-A3",
+      "variant_or_head": "mlp",
+      "metric": "BCE",
+      "difference": -0.061795055866241455,
+      "unit": "BCE"
+    }
+  ],
+  "baseline_manifest_sha256": "4af2ad3291e88d127789475b7f39cd12d0d82b7735c7e08ffc90ac5e0f64499a",
+  "new_report_manifest": [
+    {
+      "job": "fractional_dog_polykan/state/A3/vrq/fold_1",
+      "report_sha256": "e28d8547fd6d401f468ec76876547f26ea7767892289b463284dfbd668cdaea9"
+    },
+    {
+      "job": "mlp/state/A3/vrq/fold_1",
+      "report_sha256": "0eb5be5403d92d55ea5dfef6e3142db3b4bfc07694b5f6d0b3c909e5b9c67dd3"
+    },
+    {
+      "job": "fractional_dog_polykan/state/A4/vrq/fold_1",
+      "report_sha256": "8633a18891771ff472f7a600850266caadd0c503818d902da163cbda48324a1e"
+    },
+    {
+      "job": "mlp/state/A4/vrq/fold_1",
+      "report_sha256": "aab2537ea04b2179abf3577142a56dce345189d0fc621f53b8962f5369c9f72a"
+    },
+    {
+      "job": "fractional_dog_polykan/state/A3/vrq/fold_2",
+      "report_sha256": "55f112067bd9b7e582bb5a60c70099e75528ea58b9fbc91a266a7ed12f19f787"
+    },
+    {
+      "job": "mlp/state/A3/vrq/fold_2",
+      "report_sha256": "0159bb44947fe9ccb97d0e7b0a9d2df906f449c9d8a30aa14761c5c00907a372"
+    },
+    {
+      "job": "fractional_dog_polykan/state/A4/vrq/fold_2",
+      "report_sha256": "7b42a7c0d91f09f8ad79c27f556a4874920f7c0e2eb257167eb4e13f7fc55af2"
+    },
+    {
+      "job": "mlp/state/A4/vrq/fold_2",
+      "report_sha256": "d179fbe22411e6892eae141f6bf77ea16d6aaea120fbc6124e324610aba199c9"
+    },
+    {
+      "job": "fractional_dog_polykan/state/A3/vrq/fold_3",
+      "report_sha256": "9360b7a322d1682274a5c634f094a61eec3a02c3fdb346d9b83ed7b1b374f22a"
+    },
+    {
+      "job": "mlp/state/A3/vrq/fold_3",
+      "report_sha256": "489a0cac083294f91eadc9cb306236aed3f46ac3cd72bad81741205ad7f839c3"
+    },
+    {
+      "job": "fractional_dog_polykan/state/A4/vrq/fold_3",
+      "report_sha256": "f9b8f631facd4b84e8bebc46ddabbf4b1a83efde3eccd8f9622728170972e38a"
+    },
+    {
+      "job": "mlp/state/A4/vrq/fold_3",
+      "report_sha256": "7001f3f3465a46bb7f60155955d26c96ec705a459bbd9f66899076ba0249ef17"
+    },
+    {
+      "job": "fractional_dog_polykan/state/A3/vrq/fold_4",
+      "report_sha256": "945dce81cdc65c1cdb15f05e737829c4efcf784dd4490d018973c432cb7926a7"
+    },
+    {
+      "job": "mlp/state/A3/vrq/fold_4",
+      "report_sha256": "44437f1e9b89f3a0978394a0a6ab12010652d2ab0b5f9f0bb64d180832a32ef8"
+    },
+    {
+      "job": "fractional_dog_polykan/state/A4/vrq/fold_4",
+      "report_sha256": "6714da91e9d7f25b6000f3a6504a7a8332b8434677cda7e48c3634f1e36ff750"
+    },
+    {
+      "job": "mlp/state/A4/vrq/fold_4",
+      "report_sha256": "32cbbcbe35feb4ba957bbc3987f82678086be531edf9e8a98207160805ea21a0"
+    },
+    {
+      "job": "fractional_dog_polykan/state/A3/vrq/fold_5",
+      "report_sha256": "8a3631decdbe199bf55a412c82a09cc915b3a62b8ed5bf6de724a8ba32b2008e"
+    },
+    {
+      "job": "mlp/state/A3/vrq/fold_5",
+      "report_sha256": "9224e28d4b7f71d12ca4070e0c87a52eed165bdfaf82a48dd2c3a23625334e32"
+    },
+    {
+      "job": "fractional_dog_polykan/state/A4/vrq/fold_5",
+      "report_sha256": "8334718fea7624e028908f9cce1e893c77be763d4dda6e45b60fdb03c6d2c84a"
+    },
+    {
+      "job": "mlp/state/A4/vrq/fold_5",
+      "report_sha256": "6db81c5a4e0a18e0d7c85299ff2ab180ca9e24d3d465f9013279e8a11ffc01e4"
+    },
+    {
+      "job": "fractional_dog_polykan/severity/A3/vrq/fold_1",
+      "report_sha256": "8c62bdf4bebf79f2a363eb54c30338af5f83cb41d8fba73a9aa47919eb4c76e8"
+    },
+    {
+      "job": "mlp/severity/A3/vrq/fold_1",
+      "report_sha256": "be7ba0814b8750a38240bdfcf2d0689ef25791f50833b9872958450636e46421"
+    },
+    {
+      "job": "fractional_dog_polykan/severity/A4/vrq/fold_1",
+      "report_sha256": "8e8bc766d8cda851ebd56e9fa6a84d054d6a76fbf349ed09aace83d2c56c1054"
+    },
+    {
+      "job": "mlp/severity/A4/vrq/fold_1",
+      "report_sha256": "da31feecd279f261e77c69aa281d57996e3bbdb04631628914f6ab5786d40c00"
+    },
+    {
+      "job": "fractional_dog_polykan/severity/A3/vrq/fold_2",
+      "report_sha256": "0bed4a7f53b69b1a2716af52401ec8bbc76f1353b08f211ab385108514853d81"
+    },
+    {
+      "job": "mlp/severity/A3/vrq/fold_2",
+      "report_sha256": "385ec196fef0861d4789679a04c817383bee7f21bda04db4dcd3a8a4f2a1c066"
+    },
+    {
+      "job": "fractional_dog_polykan/severity/A4/vrq/fold_2",
+      "report_sha256": "7073ec71ca36aa18c3e4aa1f0484d086d5f482b5d60226a4415388a155923b85"
+    },
+    {
+      "job": "mlp/severity/A4/vrq/fold_2",
+      "report_sha256": "6bfff3bf516c86dd1c7bb07000be4be6ad6ffc3b15835be80285131aeac7374c"
+    },
+    {
+      "job": "fractional_dog_polykan/severity/A3/vrq/fold_3",
+      "report_sha256": "e1b941437ddab3195b5d4a0a4eebdb812de7be0ef7913ca65be6448bd9f306fa"
+    },
+    {
+      "job": "mlp/severity/A3/vrq/fold_3",
+      "report_sha256": "03652d5ea2fcf4b773d47e625789aaa50289e7b595c128b83004f5ec5ac40d61"
+    },
+    {
+      "job": "fractional_dog_polykan/severity/A4/vrq/fold_3",
+      "report_sha256": "9d3b7162ef2dbaa9526ce049627c0dac86fa61b6d53b67e3ba63acc6e7912a44"
+    },
+    {
+      "job": "mlp/severity/A4/vrq/fold_3",
+      "report_sha256": "04f9dadfdde538bc7239b36e71c72f8ca3e8386db4094abd34eeb91c87f3b26b"
+    },
+    {
+      "job": "fractional_dog_polykan/severity/A3/vrq/fold_4",
+      "report_sha256": "e96d8bc375aa64422277353f5c92935cd92a2794cf644f2b4dce7fa2e2945060"
+    },
+    {
+      "job": "mlp/severity/A3/vrq/fold_4",
+      "report_sha256": "20d68ec278506fe9837967d8d7d346c0035fcbd8ae80aad4f525f9af193538bc"
+    },
+    {
+      "job": "fractional_dog_polykan/severity/A4/vrq/fold_4",
+      "report_sha256": "c69625085bbdae545e528c3549fd37a3c4a0d476c3e74a39d93cf9e39fb8c370"
+    },
+    {
+      "job": "mlp/severity/A4/vrq/fold_4",
+      "report_sha256": "c0871f8364d723e8858c6182287aaabae3412b43e0f2cb8ef6660d2353e4f852"
+    },
+    {
+      "job": "fractional_dog_polykan/severity/A3/vrq/fold_5",
+      "report_sha256": "c9d6ee1927a388f8dfef3d27f638b04aec4bfebe56e599c6a4dfc4aabc258214"
+    },
+    {
+      "job": "mlp/severity/A3/vrq/fold_5",
+      "report_sha256": "b653c2245e123a7d91b67de308bc35dda774e557f03560ede1ddf6887af97450"
+    },
+    {
+      "job": "fractional_dog_polykan/severity/A4/vrq/fold_5",
+      "report_sha256": "8ac2339d036898e0237f5a2c87b202cbac99b8a5567bd9ea6f57d661cd170606"
+    },
+    {
+      "job": "mlp/severity/A4/vrq/fold_5",
+      "report_sha256": "c6171d7c3728265861a5d9331108c4b5ff5b0034c848c2620f988d53a64d2466"
+    },
+    {
+      "job": "fractional_dog_polykan/state/A3/city/fold_1",
+      "report_sha256": "7a63ebb2d9808556ac4127f509bedaa3974d389b1b86864dba3ff36f642942e5"
+    },
+    {
+      "job": "mlp/state/A3/city/fold_1",
+      "report_sha256": "ce085bcac8e55750036f42cd577cdc125e6168fb1a601e91475df4f7ce512bcf"
+    },
+    {
+      "job": "fractional_dog_polykan/state/A4/city/fold_1",
+      "report_sha256": "bd64c9abb5d6306c3c8bd72e5d8799cc4ff744ef2405af402d15e6f649f2f4cb"
+    },
+    {
+      "job": "mlp/state/A4/city/fold_1",
+      "report_sha256": "d2bae113b64dfb4364748993c1e61f060720a8571dd260f59b248cbabcd59363"
+    },
+    {
+      "job": "fractional_dog_polykan/state/A3/city/fold_2",
+      "report_sha256": "c28184f9e5a4860ef37aaa337e31974f8ff34b6060d826aa9f5e3215195c11db"
+    },
+    {
+      "job": "mlp/state/A3/city/fold_2",
+      "report_sha256": "98137187dc1d76c56e6554e69b326bffce94b2f14cc419710af6c6f0296d5c4c"
+    },
+    {
+      "job": "fractional_dog_polykan/state/A4/city/fold_2",
+      "report_sha256": "a6731df5612c3b1884c95e4f6dbd1d811cd4d60da3877cd4fe2d9cb0736c8533"
+    },
+    {
+      "job": "mlp/state/A4/city/fold_2",
+      "report_sha256": "b8a8e77371644a6fb1d20575c7f15fd412942d575708325228e848a8f70942a9"
+    },
+    {
+      "job": "fractional_dog_polykan/state/A3/city/fold_3",
+      "report_sha256": "d5e23aa66ff1a4ac08f2820990e89cd18b7d2559f846a7af04cb01e03f616ae9"
+    },
+    {
+      "job": "mlp/state/A3/city/fold_3",
+      "report_sha256": "cbd0ad769f3a8b9940ee8b1662529ba3cc7d42f5651fe5b1abd3379a5a45b7a4"
+    },
+    {
+      "job": "fractional_dog_polykan/state/A4/city/fold_3",
+      "report_sha256": "703ea6f26d58e19129819be8921d8a3dbb72bd8cf30654aad2462a997238d961"
+    },
+    {
+      "job": "mlp/state/A4/city/fold_3",
+      "report_sha256": "2f23ae908e600c7d933106ada02de9a272da56224450751568aab82421b9a851"
+    },
+    {
+      "job": "fractional_dog_polykan/state/A3/city/fold_4",
+      "report_sha256": "f695a30b2743427456a40f8ec30c022e3488004b65243ecfa6d8b14c25dcca6f"
+    },
+    {
+      "job": "mlp/state/A3/city/fold_4",
+      "report_sha256": "ace509a7629c5bd1bf59ea4e72dd94b1f84d3d0459ee702a55f1587aa86dbe2d"
+    },
+    {
+      "job": "fractional_dog_polykan/state/A4/city/fold_4",
+      "report_sha256": "20a18da4495d385cf936047b8a750e9ab51e8c46f1a695f408c4cc876ea5721e"
+    },
+    {
+      "job": "mlp/state/A4/city/fold_4",
+      "report_sha256": "bd4b0816c12ce32fdac47f1284ea168fb4d2f55180db23236dcff0fb537293ed"
+    },
+    {
+      "job": "fractional_dog_polykan/state/A3/city/fold_5",
+      "report_sha256": "8804ed6f10631f67c80e7bce17630eab731db642d4bed4eb0c75752e32785763"
+    },
+    {
+      "job": "mlp/state/A3/city/fold_5",
+      "report_sha256": "0f701eb2d25ba634a13f0d6e4bab187c8851e6e099455a9077fcc0b94098b575"
+    },
+    {
+      "job": "fractional_dog_polykan/state/A4/city/fold_5",
+      "report_sha256": "d43379ab152443aebdcd61f7ba783062beb78df9984417e26581427fa22fd658"
+    },
+    {
+      "job": "mlp/state/A4/city/fold_5",
+      "report_sha256": "ce7f85995f76bc83f77d6dedb4242e9f834ff83e01ac6c9dbffffe433ca4db60"
+    },
+    {
+      "job": "fractional_dog_polykan/severity/A3/city/fold_1",
+      "report_sha256": "a208c5c6011cf617111a095531d825045c2ba499b75ae98b406a9c35632485e7"
+    },
+    {
+      "job": "mlp/severity/A3/city/fold_1",
+      "report_sha256": "7fe8cec7e6aa236c492a869bbd8270390c9efe0fc8d877dc4cb75bce0121a968"
+    },
+    {
+      "job": "fractional_dog_polykan/severity/A4/city/fold_1",
+      "report_sha256": "37dda6831f19ad65289c0f07d04e2e712a79542f60a35cb3e90de80c114e5f9c"
+    },
+    {
+      "job": "mlp/severity/A4/city/fold_1",
+      "report_sha256": "ef54495bfcdc0e3ffdb44e7a7c189ede5ac4e7b3f4af3734c5f6e8d72e44198f"
+    },
+    {
+      "job": "fractional_dog_polykan/severity/A3/city/fold_2",
+      "report_sha256": "3095bf48f92d536dda74076384eae9b9be5a875c4816e7d54d89cab1e98315a2"
+    },
+    {
+      "job": "mlp/severity/A3/city/fold_2",
+      "report_sha256": "b1a3f130df85964dc25180f61328e0e53b83ee6a5dbf7358debfc9a5209f2f7d"
+    },
+    {
+      "job": "fractional_dog_polykan/severity/A4/city/fold_2",
+      "report_sha256": "c2231aa753fa9a73de90bb84481a76f248e43ff32f78ca9cf3b69e1bf5ab8309"
+    },
+    {
+      "job": "mlp/severity/A4/city/fold_2",
+      "report_sha256": "8245901e5e25da2b8ee7d67e6454b0734ae8fe2417e0ae8a3e14dd4789694bc8"
+    },
+    {
+      "job": "fractional_dog_polykan/severity/A3/city/fold_3",
+      "report_sha256": "650945c18731bfa94987fb93efabce9b67d3ad6094d09743313869c073ff2fb2"
+    },
+    {
+      "job": "mlp/severity/A3/city/fold_3",
+      "report_sha256": "45086201bbd566f57fa34ae0ae05242763390b41edb04f06c0e1902d10f2448d"
+    },
+    {
+      "job": "fractional_dog_polykan/severity/A4/city/fold_3",
+      "report_sha256": "0037344ba400a6d86c19c448e4bd57c145375e8dcbb4804381e4777a960561ca"
+    },
+    {
+      "job": "mlp/severity/A4/city/fold_3",
+      "report_sha256": "10804f50357fc39cb4c0ef7afde17b4e8dc1a9412622bfd0f210d9018234596b"
+    },
+    {
+      "job": "fractional_dog_polykan/severity/A3/city/fold_4",
+      "report_sha256": "386c6b89f6255904fd0917e80a4761024f6d0a4636edc7c533cd981d979c8b4f"
+    },
+    {
+      "job": "mlp/severity/A3/city/fold_4",
+      "report_sha256": "321bae80b9cea9ffd99d5d7be2db91c4ee820439776d7020fbf87455c26f1ebf"
+    },
+    {
+      "job": "fractional_dog_polykan/severity/A4/city/fold_4",
+      "report_sha256": "96eecfc6c960dd5b27c85d6c7619e158e805cc838daa9fbafe46b3c57d17d244"
+    },
+    {
+      "job": "mlp/severity/A4/city/fold_4",
+      "report_sha256": "c51e2f60bfec7b1b83ebbf42167489a44949c008959f09f1a2f3f1c75b38a926"
+    },
+    {
+      "job": "fractional_dog_polykan/severity/A3/city/fold_5",
+      "report_sha256": "bcea577d7fa5e4af200dde0e4d4cade570c2c05008feda4dd9a6dbc0daa6470a"
+    },
+    {
+      "job": "mlp/severity/A3/city/fold_5",
+      "report_sha256": "46bfdcf39a958c0e56beb1a393497f2e4dc27f0f269fd0ffe8d178a551d4ac60"
+    },
+    {
+      "job": "fractional_dog_polykan/severity/A4/city/fold_5",
+      "report_sha256": "6fa7069837a0fd20ba7e4261eec0b42ddebc2dab317652d6f288dff35773555f"
+    },
+    {
+      "job": "mlp/severity/A4/city/fold_5",
+      "report_sha256": "1ddd5aed4026b6366729eb0955e1dd28f7dac615c28cde8ad2ed44315785ee62"
+    }
+  ],
+  "limits": [
+    "Single seed and fixed training settings; numeric gains are not statistical significance.",
+    "No anchors or known-rest calibration enter inference. Legacy C0 target exclusions remain.",
+    "EA uses all unlabeled windows of each subject offline and is transductive, not strictly inductive.",
+    "The complete pretraining sample manifest is missing; pretraining overlap has not been excluded.",
+    "Design was informed by existing test results and is exploratory.",
+    "Only pretrained frozen and finetuned encoders are tested; this does not establish a pretraining-versus-random effect.",
+    "DoG-versus-MLP compares the complete mappings; it does not isolate fractional and DoG components.",
+    "Same selection rules and maximum epochs, not equal actual updates or FLOPs."
+  ]
+}

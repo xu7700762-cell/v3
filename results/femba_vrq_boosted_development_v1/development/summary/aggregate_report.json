@@ -1,0 +1,37 @@
+{
+  "status": "complete",
+  "completed_jobs": 90,
+  "expected_jobs": 90,
+  "full_matrix_completed": true,
+  "outer_test_scored": false,
+  "evaluation_partition": "nested_source_validation",
+  "smoke": false,
+  "limits": [
+    "Only the eighteen fold_1 source subjects are used for development; five outer-test subjects remain excluded.",
+    "The three six-subject validation groups are disjoint and each contains three low and three high severity subjects.",
+    "All configurations use identical source examples, labels, shuffles and validation rules.",
+    "The base selected for each seed, task and split is byte-identical and frozen for all residual comparisons.",
+    "No known-rest calibration or anchors; subject-wide unlabeled EA is retained and explicitly transductive.",
+    "Severity uses one eleven-window task-session sample per subject; state uses individual five-second windows.",
+    "This three-split three-seed matrix is exploratory model development, not independent test evidence.",
+    "No outer-test evaluation is automatically triggered by this experiment."
+  ],
+  "promotion": {
+    "severity": {
+      "evaluated": true,
+      "passed": false,
+      "dog_minus_mlp_mean_BACC": -0.07407407407407408,
+      "dog_minus_poly_mean_BACC": -0.05555555555555555,
+      "dog_positive_runs_vs_mlp": 0,
+      "dog_minus_no_dog_mean_BACC": -0.01851851851851852
+    },
+    "state": {
+      "evaluated": true,
+      "passed": true,
+      "dog_minus_mlp_mean_BACC": 0.002655582514745267,
+      "dog_minus_poly_mean_BACC": 0.0018861011953594181,
+      "dog_positive_runs_vs_mlp": 6,
+      "dog_minus_no_dog_mean_BACC": 0.0019886766431278634
+    }
+  }
+}

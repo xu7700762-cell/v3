@@ -1,0 +1,22 @@
+{
+  "schema": "femba_ssl_fivefold_v3",
+  "folds": [1, 2, 3, 4, 5],
+  "condition_order": ["C0", "C1"],
+  "selection_base_protocol": "femba_ssl_anchor_pilot_v2",
+  "selection": "minimum_unweighted_source_val_BCE_earliest_step_tie",
+  "refit": "original_initialization_all_source",
+  "refit_budget": "ceil(best_selection_step * source_steps_per_epoch / selection_steps_per_epoch)",
+  "outer_test_scoring": true,
+  "frozen_storage": "lossless_shared_full_encoder_plus_independent_head",
+  "trainable_storage": "independent_full_encoder_and_head",
+  "retention": "retain_final_model_predictions_histories_and_audits; remove_new_intermediate_weights_only_after_verified_completion",
+  "limits": [
+    "Single seed and fixed optimization budget; no claim of optimal hyperparameters.",
+    "Fivefold splits are fixed and identity-disjoint within each fold; training sets across folds overlap.",
+    "Known personal reference session is required for C1; EA uses all unlabeled subject windows offline.",
+    "Pretraining scripts include monifeixing, but the complete sample manifest is missing; overlap is not excluded.",
+    "Design was informed by previous test and pilot results and remains exploratory.",
+    "All groups use FEMBA; no comparison against other architectures.",
+    "Paired sample exposure rules and maximum optimization budget, not equal FLOPs."
+  ]
+}

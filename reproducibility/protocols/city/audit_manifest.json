@@ -1,0 +1,7446 @@
+{
+  "audit": {
+    "inputs": {
+      "acq26_scores": {
+        "path": "questionnair_data26.txt",
+        "sha256": "78e6597d9e659922ae9087d74ba55cf431cc3586300edbcad1df7038c3292881"
+      },
+      "record_workbook": {
+        "path": "BCI实验记录表.xlsx",
+        "sha256": "e87929ac0283d7ecf5c5b21236e07c47e0d9873ad01e894b7a19d5ff63bbc512"
+      },
+      "ssq_workbook": {
+        "path": "SSQ-TS正规总分汇总表.xlsx",
+        "sha256": "caf47eb180e2cc0013e7ea8a94ff20579d40edbb1bd2ee9c4d5509e30bfee4c6"
+      }
+    },
+    "path_labels": [
+      {
+        "duration_seconds": 99.91796875,
+        "path_label": 0,
+        "path_score": 10.0,
+        "route_id": 15,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq01"
+      },
+      {
+        "duration_seconds": 130.3359375,
+        "path_label": 0,
+        "path_score": 5.0,
+        "route_id": 1,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq01"
+      },
+      {
+        "duration_seconds": 126.16796875,
+        "path_label": 0,
+        "path_score": 15.0,
+        "route_id": 8,
+        "route_order": 3,
+        "session": "task03",
+        "subject_id": "acq01"
+      },
+      {
+        "duration_seconds": 135.51171875,
+        "path_label": 0,
+        "path_score": 10.0,
+        "route_id": 16,
+        "route_order": 4,
+        "session": "task04",
+        "subject_id": "acq01"
+      },
+      {
+        "duration_seconds": 127.20703125,
+        "path_label": 0,
+        "path_score": 15.0,
+        "route_id": 2,
+        "route_order": 5,
+        "session": "task05",
+        "subject_id": "acq01"
+      },
+      {
+        "duration_seconds": 124.51171875,
+        "path_label": 0,
+        "path_score": 8.0,
+        "route_id": 6,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq02"
+      },
+      {
+        "duration_seconds": 127.77734375,
+        "path_label": 1,
+        "path_score": 30.0,
+        "route_id": 9,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq02"
+      },
+      {
+        "duration_seconds": 130.37890625,
+        "path_label": 1,
+        "path_score": 58.0,
+        "route_id": 19,
+        "route_order": 3,
+        "session": "task03",
+        "subject_id": "acq02"
+      },
+      {
+        "duration_seconds": 132.765625,
+        "path_label": 1,
+        "path_score": 66.0,
+        "route_id": 14,
+        "route_order": 4,
+        "session": "task04",
+        "subject_id": "acq02"
+      },
+      {
+        "duration_seconds": 126.16015625,
+        "path_label": 1,
+        "path_score": 38.0,
+        "route_id": 8,
+        "route_order": 5,
+        "session": "task05",
+        "subject_id": "acq02"
+      },
+      {
+        "duration_seconds": 159.55078125,
+        "path_label": 1,
+        "path_score": 63.0,
+        "route_id": 12,
+        "route_order": 6,
+        "session": "task06",
+        "subject_id": "acq02"
+      },
+      {
+        "duration_seconds": 89.0625,
+        "path_label": 0,
+        "path_score": 8.0,
+        "route_id": 4,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq03"
+      },
+      {
+        "duration_seconds": 132.0390625,
+        "path_label": 1,
+        "path_score": 86.0,
+        "route_id": 20,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq03"
+      },
+      {
+        "duration_seconds": 132.73046875,
+        "path_label": 1,
+        "path_score": 84.0,
+        "route_id": 18,
+        "route_order": 3,
+        "session": "task03",
+        "subject_id": "acq03"
+      },
+      {
+        "duration_seconds": 110.03125,
+        "path_label": 1,
+        "path_score": 40.0,
+        "route_id": 15,
+        "route_order": 4,
+        "session": "task04",
+        "subject_id": "acq03"
+      },
+      {
+        "duration_seconds": 135.51953125,
+        "path_label": 1,
+        "path_score": 45.0,
+        "route_id": 16,
+        "route_order": 5,
+        "session": "task05",
+        "subject_id": "acq03"
+      },
+      {
+        "duration_seconds": 120.37890625,
+        "path_label": 0,
+        "path_score": 15.0,
+        "route_id": 7,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq04"
+      },
+      {
+        "duration_seconds": 181.67578125,
+        "path_label": 0,
+        "path_score": 11.0,
+        "route_id": 11,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq04"
+      },
+      {
+        "duration_seconds": 132.76953125,
+        "path_label": 0,
+        "path_score": 16.0,
+        "route_id": 14,
+        "route_order": 3,
+        "session": "task03",
+        "subject_id": "acq04"
+      },
+      {
+        "duration_seconds": 134.6484375,
+        "path_label": 1,
+        "path_score": 35.0,
+        "route_id": 17,
+        "route_order": 4,
+        "session": "task04",
+        "subject_id": "acq04"
+      },
+      {
+        "duration_seconds": 159.5390625,
+        "path_label": 0,
+        "path_score": 22.0,
+        "route_id": 12,
+        "route_order": 5,
+        "session": "task05",
+        "subject_id": "acq04"
+      },
+      {
+        "duration_seconds": 190.83984375,
+        "path_label": 0,
+        "path_score": 15.0,
+        "route_id": 10,
+        "route_order": 6,
+        "session": "task06",
+        "subject_id": "acq04"
+      },
+      {
+        "duration_seconds": 99.171875,
+        "path_label": 0,
+        "path_score": 8.0,
+        "route_id": 4,
+        "route_order": 7,
+        "session": "task07",
+        "subject_id": "acq04"
+      },
+      {
+        "duration_seconds": 126.16015625,
+        "path_label": 0,
+        "path_score": 24.0,
+        "route_id": 8,
+        "route_order": 8,
+        "session": "task08",
+        "subject_id": "acq04"
+      },
+      {
+        "duration_seconds": 121.9296875,
+        "path_label": 0,
+        "path_score": 8.0,
+        "route_id": 20,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq05"
+      },
+      {
+        "duration_seconds": 127.19140625,
+        "path_label": 0,
+        "path_score": 8.0,
+        "route_id": 2,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq05"
+      },
+      {
+        "duration_seconds": 132.3046875,
+        "path_label": 1,
+        "path_score": 43.0,
+        "route_id": 21,
+        "route_order": 3,
+        "session": "task03",
+        "subject_id": "acq05"
+      },
+      {
+        "duration_seconds": 132.765625,
+        "path_label": 1,
+        "path_score": 34.0,
+        "route_id": 14,
+        "route_order": 4,
+        "session": "task04",
+        "subject_id": "acq05"
+      },
+      {
+        "duration_seconds": 159.55078125,
+        "path_label": 1,
+        "path_score": 38.0,
+        "route_id": 12,
+        "route_order": 5,
+        "session": "task05",
+        "subject_id": "acq05"
+      },
+      {
+        "duration_seconds": 132.73828125,
+        "path_label": 1,
+        "path_score": 58.0,
+        "route_id": 18,
+        "route_order": 6,
+        "session": "task06",
+        "subject_id": "acq05"
+      },
+      {
+        "duration_seconds": 134.65625,
+        "path_label": 1,
+        "path_score": 51.0,
+        "route_id": 17,
+        "route_order": 7,
+        "session": "task07",
+        "subject_id": "acq05"
+      },
+      {
+        "duration_seconds": 127.77734375,
+        "path_label": 1,
+        "path_score": 63.0,
+        "route_id": 9,
+        "route_order": 8,
+        "session": "task08",
+        "subject_id": "acq05"
+      },
+      {
+        "duration_seconds": 110.0390625,
+        "path_label": 1,
+        "path_score": 51.0,
+        "route_id": 15,
+        "route_order": 9,
+        "session": "task09",
+        "subject_id": "acq05"
+      },
+      {
+        "duration_seconds": 130.4921875,
+        "path_label": 0,
+        "path_score": 25.0,
+        "route_id": 7,
+        "route_order": 10,
+        "session": "task10",
+        "subject_id": "acq05"
+      },
+      {
+        "duration_seconds": 180.71484375,
+        "path_label": 1,
+        "path_score": 36.0,
+        "route_id": 10,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq06"
+      },
+      {
+        "duration_seconds": 132.4296875,
+        "path_label": 1,
+        "path_score": 57.0,
+        "route_id": 13,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq06"
+      },
+      {
+        "duration_seconds": 130.49609375,
+        "path_label": 1,
+        "path_score": 70.0,
+        "route_id": 7,
+        "route_order": 3,
+        "session": "task03",
+        "subject_id": "acq06"
+      },
+      {
+        "duration_seconds": 99.1796875,
+        "path_label": 1,
+        "path_score": 40.0,
+        "route_id": 4,
+        "route_order": 4,
+        "session": "task04",
+        "subject_id": "acq06"
+      },
+      {
+        "duration_seconds": 110.0390625,
+        "path_label": 1,
+        "path_score": 80.0,
+        "route_id": 15,
+        "route_order": 5,
+        "session": "task05",
+        "subject_id": "acq06"
+      },
+      {
+        "duration_seconds": 136.54296875,
+        "path_label": 1,
+        "path_score": 65.0,
+        "route_id": 5,
+        "route_order": 6,
+        "session": "task06",
+        "subject_id": "acq06"
+      },
+      {
+        "duration_seconds": 132.046875,
+        "path_label": 1,
+        "path_score": 91.0,
+        "route_id": 20,
+        "route_order": 7,
+        "session": "task07",
+        "subject_id": "acq06"
+      },
+      {
+        "duration_seconds": 122.625,
+        "path_label": 1,
+        "path_score": 60.0,
+        "route_id": 18,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq07"
+      },
+      {
+        "duration_seconds": 132.44140625,
+        "path_label": 1,
+        "path_score": 60.0,
+        "route_id": 13,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq07"
+      },
+      {
+        "duration_seconds": 99.91796875,
+        "path_label": 0,
+        "path_score": 24.0,
+        "route_id": 15,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq08"
+      },
+      {
+        "duration_seconds": 132.76171875,
+        "path_label": 0,
+        "path_score": 19.0,
+        "route_id": 14,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq08"
+      },
+      {
+        "duration_seconds": 132.046875,
+        "path_label": 1,
+        "path_score": 40.0,
+        "route_id": 20,
+        "route_order": 3,
+        "session": "task03",
+        "subject_id": "acq08"
+      },
+      {
+        "duration_seconds": 130.3828125,
+        "path_label": 1,
+        "path_score": 60.0,
+        "route_id": 19,
+        "route_order": 4,
+        "session": "task04",
+        "subject_id": "acq08"
+      },
+      {
+        "duration_seconds": 126.16796875,
+        "path_label": 1,
+        "path_score": 43.0,
+        "route_id": 8,
+        "route_order": 5,
+        "session": "task05",
+        "subject_id": "acq08"
+      },
+      {
+        "duration_seconds": 159.55078125,
+        "path_label": 1,
+        "path_score": 53.0,
+        "route_id": 12,
+        "route_order": 6,
+        "session": "task06",
+        "subject_id": "acq08"
+      },
+      {
+        "duration_seconds": 132.43359375,
+        "path_label": 1,
+        "path_score": 62.0,
+        "route_id": 13,
+        "route_order": 7,
+        "session": "task07",
+        "subject_id": "acq08"
+      },
+      {
+        "duration_seconds": 120.375,
+        "path_label": 0,
+        "path_score": 5.0,
+        "route_id": 7,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq09"
+      },
+      {
+        "duration_seconds": 130.37890625,
+        "path_label": 1,
+        "path_score": 70.0,
+        "route_id": 19,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq09"
+      },
+      {
+        "duration_seconds": 121.9375,
+        "path_label": 0,
+        "path_score": 16.0,
+        "route_id": 20,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq10"
+      },
+      {
+        "duration_seconds": 181.6640625,
+        "path_label": 1,
+        "path_score": 36.0,
+        "route_id": 11,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq10"
+      },
+      {
+        "duration_seconds": 136.53515625,
+        "path_label": 0,
+        "path_score": 18.0,
+        "route_id": 5,
+        "route_order": 3,
+        "session": "task03",
+        "subject_id": "acq10"
+      },
+      {
+        "duration_seconds": 126.1640625,
+        "path_label": 1,
+        "path_score": 32.0,
+        "route_id": 8,
+        "route_order": 4,
+        "session": "task04",
+        "subject_id": "acq10"
+      },
+      {
+        "duration_seconds": 130.34375,
+        "path_label": 1,
+        "path_score": 40.0,
+        "route_id": 1,
+        "route_order": 5,
+        "session": "task05",
+        "subject_id": "acq10"
+      },
+      {
+        "duration_seconds": 132.3125,
+        "path_label": 1,
+        "path_score": 62.0,
+        "route_id": 21,
+        "route_order": 6,
+        "session": "task06",
+        "subject_id": "acq10"
+      },
+      {
+        "duration_seconds": 124.51171875,
+        "path_label": 1,
+        "path_score": 44.0,
+        "route_id": 6,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq11"
+      },
+      {
+        "duration_seconds": 159.55078125,
+        "path_label": 1,
+        "path_score": 70.0,
+        "route_id": 12,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq11"
+      },
+      {
+        "duration_seconds": 132.73828125,
+        "path_label": 1,
+        "path_score": 84.0,
+        "route_id": 18,
+        "route_order": 3,
+        "session": "task03",
+        "subject_id": "acq11"
+      },
+      {
+        "duration_seconds": 117.078125,
+        "path_label": 1,
+        "path_score": 36.0,
+        "route_id": 2,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq12"
+      },
+      {
+        "duration_seconds": 126.16796875,
+        "path_label": 1,
+        "path_score": 46.0,
+        "route_id": 8,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq12"
+      },
+      {
+        "duration_seconds": 132.77734375,
+        "path_label": 1,
+        "path_score": 46.0,
+        "route_id": 14,
+        "route_order": 3,
+        "session": "task03",
+        "subject_id": "acq12"
+      },
+      {
+        "duration_seconds": 134.65234375,
+        "path_label": 1,
+        "path_score": 83.0,
+        "route_id": 17,
+        "route_order": 4,
+        "session": "task04",
+        "subject_id": "acq12"
+      },
+      {
+        "duration_seconds": 159.55078125,
+        "path_label": 1,
+        "path_score": 77.0,
+        "route_id": 12,
+        "route_order": 5,
+        "session": "task05",
+        "subject_id": "acq12"
+      },
+      {
+        "duration_seconds": 122.3203125,
+        "path_label": 0,
+        "path_score": 15.0,
+        "route_id": 13,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq13"
+      },
+      {
+        "duration_seconds": 135.51953125,
+        "path_label": 0,
+        "path_score": 12.0,
+        "route_id": 16,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq13"
+      },
+      {
+        "duration_seconds": 110.0390625,
+        "path_label": 0,
+        "path_score": 18.0,
+        "route_id": 15,
+        "route_order": 3,
+        "session": "task03",
+        "subject_id": "acq13"
+      },
+      {
+        "duration_seconds": 127.78125,
+        "path_label": 0,
+        "path_score": 18.0,
+        "route_id": 9,
+        "route_order": 4,
+        "session": "task04",
+        "subject_id": "acq13"
+      },
+      {
+        "duration_seconds": 130.4921875,
+        "path_label": 0,
+        "path_score": 21.0,
+        "route_id": 7,
+        "route_order": 5,
+        "session": "task05",
+        "subject_id": "acq13"
+      },
+      {
+        "duration_seconds": 130.33203125,
+        "path_label": 0,
+        "path_score": 8.0,
+        "route_id": 1,
+        "route_order": 6,
+        "session": "task06",
+        "subject_id": "acq13"
+      },
+      {
+        "duration_seconds": 126.171875,
+        "path_label": 0,
+        "path_score": 4.0,
+        "route_id": 8,
+        "route_order": 7,
+        "session": "task07",
+        "subject_id": "acq13"
+      },
+      {
+        "duration_seconds": 159.546875,
+        "path_label": 0,
+        "path_score": 0.0,
+        "route_id": 12,
+        "route_order": 8,
+        "session": "task08",
+        "subject_id": "acq13"
+      },
+      {
+        "duration_seconds": 134.62890625,
+        "path_label": 1,
+        "path_score": 88.0,
+        "route_id": 6,
+        "route_order": 9,
+        "session": "task09",
+        "subject_id": "acq13"
+      },
+      {
+        "duration_seconds": 117.08984375,
+        "path_label": 0,
+        "path_score": 19.0,
+        "route_id": 2,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq14"
+      },
+      {
+        "duration_seconds": 190.84375,
+        "path_label": 1,
+        "path_score": 31.0,
+        "route_id": 10,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq14"
+      },
+      {
+        "duration_seconds": 136.5390625,
+        "path_label": 0,
+        "path_score": 24.0,
+        "route_id": 5,
+        "route_order": 3,
+        "session": "task03",
+        "subject_id": "acq14"
+      },
+      {
+        "duration_seconds": 130.484375,
+        "path_label": 1,
+        "path_score": 45.0,
+        "route_id": 7,
+        "route_order": 4,
+        "session": "task04",
+        "subject_id": "acq14"
+      },
+      {
+        "duration_seconds": 130.37890625,
+        "path_label": 1,
+        "path_score": 81.0,
+        "route_id": 19,
+        "route_order": 5,
+        "session": "task05",
+        "subject_id": "acq14"
+      },
+      {
+        "duration_seconds": 126.4140625,
+        "path_label": 0,
+        "path_score": 0.0,
+        "route_id": 5,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq15"
+      },
+      {
+        "duration_seconds": 128.921875,
+        "path_label": 0,
+        "path_score": 20.0,
+        "route_id": 3,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq15"
+      },
+      {
+        "duration_seconds": 132.73046875,
+        "path_label": 0,
+        "path_score": 20.0,
+        "route_id": 18,
+        "route_order": 3,
+        "session": "task03",
+        "subject_id": "acq15"
+      },
+      {
+        "duration_seconds": 126.16796875,
+        "path_label": 0,
+        "path_score": 0.0,
+        "route_id": 8,
+        "route_order": 4,
+        "session": "task04",
+        "subject_id": "acq15"
+      },
+      {
+        "duration_seconds": 190.83984375,
+        "path_label": 0,
+        "path_score": 0.0,
+        "route_id": 10,
+        "route_order": 5,
+        "session": "task05",
+        "subject_id": "acq15"
+      },
+      {
+        "duration_seconds": 99.171875,
+        "path_label": 0,
+        "path_score": 5.0,
+        "route_id": 4,
+        "route_order": 6,
+        "session": "task06",
+        "subject_id": "acq15"
+      },
+      {
+        "duration_seconds": 132.44140625,
+        "path_label": 0,
+        "path_score": 5.0,
+        "route_id": 13,
+        "route_order": 7,
+        "session": "task07",
+        "subject_id": "acq15"
+      },
+      {
+        "duration_seconds": 130.37890625,
+        "path_label": 0,
+        "path_score": 20.0,
+        "route_id": 19,
+        "route_order": 8,
+        "session": "task08",
+        "subject_id": "acq15"
+      },
+      {
+        "duration_seconds": 127.1953125,
+        "path_label": 0,
+        "path_score": 0.0,
+        "route_id": 2,
+        "route_order": 9,
+        "session": "task09",
+        "subject_id": "acq15"
+      },
+      {
+        "duration_seconds": 124.53515625,
+        "path_label": 0,
+        "path_score": 18.0,
+        "route_id": 17,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq16"
+      },
+      {
+        "duration_seconds": 132.734375,
+        "path_label": 1,
+        "path_score": 30.0,
+        "route_id": 18,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq16"
+      },
+      {
+        "duration_seconds": 132.3203125,
+        "path_label": 0,
+        "path_score": 22.0,
+        "route_id": 21,
+        "route_order": 3,
+        "session": "task03",
+        "subject_id": "acq16"
+      },
+      {
+        "duration_seconds": 127.2109375,
+        "path_label": 0,
+        "path_score": 7.0,
+        "route_id": 2,
+        "route_order": 4,
+        "session": "task04",
+        "subject_id": "acq16"
+      },
+      {
+        "duration_seconds": 99.16796875,
+        "path_label": 0,
+        "path_score": 7.0,
+        "route_id": 4,
+        "route_order": 5,
+        "session": "task05",
+        "subject_id": "acq16"
+      },
+      {
+        "duration_seconds": 171.5546875,
+        "path_label": 0,
+        "path_score": 5.0,
+        "route_id": 11,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq17"
+      },
+      {
+        "duration_seconds": 130.33203125,
+        "path_label": 0,
+        "path_score": 9.0,
+        "route_id": 1,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq17"
+      },
+      {
+        "duration_seconds": 127.77734375,
+        "path_label": 0,
+        "path_score": 15.0,
+        "route_id": 9,
+        "route_order": 3,
+        "session": "task03",
+        "subject_id": "acq17"
+      },
+      {
+        "duration_seconds": 134.65234375,
+        "path_label": 1,
+        "path_score": 33.0,
+        "route_id": 17,
+        "route_order": 4,
+        "session": "task04",
+        "subject_id": "acq17"
+      },
+      {
+        "duration_seconds": 126.171875,
+        "path_label": 1,
+        "path_score": 34.0,
+        "route_id": 8,
+        "route_order": 5,
+        "session": "task05",
+        "subject_id": "acq17"
+      },
+      {
+        "duration_seconds": 130.4921875,
+        "path_label": 1,
+        "path_score": 38.0,
+        "route_id": 7,
+        "route_order": 6,
+        "session": "task06",
+        "subject_id": "acq17"
+      },
+      {
+        "duration_seconds": 136.53125,
+        "path_label": 1,
+        "path_score": 42.0,
+        "route_id": 5,
+        "route_order": 7,
+        "session": "task07",
+        "subject_id": "acq17"
+      },
+      {
+        "duration_seconds": 132.7265625,
+        "path_label": 1,
+        "path_score": 55.0,
+        "route_id": 18,
+        "route_order": 8,
+        "session": "task08",
+        "subject_id": "acq17"
+      },
+      {
+        "duration_seconds": 135.51171875,
+        "path_label": 1,
+        "path_score": 65.0,
+        "route_id": 16,
+        "route_order": 9,
+        "session": "task09",
+        "subject_id": "acq17"
+      },
+      {
+        "duration_seconds": 180.71484375,
+        "path_label": 0,
+        "path_score": 0.0,
+        "route_id": 10,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq18"
+      },
+      {
+        "duration_seconds": 127.20703125,
+        "path_label": 0,
+        "path_score": 16.0,
+        "route_id": 2,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq18"
+      },
+      {
+        "duration_seconds": 132.765625,
+        "path_label": 0,
+        "path_score": 21.0,
+        "route_id": 14,
+        "route_order": 3,
+        "session": "task03",
+        "subject_id": "acq18"
+      },
+      {
+        "duration_seconds": 130.33203125,
+        "path_label": 1,
+        "path_score": 83.0,
+        "route_id": 1,
+        "route_order": 4,
+        "session": "task04",
+        "subject_id": "acq18"
+      },
+      {
+        "duration_seconds": 171.56640625,
+        "path_label": 1,
+        "path_score": 30.0,
+        "route_id": 11,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq19"
+      },
+      {
+        "duration_seconds": 126.16796875,
+        "path_label": 1,
+        "path_score": 49.0,
+        "route_id": 8,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq19"
+      },
+      {
+        "duration_seconds": 89.046875,
+        "path_label": 0,
+        "path_score": 0.0,
+        "route_id": 4,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq20"
+      },
+      {
+        "duration_seconds": 132.3046875,
+        "path_label": 0,
+        "path_score": 21.0,
+        "route_id": 21,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq20"
+      },
+      {
+        "duration_seconds": 130.4921875,
+        "path_label": 0,
+        "path_score": 10.0,
+        "route_id": 7,
+        "route_order": 3,
+        "session": "task03",
+        "subject_id": "acq20"
+      },
+      {
+        "duration_seconds": 126.16796875,
+        "path_label": 0,
+        "path_score": 0.0,
+        "route_id": 8,
+        "route_order": 4,
+        "session": "task04",
+        "subject_id": "acq20"
+      },
+      {
+        "duration_seconds": 130.32421875,
+        "path_label": 0,
+        "path_score": 10.0,
+        "route_id": 1,
+        "route_order": 5,
+        "session": "task05",
+        "subject_id": "acq20"
+      },
+      {
+        "duration_seconds": 134.65625,
+        "path_label": 0,
+        "path_score": 10.0,
+        "route_id": 17,
+        "route_order": 6,
+        "session": "task06",
+        "subject_id": "acq20"
+      },
+      {
+        "duration_seconds": 127.78125,
+        "path_label": 0,
+        "path_score": 20.0,
+        "route_id": 9,
+        "route_order": 7,
+        "session": "task07",
+        "subject_id": "acq20"
+      },
+      {
+        "duration_seconds": 110.03515625,
+        "path_label": 0,
+        "path_score": 20.0,
+        "route_id": 15,
+        "route_order": 8,
+        "session": "task08",
+        "subject_id": "acq20"
+      },
+      {
+        "duration_seconds": 132.7265625,
+        "path_label": 0,
+        "path_score": 20.0,
+        "route_id": 18,
+        "route_order": 9,
+        "session": "task09",
+        "subject_id": "acq20"
+      },
+      {
+        "duration_seconds": 132.76171875,
+        "path_label": 0,
+        "path_score": 10.0,
+        "route_id": 14,
+        "route_order": 10,
+        "session": "task10",
+        "subject_id": "acq20"
+      },
+      {
+        "duration_seconds": 89.05078125,
+        "path_label": 0,
+        "path_score": 0.0,
+        "route_id": 4,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq21"
+      },
+      {
+        "duration_seconds": 126.16796875,
+        "path_label": 0,
+        "path_score": 10.0,
+        "route_id": 8,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq21"
+      },
+      {
+        "duration_seconds": 132.046875,
+        "path_label": 1,
+        "path_score": 41.0,
+        "route_id": 20,
+        "route_order": 3,
+        "session": "task03",
+        "subject_id": "acq21"
+      },
+      {
+        "duration_seconds": 110.0390625,
+        "path_label": 1,
+        "path_score": 41.0,
+        "route_id": 15,
+        "route_order": 4,
+        "session": "task04",
+        "subject_id": "acq21"
+      },
+      {
+        "duration_seconds": 132.765625,
+        "path_label": 1,
+        "path_score": 54.0,
+        "route_id": 14,
+        "route_order": 5,
+        "session": "task05",
+        "subject_id": "acq21"
+      },
+      {
+        "duration_seconds": 159.546875,
+        "path_label": 1,
+        "path_score": 80.0,
+        "route_id": 12,
+        "route_order": 6,
+        "session": "task06",
+        "subject_id": "acq21"
+      },
+      {
+        "duration_seconds": 135.51171875,
+        "path_label": 1,
+        "path_score": 91.0,
+        "route_id": 16,
+        "route_order": 7,
+        "session": "task07",
+        "subject_id": "acq21"
+      },
+      {
+        "duration_seconds": 117.65625,
+        "path_label": 1,
+        "path_score": 36.0,
+        "route_id": 9,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq23"
+      },
+      {
+        "duration_seconds": 132.73828125,
+        "path_label": 1,
+        "path_score": 59.0,
+        "route_id": 18,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq23"
+      },
+      {
+        "duration_seconds": 117.08984375,
+        "path_label": 0,
+        "path_score": 0.0,
+        "route_id": 2,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq24"
+      },
+      {
+        "duration_seconds": 130.375,
+        "path_label": 0,
+        "path_score": 10.0,
+        "route_id": 19,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq24"
+      },
+      {
+        "duration_seconds": 134.65625,
+        "path_label": 1,
+        "path_score": 30.0,
+        "route_id": 17,
+        "route_order": 3,
+        "session": "task03",
+        "subject_id": "acq24"
+      },
+      {
+        "duration_seconds": 136.53515625,
+        "path_label": 0,
+        "path_score": 10.0,
+        "route_id": 5,
+        "route_order": 4,
+        "session": "task04",
+        "subject_id": "acq24"
+      },
+      {
+        "duration_seconds": 134.62109375,
+        "path_label": 1,
+        "path_score": 60.0,
+        "route_id": 6,
+        "route_order": 5,
+        "session": "task05",
+        "subject_id": "acq24"
+      },
+      {
+        "duration_seconds": 99.1640625,
+        "path_label": 1,
+        "path_score": 40.0,
+        "route_id": 4,
+        "route_order": 6,
+        "session": "task06",
+        "subject_id": "acq24"
+      },
+      {
+        "duration_seconds": 132.31640625,
+        "path_label": 1,
+        "path_score": 90.0,
+        "route_id": 21,
+        "route_order": 7,
+        "session": "task07",
+        "subject_id": "acq24"
+      },
+      {
+        "duration_seconds": 126.16796875,
+        "path_label": 1,
+        "path_score": 95.0,
+        "route_id": 8,
+        "route_order": 8,
+        "session": "task08",
+        "subject_id": "acq24"
+      },
+      {
+        "duration_seconds": 132.4375,
+        "path_label": 1,
+        "path_score": 100.0,
+        "route_id": 13,
+        "route_order": 9,
+        "session": "task09",
+        "subject_id": "acq24"
+      },
+      {
+        "duration_seconds": 149.4296875,
+        "path_label": 0,
+        "path_score": 0.0,
+        "route_id": 12,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq25"
+      },
+      {
+        "duration_seconds": 181.671875,
+        "path_label": 0,
+        "path_score": 18.0,
+        "route_id": 11,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq25"
+      },
+      {
+        "duration_seconds": 132.4296875,
+        "path_label": 0,
+        "path_score": 10.0,
+        "route_id": 13,
+        "route_order": 3,
+        "session": "task03",
+        "subject_id": "acq25"
+      },
+      {
+        "duration_seconds": 99.16796875,
+        "path_label": 0,
+        "path_score": 14.0,
+        "route_id": 4,
+        "route_order": 4,
+        "session": "task04",
+        "subject_id": "acq25"
+      },
+      {
+        "duration_seconds": 190.83984375,
+        "path_label": 0,
+        "path_score": 25.0,
+        "route_id": 10,
+        "route_order": 5,
+        "session": "task05",
+        "subject_id": "acq25"
+      },
+      {
+        "duration_seconds": 132.31640625,
+        "path_label": 1,
+        "path_score": 34.0,
+        "route_id": 21,
+        "route_order": 6,
+        "session": "task06",
+        "subject_id": "acq25"
+      },
+      {
+        "duration_seconds": 130.33203125,
+        "path_label": 1,
+        "path_score": 38.0,
+        "route_id": 1,
+        "route_order": 7,
+        "session": "task07",
+        "subject_id": "acq25"
+      },
+      {
+        "duration_seconds": 132.7421875,
+        "path_label": 1,
+        "path_score": 47.0,
+        "route_id": 18,
+        "route_order": 8,
+        "session": "task08",
+        "subject_id": "acq25"
+      },
+      {
+        "duration_seconds": 110.0390625,
+        "path_label": 1,
+        "path_score": 49.0,
+        "route_id": 15,
+        "route_order": 9,
+        "session": "task09",
+        "subject_id": "acq25"
+      },
+      {
+        "duration_seconds": 130.4921875,
+        "path_label": 1,
+        "path_score": 38.0,
+        "route_id": 7,
+        "route_order": 10,
+        "session": "task10",
+        "subject_id": "acq25"
+      },
+      {
+        "duration_seconds": 124.53125,
+        "path_label": 0,
+        "path_score": 14.0,
+        "route_id": 6,
+        "route_order": 1,
+        "session": "task01",
+        "subject_id": "acq26"
+      },
+      {
+        "duration_seconds": 136.5390625,
+        "path_label": 0,
+        "path_score": 11.0,
+        "route_id": 13,
+        "route_order": 2,
+        "session": "task02",
+        "subject_id": "acq26"
+      },
+      {
+        "duration_seconds": 127.77734375,
+        "path_label": 0,
+        "path_score": 12.0,
+        "route_id": 1,
+        "route_order": 3,
+        "session": "task03",
+        "subject_id": "acq26"
+      },
+      {
+        "duration_seconds": 190.8359375,
+        "path_label": 0,
+        "path_score": 18.0,
+        "route_id": 3,
+        "route_order": 4,
+        "session": "task04",
+        "subject_id": "acq26"
+      },
+      {
+        "duration_seconds": 99.17578125,
+        "path_label": 0,
+        "path_score": 27.0,
+        "route_id": 10,
+        "route_order": 5,
+        "session": "task05",
+        "subject_id": "acq26"
+      },
+      {
+        "duration_seconds": 130.3359375,
+        "path_label": 0,
+        "path_score": 27.0,
+        "route_id": 5,
+        "route_order": 6,
+        "session": "task06",
+        "subject_id": "acq26"
+      },
+      {
+        "duration_seconds": 132.73828125,
+        "path_label": 1,
+        "path_score": 52.0,
+        "route_id": 2,
+        "route_order": 7,
+        "session": "task07",
+        "subject_id": "acq26"
+      }
+    ],
+    "subjects": {
+      "acq01": {
+        "anchor_session": "rest02",
+        "delta_ssq": {
+          "delta_label": 0,
+          "delta_ssq": 44.88,
+          "post_ssq": 48.62,
+          "pre_ssq": 3.74,
+          "subject_id": "acq01"
+        },
+        "included": true,
+        "mat_path": "Acquisition 01.mat",
+        "mat_sha256": "03d77cb3c1c2c2cfc100d07def3f84cb7142a4be9ac01e864a5412337ea521ef",
+        "path_count": 5,
+        "raw_shape": [
+          37,
+          448672
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 6499,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 0,
+            "state": "rest",
+            "subject_id": "acq01"
+          },
+          {
+            "complete": true,
+            "end_sample": 32078,
+            "path_score": 10.0,
+            "route_id": 15,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 6499,
+            "state": "task",
+            "subject_id": "acq01"
+          },
+          {
+            "complete": true,
+            "end_sample": 81023,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 32078,
+            "state": "rest",
+            "subject_id": "acq01"
+          },
+          {
+            "complete": true,
+            "end_sample": 114389,
+            "path_score": 5.0,
+            "route_id": 1,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 81023,
+            "state": "task",
+            "subject_id": "acq01"
+          },
+          {
+            "complete": true,
+            "end_sample": 163530,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 3,
+            "session": "rest03",
+            "start_sample": 114389,
+            "state": "rest",
+            "subject_id": "acq01"
+          },
+          {
+            "complete": true,
+            "end_sample": 195829,
+            "path_score": 15.0,
+            "route_id": 8,
+            "route_order": 3,
+            "segment_index": 3,
+            "session": "task03",
+            "start_sample": 163530,
+            "state": "task",
+            "subject_id": "acq01"
+          },
+          {
+            "complete": true,
+            "end_sample": 245591,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 4,
+            "session": "rest04",
+            "start_sample": 195829,
+            "state": "rest",
+            "subject_id": "acq01"
+          },
+          {
+            "complete": true,
+            "end_sample": 280282,
+            "path_score": 10.0,
+            "route_id": 16,
+            "route_order": 4,
+            "segment_index": 4,
+            "session": "task04",
+            "start_sample": 245591,
+            "state": "task",
+            "subject_id": "acq01"
+          },
+          {
+            "complete": true,
+            "end_sample": 330973,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 5,
+            "session": "rest05",
+            "start_sample": 280282,
+            "state": "rest",
+            "subject_id": "acq01"
+          },
+          {
+            "complete": true,
+            "end_sample": 363538,
+            "path_score": 15.0,
+            "route_id": 2,
+            "route_order": 5,
+            "segment_index": 5,
+            "session": "task05",
+            "start_sample": 330973,
+            "state": "task",
+            "subject_id": "acq01"
+          },
+          {
+            "complete": true,
+            "end_sample": 391005,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 6,
+            "session": "rest06",
+            "start_sample": 363538,
+            "state": "rest",
+            "subject_id": "acq01"
+          },
+          {
+            "complete": true,
+            "end_sample": 399291,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 7,
+            "session": "rest07",
+            "start_sample": 392876,
+            "state": "rest",
+            "subject_id": "acq01"
+          },
+          {
+            "complete": true,
+            "end_sample": 415590,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 9,
+            "session": "rest09",
+            "start_sample": 407032,
+            "state": "rest",
+            "subject_id": "acq01"
+          },
+          {
+            "complete": true,
+            "end_sample": 434097,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 10,
+            "session": "rest10",
+            "start_sample": 418138,
+            "state": "rest",
+            "subject_id": "acq01"
+          }
+        ],
+        "trigger_events": [
+          [
+            6499,
+            20
+          ],
+          [
+            32078,
+            22
+          ],
+          [
+            81023,
+            20
+          ],
+          [
+            114389,
+            22
+          ],
+          [
+            163530,
+            20
+          ],
+          [
+            195829,
+            22
+          ],
+          [
+            245591,
+            20
+          ],
+          [
+            280282,
+            22
+          ],
+          [
+            330973,
+            20
+          ],
+          [
+            363538,
+            22
+          ],
+          [
+            391005,
+            20
+          ],
+          [
+            392876,
+            22
+          ],
+          [
+            399291,
+            20
+          ],
+          [
+            401743,
+            22
+          ],
+          [
+            404660,
+            20
+          ],
+          [
+            407032,
+            22
+          ],
+          [
+            415590,
+            20
+          ],
+          [
+            418138,
+            22
+          ],
+          [
+            434097,
+            20
+          ],
+          [
+            436488,
+            22
+          ],
+          [
+            437769,
+            20
+          ],
+          [
+            440170,
+            22
+          ]
+        ]
+      },
+      "acq02": {
+        "anchor_session": "rest02",
+        "delta_ssq": {
+          "delta_label": 1,
+          "delta_ssq": 138.38,
+          "post_ssq": 138.38,
+          "pre_ssq": 0.0,
+          "subject_id": "acq02"
+        },
+        "included": true,
+        "mat_path": "Acquisition 02.mat",
+        "mat_sha256": "072ea6d05ac6dd4a954bdd9de38521131c42e1ea1b7bb816130a10c3c7441856",
+        "path_count": 6,
+        "raw_shape": [
+          37,
+          498240
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 8787,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 0,
+            "state": "rest",
+            "subject_id": "acq02"
+          },
+          {
+            "complete": true,
+            "end_sample": 40662,
+            "path_score": 8.0,
+            "route_id": 6,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 8787,
+            "state": "task",
+            "subject_id": "acq02"
+          },
+          {
+            "complete": true,
+            "end_sample": 93583,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 40662,
+            "state": "rest",
+            "subject_id": "acq02"
+          },
+          {
+            "complete": true,
+            "end_sample": 126294,
+            "path_score": 30.0,
+            "route_id": 9,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 93583,
+            "state": "task",
+            "subject_id": "acq02"
+          },
+          {
+            "complete": true,
+            "end_sample": 175155,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 3,
+            "session": "rest03",
+            "start_sample": 126294,
+            "state": "rest",
+            "subject_id": "acq02"
+          },
+          {
+            "complete": true,
+            "end_sample": 208532,
+            "path_score": 58.0,
+            "route_id": 19,
+            "route_order": 3,
+            "segment_index": 3,
+            "session": "task03",
+            "start_sample": 175155,
+            "state": "task",
+            "subject_id": "acq02"
+          },
+          {
+            "complete": true,
+            "end_sample": 258231,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 4,
+            "session": "rest04",
+            "start_sample": 208532,
+            "state": "rest",
+            "subject_id": "acq02"
+          },
+          {
+            "complete": true,
+            "end_sample": 292219,
+            "path_score": 66.0,
+            "route_id": 14,
+            "route_order": 4,
+            "segment_index": 4,
+            "session": "task04",
+            "start_sample": 258231,
+            "state": "task",
+            "subject_id": "acq02"
+          },
+          {
+            "complete": true,
+            "end_sample": 344569,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 5,
+            "session": "rest05",
+            "start_sample": 292219,
+            "state": "rest",
+            "subject_id": "acq02"
+          },
+          {
+            "complete": true,
+            "end_sample": 376866,
+            "path_score": 38.0,
+            "route_id": 8,
+            "route_order": 5,
+            "segment_index": 5,
+            "session": "task05",
+            "start_sample": 344569,
+            "state": "task",
+            "subject_id": "acq02"
+          },
+          {
+            "complete": true,
+            "end_sample": 427647,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 6,
+            "session": "rest06",
+            "start_sample": 376866,
+            "state": "rest",
+            "subject_id": "acq02"
+          },
+          {
+            "complete": true,
+            "end_sample": 468492,
+            "path_score": 63.0,
+            "route_id": 12,
+            "route_order": 6,
+            "segment_index": 6,
+            "session": "task06",
+            "start_sample": 427647,
+            "state": "task",
+            "subject_id": "acq02"
+          }
+        ],
+        "trigger_events": [
+          [
+            8787,
+            20
+          ],
+          [
+            40662,
+            22
+          ],
+          [
+            93583,
+            20
+          ],
+          [
+            126294,
+            22
+          ],
+          [
+            175155,
+            20
+          ],
+          [
+            208532,
+            22
+          ],
+          [
+            258231,
+            20
+          ],
+          [
+            292219,
+            22
+          ],
+          [
+            344569,
+            20
+          ],
+          [
+            376866,
+            22
+          ],
+          [
+            427647,
+            20
+          ],
+          [
+            468492,
+            22
+          ]
+        ]
+      },
+      "acq03": {
+        "anchor_session": "rest02",
+        "delta_ssq": {
+          "delta_label": 1,
+          "delta_ssq": 209.44,
+          "post_ssq": 209.44,
+          "pre_ssq": 0.0,
+          "subject_id": "acq03"
+        },
+        "included": true,
+        "mat_path": "Acquisition 03.mat",
+        "mat_sha256": "4348aea4fea19995f5145ae75bcb39c0084aa68daceb70631bb1e0342517f7fb",
+        "path_count": 5,
+        "raw_shape": [
+          37,
+          376192
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 6482,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 0,
+            "state": "rest",
+            "subject_id": "acq03"
+          },
+          {
+            "complete": true,
+            "end_sample": 29282,
+            "path_score": 8.0,
+            "route_id": 4,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 6482,
+            "state": "task",
+            "subject_id": "acq03"
+          },
+          {
+            "complete": true,
+            "end_sample": 78409,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 29282,
+            "state": "rest",
+            "subject_id": "acq03"
+          },
+          {
+            "complete": true,
+            "end_sample": 112211,
+            "path_score": 86.0,
+            "route_id": 20,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 78409,
+            "state": "task",
+            "subject_id": "acq03"
+          },
+          {
+            "complete": true,
+            "end_sample": 163997,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 3,
+            "session": "rest03",
+            "start_sample": 112211,
+            "state": "rest",
+            "subject_id": "acq03"
+          },
+          {
+            "complete": true,
+            "end_sample": 197976,
+            "path_score": 84.0,
+            "route_id": 18,
+            "route_order": 3,
+            "segment_index": 3,
+            "session": "task03",
+            "start_sample": 163997,
+            "state": "task",
+            "subject_id": "acq03"
+          },
+          {
+            "complete": true,
+            "end_sample": 251801,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 4,
+            "session": "rest04",
+            "start_sample": 197976,
+            "state": "rest",
+            "subject_id": "acq03"
+          },
+          {
+            "complete": true,
+            "end_sample": 279969,
+            "path_score": 40.0,
+            "route_id": 15,
+            "route_order": 4,
+            "segment_index": 4,
+            "session": "task04",
+            "start_sample": 251801,
+            "state": "task",
+            "subject_id": "acq03"
+          },
+          {
+            "complete": true,
+            "end_sample": 331775,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 5,
+            "session": "rest05",
+            "start_sample": 279969,
+            "state": "rest",
+            "subject_id": "acq03"
+          },
+          {
+            "complete": true,
+            "end_sample": 366468,
+            "path_score": 45.0,
+            "route_id": 16,
+            "route_order": 5,
+            "segment_index": 5,
+            "session": "task05",
+            "start_sample": 331775,
+            "state": "task",
+            "subject_id": "acq03"
+          }
+        ],
+        "trigger_events": [
+          [
+            6482,
+            20
+          ],
+          [
+            29282,
+            22
+          ],
+          [
+            78409,
+            20
+          ],
+          [
+            112211,
+            22
+          ],
+          [
+            163997,
+            20
+          ],
+          [
+            197976,
+            22
+          ],
+          [
+            251801,
+            20
+          ],
+          [
+            279969,
+            22
+          ],
+          [
+            331775,
+            20
+          ],
+          [
+            366468,
+            22
+          ]
+        ]
+      },
+      "acq04": {
+        "anchor_session": "rest02",
+        "delta_ssq": {
+          "delta_label": 0,
+          "delta_ssq": 52.36,
+          "post_ssq": 59.84,
+          "pre_ssq": 7.48,
+          "subject_id": "acq04"
+        },
+        "included": true,
+        "mat_path": "Acquisition 04.mat",
+        "mat_sha256": "7650aad6260b152fe13f25e58d1568562e8452c838a5586d3e07a7d9d4e3bbdd",
+        "path_count": 8,
+        "raw_shape": [
+          37,
+          656560
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 10696,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 0,
+            "state": "rest",
+            "subject_id": "acq04"
+          },
+          {
+            "complete": true,
+            "end_sample": 41513,
+            "path_score": 15.0,
+            "route_id": 7,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 10696,
+            "state": "task",
+            "subject_id": "acq04"
+          },
+          {
+            "complete": true,
+            "end_sample": 90571,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 41513,
+            "state": "rest",
+            "subject_id": "acq04"
+          },
+          {
+            "complete": true,
+            "end_sample": 137080,
+            "path_score": 11.0,
+            "route_id": 11,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 90571,
+            "state": "task",
+            "subject_id": "acq04"
+          },
+          {
+            "complete": true,
+            "end_sample": 185948,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 3,
+            "session": "rest03",
+            "start_sample": 137080,
+            "state": "rest",
+            "subject_id": "acq04"
+          },
+          {
+            "complete": true,
+            "end_sample": 219937,
+            "path_score": 16.0,
+            "route_id": 14,
+            "route_order": 3,
+            "segment_index": 3,
+            "session": "task03",
+            "start_sample": 185948,
+            "state": "task",
+            "subject_id": "acq04"
+          },
+          {
+            "complete": true,
+            "end_sample": 268769,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 4,
+            "session": "rest04",
+            "start_sample": 219937,
+            "state": "rest",
+            "subject_id": "acq04"
+          },
+          {
+            "complete": true,
+            "end_sample": 303239,
+            "path_score": 35.0,
+            "route_id": 17,
+            "route_order": 4,
+            "segment_index": 4,
+            "session": "task04",
+            "start_sample": 268769,
+            "state": "task",
+            "subject_id": "acq04"
+          },
+          {
+            "complete": true,
+            "end_sample": 351932,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 5,
+            "session": "rest05",
+            "start_sample": 303239,
+            "state": "rest",
+            "subject_id": "acq04"
+          },
+          {
+            "complete": true,
+            "end_sample": 392774,
+            "path_score": 22.0,
+            "route_id": 12,
+            "route_order": 5,
+            "segment_index": 5,
+            "session": "task05",
+            "start_sample": 351932,
+            "state": "task",
+            "subject_id": "acq04"
+          },
+          {
+            "complete": true,
+            "end_sample": 441109,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 6,
+            "session": "rest06",
+            "start_sample": 392774,
+            "state": "rest",
+            "subject_id": "acq04"
+          },
+          {
+            "complete": true,
+            "end_sample": 489964,
+            "path_score": 15.0,
+            "route_id": 10,
+            "route_order": 6,
+            "segment_index": 6,
+            "session": "task06",
+            "start_sample": 441109,
+            "state": "task",
+            "subject_id": "acq04"
+          },
+          {
+            "complete": true,
+            "end_sample": 539127,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 7,
+            "session": "rest07",
+            "start_sample": 489964,
+            "state": "rest",
+            "subject_id": "acq04"
+          },
+          {
+            "complete": true,
+            "end_sample": 564515,
+            "path_score": 8.0,
+            "route_id": 4,
+            "route_order": 7,
+            "segment_index": 7,
+            "session": "task07",
+            "start_sample": 539127,
+            "state": "task",
+            "subject_id": "acq04"
+          },
+          {
+            "complete": true,
+            "end_sample": 613711,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 8,
+            "session": "rest08",
+            "start_sample": 564515,
+            "state": "rest",
+            "subject_id": "acq04"
+          },
+          {
+            "complete": true,
+            "end_sample": 646008,
+            "path_score": 24.0,
+            "route_id": 8,
+            "route_order": 8,
+            "segment_index": 8,
+            "session": "task08",
+            "start_sample": 613711,
+            "state": "task",
+            "subject_id": "acq04"
+          },
+          {
+            "complete": true,
+            "end_sample": 655867,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 9,
+            "session": "rest09",
+            "start_sample": 646008,
+            "state": "rest",
+            "subject_id": "acq04"
+          }
+        ],
+        "trigger_events": [
+          [
+            10696,
+            20
+          ],
+          [
+            41513,
+            22
+          ],
+          [
+            90571,
+            20
+          ],
+          [
+            137080,
+            22
+          ],
+          [
+            185948,
+            20
+          ],
+          [
+            219937,
+            22
+          ],
+          [
+            268769,
+            20
+          ],
+          [
+            303239,
+            22
+          ],
+          [
+            351932,
+            20
+          ],
+          [
+            392774,
+            22
+          ],
+          [
+            441109,
+            20
+          ],
+          [
+            489964,
+            22
+          ],
+          [
+            539127,
+            20
+          ],
+          [
+            564515,
+            22
+          ],
+          [
+            613711,
+            20
+          ],
+          [
+            646008,
+            22
+          ],
+          [
+            655867,
+            20
+          ]
+        ]
+      },
+      "acq05": {
+        "anchor_session": "rest02",
+        "delta_ssq": {
+          "delta_label": 1,
+          "delta_ssq": 78.54,
+          "post_ssq": 78.54,
+          "pre_ssq": 0.0,
+          "subject_id": "acq05"
+        },
+        "included": true,
+        "mat_path": "Acquisition 05.mat",
+        "mat_sha256": "95465e74cc6ce46d25ce2528be6c3e5195e14bb7e7a2ce315f2eabba2984bfac",
+        "path_count": 10,
+        "raw_shape": [
+          37,
+          874672
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 52827,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 0,
+            "state": "rest",
+            "subject_id": "acq05"
+          },
+          {
+            "complete": true,
+            "end_sample": 84041,
+            "path_score": 8.0,
+            "route_id": 20,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 52827,
+            "state": "task",
+            "subject_id": "acq05"
+          },
+          {
+            "complete": true,
+            "end_sample": 134909,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 84041,
+            "state": "rest",
+            "subject_id": "acq05"
+          },
+          {
+            "complete": true,
+            "end_sample": 167470,
+            "path_score": 8.0,
+            "route_id": 2,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 134909,
+            "state": "task",
+            "subject_id": "acq05"
+          },
+          {
+            "complete": true,
+            "end_sample": 216850,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 3,
+            "session": "rest03",
+            "start_sample": 167470,
+            "state": "rest",
+            "subject_id": "acq05"
+          },
+          {
+            "complete": true,
+            "end_sample": 250720,
+            "path_score": 43.0,
+            "route_id": 21,
+            "route_order": 3,
+            "segment_index": 3,
+            "session": "task03",
+            "start_sample": 216850,
+            "state": "task",
+            "subject_id": "acq05"
+          },
+          {
+            "complete": true,
+            "end_sample": 301264,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 4,
+            "session": "rest04",
+            "start_sample": 250720,
+            "state": "rest",
+            "subject_id": "acq05"
+          },
+          {
+            "complete": true,
+            "end_sample": 335252,
+            "path_score": 34.0,
+            "route_id": 14,
+            "route_order": 4,
+            "segment_index": 4,
+            "session": "task04",
+            "start_sample": 301264,
+            "state": "task",
+            "subject_id": "acq05"
+          },
+          {
+            "complete": true,
+            "end_sample": 386414,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 5,
+            "session": "rest05",
+            "start_sample": 335252,
+            "state": "rest",
+            "subject_id": "acq05"
+          },
+          {
+            "complete": true,
+            "end_sample": 427259,
+            "path_score": 38.0,
+            "route_id": 12,
+            "route_order": 5,
+            "segment_index": 5,
+            "session": "task05",
+            "start_sample": 386414,
+            "state": "task",
+            "subject_id": "acq05"
+          },
+          {
+            "complete": true,
+            "end_sample": 478565,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 6,
+            "session": "rest06",
+            "start_sample": 427259,
+            "state": "rest",
+            "subject_id": "acq05"
+          },
+          {
+            "complete": true,
+            "end_sample": 512546,
+            "path_score": 58.0,
+            "route_id": 18,
+            "route_order": 6,
+            "segment_index": 6,
+            "session": "task06",
+            "start_sample": 478565,
+            "state": "task",
+            "subject_id": "acq05"
+          },
+          {
+            "complete": true,
+            "end_sample": 562336,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 7,
+            "session": "rest07",
+            "start_sample": 512546,
+            "state": "rest",
+            "subject_id": "acq05"
+          },
+          {
+            "complete": true,
+            "end_sample": 596808,
+            "path_score": 51.0,
+            "route_id": 17,
+            "route_order": 7,
+            "segment_index": 7,
+            "session": "task07",
+            "start_sample": 562336,
+            "state": "task",
+            "subject_id": "acq05"
+          },
+          {
+            "complete": true,
+            "end_sample": 648274,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 8,
+            "session": "rest08",
+            "start_sample": 596808,
+            "state": "rest",
+            "subject_id": "acq05"
+          },
+          {
+            "complete": true,
+            "end_sample": 680985,
+            "path_score": 63.0,
+            "route_id": 9,
+            "route_order": 8,
+            "segment_index": 8,
+            "session": "task08",
+            "start_sample": 648274,
+            "state": "task",
+            "subject_id": "acq05"
+          },
+          {
+            "complete": true,
+            "end_sample": 731658,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 9,
+            "session": "rest09",
+            "start_sample": 680985,
+            "state": "rest",
+            "subject_id": "acq05"
+          },
+          {
+            "complete": true,
+            "end_sample": 759828,
+            "path_score": 51.0,
+            "route_id": 15,
+            "route_order": 9,
+            "segment_index": 9,
+            "session": "task09",
+            "start_sample": 731658,
+            "state": "task",
+            "subject_id": "acq05"
+          },
+          {
+            "complete": true,
+            "end_sample": 810433,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 10,
+            "session": "rest10",
+            "start_sample": 759828,
+            "state": "rest",
+            "subject_id": "acq05"
+          },
+          {
+            "complete": true,
+            "end_sample": 843839,
+            "path_score": 25.0,
+            "route_id": 7,
+            "route_order": 10,
+            "segment_index": 10,
+            "session": "task10",
+            "start_sample": 810433,
+            "state": "task",
+            "subject_id": "acq05"
+          },
+          {
+            "complete": true,
+            "end_sample": 873636,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 11,
+            "session": "rest11",
+            "start_sample": 843839,
+            "state": "rest",
+            "subject_id": "acq05"
+          }
+        ],
+        "trigger_events": [
+          [
+            52827,
+            20
+          ],
+          [
+            84041,
+            22
+          ],
+          [
+            134909,
+            20
+          ],
+          [
+            167470,
+            22
+          ],
+          [
+            216850,
+            20
+          ],
+          [
+            250720,
+            22
+          ],
+          [
+            301264,
+            20
+          ],
+          [
+            335252,
+            22
+          ],
+          [
+            386414,
+            20
+          ],
+          [
+            427259,
+            22
+          ],
+          [
+            478565,
+            20
+          ],
+          [
+            512546,
+            22
+          ],
+          [
+            562336,
+            20
+          ],
+          [
+            596808,
+            22
+          ],
+          [
+            648274,
+            20
+          ],
+          [
+            680985,
+            22
+          ],
+          [
+            731658,
+            20
+          ],
+          [
+            759828,
+            22
+          ],
+          [
+            810433,
+            20
+          ],
+          [
+            843839,
+            22
+          ],
+          [
+            873636,
+            20
+          ]
+        ]
+      },
+      "acq06": {
+        "anchor_session": "rest03",
+        "delta_ssq": {
+          "delta_label": 1,
+          "delta_ssq": 168.3,
+          "post_ssq": 168.3,
+          "pre_ssq": 0.0,
+          "subject_id": "acq06"
+        },
+        "included": true,
+        "mat_path": "Acquisition 06.mat",
+        "mat_sha256": "63f039a981307b0ab7bd6f74a3f24ad3ee3ffb5e2d42e9b15a539fea4a7005dd",
+        "path_count": 7,
+        "raw_shape": [
+          37,
+          583056
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 10984,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 0,
+            "state": "rest",
+            "subject_id": "acq06"
+          },
+          {
+            "complete": true,
+            "end_sample": 57247,
+            "path_score": 36.0,
+            "route_id": 10,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 10984,
+            "state": "task",
+            "subject_id": "acq06"
+          },
+          {
+            "complete": true,
+            "end_sample": 63378,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 57247,
+            "state": "rest",
+            "subject_id": "acq06"
+          },
+          {
+            "complete": true,
+            "end_sample": 97280,
+            "path_score": 57.0,
+            "route_id": 13,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 63378,
+            "state": "task",
+            "subject_id": "acq06"
+          },
+          {
+            "complete": true,
+            "end_sample": 149495,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 3,
+            "session": "rest03",
+            "start_sample": 97280,
+            "state": "rest",
+            "subject_id": "acq06"
+          },
+          {
+            "complete": true,
+            "end_sample": 182902,
+            "path_score": 70.0,
+            "route_id": 7,
+            "route_order": 3,
+            "segment_index": 3,
+            "session": "task03",
+            "start_sample": 149495,
+            "state": "task",
+            "subject_id": "acq06"
+          },
+          {
+            "complete": true,
+            "end_sample": 235060,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 4,
+            "session": "rest04",
+            "start_sample": 182902,
+            "state": "rest",
+            "subject_id": "acq06"
+          },
+          {
+            "complete": true,
+            "end_sample": 260450,
+            "path_score": 40.0,
+            "route_id": 4,
+            "route_order": 4,
+            "segment_index": 4,
+            "session": "task04",
+            "start_sample": 235060,
+            "state": "task",
+            "subject_id": "acq06"
+          },
+          {
+            "complete": true,
+            "end_sample": 311269,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 5,
+            "session": "rest05",
+            "start_sample": 260450,
+            "state": "rest",
+            "subject_id": "acq06"
+          },
+          {
+            "complete": true,
+            "end_sample": 339439,
+            "path_score": 80.0,
+            "route_id": 15,
+            "route_order": 5,
+            "segment_index": 5,
+            "session": "task05",
+            "start_sample": 311269,
+            "state": "task",
+            "subject_id": "acq06"
+          },
+          {
+            "complete": true,
+            "end_sample": 390734,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 6,
+            "session": "rest06",
+            "start_sample": 339439,
+            "state": "rest",
+            "subject_id": "acq06"
+          },
+          {
+            "complete": true,
+            "end_sample": 425689,
+            "path_score": 65.0,
+            "route_id": 5,
+            "route_order": 6,
+            "segment_index": 6,
+            "session": "task06",
+            "start_sample": 390734,
+            "state": "task",
+            "subject_id": "acq06"
+          },
+          {
+            "complete": true,
+            "end_sample": 475220,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 7,
+            "session": "rest07",
+            "start_sample": 425689,
+            "state": "rest",
+            "subject_id": "acq06"
+          },
+          {
+            "complete": true,
+            "end_sample": 509024,
+            "path_score": 91.0,
+            "route_id": 20,
+            "route_order": 7,
+            "segment_index": 7,
+            "session": "task07",
+            "start_sample": 475220,
+            "state": "task",
+            "subject_id": "acq06"
+          },
+          {
+            "complete": true,
+            "end_sample": 518668,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 8,
+            "session": "rest08",
+            "start_sample": 509024,
+            "state": "rest",
+            "subject_id": "acq06"
+          }
+        ],
+        "trigger_events": [
+          [
+            10984,
+            20
+          ],
+          [
+            57247,
+            22
+          ],
+          [
+            63378,
+            20
+          ],
+          [
+            97280,
+            22
+          ],
+          [
+            149495,
+            20
+          ],
+          [
+            182902,
+            22
+          ],
+          [
+            235060,
+            20
+          ],
+          [
+            260450,
+            22
+          ],
+          [
+            311269,
+            20
+          ],
+          [
+            339439,
+            22
+          ],
+          [
+            390734,
+            20
+          ],
+          [
+            425689,
+            22
+          ],
+          [
+            475220,
+            20
+          ],
+          [
+            509024,
+            22
+          ],
+          [
+            518668,
+            20
+          ]
+        ]
+      },
+      "acq07": {
+        "anchor_session": "rest02",
+        "delta_ssq": {
+          "delta_label": 1,
+          "delta_ssq": 127.16,
+          "post_ssq": 127.16,
+          "pre_ssq": 0.0,
+          "subject_id": "acq07"
+        },
+        "included": true,
+        "mat_path": "Acquisition 07.mat",
+        "mat_sha256": "76af15473238d8dbf0f42cfbd45ecac1269f1af544f1e2f3a91662b2f90047cb",
+        "path_count": 2,
+        "raw_shape": [
+          37,
+          152448
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 24876,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 0,
+            "state": "rest",
+            "subject_id": "acq07"
+          },
+          {
+            "complete": true,
+            "end_sample": 56268,
+            "path_score": 60.0,
+            "route_id": 18,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 24876,
+            "state": "task",
+            "subject_id": "acq07"
+          },
+          {
+            "complete": true,
+            "end_sample": 108278,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 56268,
+            "state": "rest",
+            "subject_id": "acq07"
+          },
+          {
+            "complete": true,
+            "end_sample": 142183,
+            "path_score": 60.0,
+            "route_id": 13,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 108278,
+            "state": "task",
+            "subject_id": "acq07"
+          }
+        ],
+        "trigger_events": [
+          [
+            24876,
+            20
+          ],
+          [
+            56268,
+            22
+          ],
+          [
+            108278,
+            20
+          ],
+          [
+            142183,
+            22
+          ]
+        ]
+      },
+      "acq08": {
+        "anchor_session": "rest02",
+        "delta_ssq": {
+          "delta_label": 1,
+          "delta_ssq": 112.2,
+          "post_ssq": 112.2,
+          "pre_ssq": 0.0,
+          "subject_id": "acq08"
+        },
+        "included": true,
+        "mat_path": "Acquisition 08.mat",
+        "mat_sha256": "cd24b32ca224ceea4fcd12ad709518903b9cc3c291337f416ec26c23f068a7c6",
+        "path_count": 7,
+        "raw_shape": [
+          37,
+          568032
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 13776,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 0,
+            "state": "rest",
+            "subject_id": "acq08"
+          },
+          {
+            "complete": true,
+            "end_sample": 39355,
+            "path_score": 24.0,
+            "route_id": 15,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 13776,
+            "state": "task",
+            "subject_id": "acq08"
+          },
+          {
+            "complete": true,
+            "end_sample": 89243,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 39355,
+            "state": "rest",
+            "subject_id": "acq08"
+          },
+          {
+            "complete": true,
+            "end_sample": 123230,
+            "path_score": 19.0,
+            "route_id": 14,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 89243,
+            "state": "task",
+            "subject_id": "acq08"
+          },
+          {
+            "complete": true,
+            "end_sample": 172335,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 3,
+            "session": "rest03",
+            "start_sample": 123230,
+            "state": "rest",
+            "subject_id": "acq08"
+          },
+          {
+            "complete": true,
+            "end_sample": 206139,
+            "path_score": 40.0,
+            "route_id": 20,
+            "route_order": 3,
+            "segment_index": 3,
+            "session": "task03",
+            "start_sample": 172335,
+            "state": "task",
+            "subject_id": "acq08"
+          },
+          {
+            "complete": true,
+            "end_sample": 256262,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 4,
+            "session": "rest04",
+            "start_sample": 206139,
+            "state": "rest",
+            "subject_id": "acq08"
+          },
+          {
+            "complete": true,
+            "end_sample": 289640,
+            "path_score": 60.0,
+            "route_id": 19,
+            "route_order": 4,
+            "segment_index": 4,
+            "session": "task04",
+            "start_sample": 256262,
+            "state": "task",
+            "subject_id": "acq08"
+          },
+          {
+            "complete": true,
+            "end_sample": 339182,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 5,
+            "session": "rest05",
+            "start_sample": 289640,
+            "state": "rest",
+            "subject_id": "acq08"
+          },
+          {
+            "complete": true,
+            "end_sample": 371481,
+            "path_score": 43.0,
+            "route_id": 8,
+            "route_order": 5,
+            "segment_index": 5,
+            "session": "task05",
+            "start_sample": 339182,
+            "state": "task",
+            "subject_id": "acq08"
+          },
+          {
+            "complete": true,
+            "end_sample": 421665,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 6,
+            "session": "rest06",
+            "start_sample": 371481,
+            "state": "rest",
+            "subject_id": "acq08"
+          },
+          {
+            "complete": true,
+            "end_sample": 462510,
+            "path_score": 53.0,
+            "route_id": 12,
+            "route_order": 6,
+            "segment_index": 6,
+            "session": "task06",
+            "start_sample": 421665,
+            "state": "task",
+            "subject_id": "acq08"
+          },
+          {
+            "complete": true,
+            "end_sample": 511838,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 7,
+            "session": "rest07",
+            "start_sample": 462510,
+            "state": "rest",
+            "subject_id": "acq08"
+          },
+          {
+            "complete": true,
+            "end_sample": 545741,
+            "path_score": 62.0,
+            "route_id": 13,
+            "route_order": 7,
+            "segment_index": 7,
+            "session": "task07",
+            "start_sample": 511838,
+            "state": "task",
+            "subject_id": "acq08"
+          },
+          {
+            "complete": true,
+            "end_sample": 566221,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 8,
+            "session": "rest08",
+            "start_sample": 545741,
+            "state": "rest",
+            "subject_id": "acq08"
+          }
+        ],
+        "trigger_events": [
+          [
+            13776,
+            20
+          ],
+          [
+            39355,
+            22
+          ],
+          [
+            89243,
+            20
+          ],
+          [
+            123230,
+            22
+          ],
+          [
+            172335,
+            20
+          ],
+          [
+            206139,
+            22
+          ],
+          [
+            256262,
+            20
+          ],
+          [
+            289640,
+            22
+          ],
+          [
+            339182,
+            20
+          ],
+          [
+            371481,
+            22
+          ],
+          [
+            421665,
+            20
+          ],
+          [
+            462510,
+            22
+          ],
+          [
+            511838,
+            20
+          ],
+          [
+            545741,
+            22
+          ],
+          [
+            566221,
+            20
+          ]
+        ]
+      },
+      "acq09": {
+        "anchor_session": "rest02",
+        "delta_ssq": {
+          "delta_label": 0,
+          "delta_ssq": 63.58,
+          "post_ssq": 63.58,
+          "pre_ssq": 0.0,
+          "subject_id": "acq09"
+        },
+        "included": true,
+        "mat_path": "Acquisition 09.mat",
+        "mat_sha256": "87233356a915f013bbd0bd14633b836db4e1549a68c5f4a72642d1697d3cee6b",
+        "path_count": 2,
+        "raw_shape": [
+          37,
+          129024
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 13738,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 0,
+            "state": "rest",
+            "subject_id": "acq09"
+          },
+          {
+            "complete": true,
+            "end_sample": 44554,
+            "path_score": 5.0,
+            "route_id": 7,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 13738,
+            "state": "task",
+            "subject_id": "acq09"
+          },
+          {
+            "complete": true,
+            "end_sample": 57888,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 44554,
+            "state": "rest",
+            "subject_id": "acq09"
+          },
+          {
+            "complete": true,
+            "end_sample": 91265,
+            "path_score": 70.0,
+            "route_id": 19,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 57888,
+            "state": "task",
+            "subject_id": "acq09"
+          },
+          {
+            "complete": true,
+            "end_sample": 115490,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 3,
+            "session": "rest03",
+            "start_sample": 91265,
+            "state": "rest",
+            "subject_id": "acq09"
+          }
+        ],
+        "trigger_events": [
+          [
+            13738,
+            20
+          ],
+          [
+            44554,
+            22
+          ],
+          [
+            57888,
+            20
+          ],
+          [
+            91265,
+            22
+          ],
+          [
+            115490,
+            20
+          ]
+        ]
+      },
+      "acq10": {
+        "anchor_session": "rest02",
+        "delta_ssq": {
+          "delta_label": 1,
+          "delta_ssq": 104.72,
+          "post_ssq": 104.72,
+          "pre_ssq": 0.0,
+          "subject_id": "acq10"
+        },
+        "included": true,
+        "mat_path": "Acquisition 10.mat",
+        "mat_sha256": "7753b0705c05b34a7cbe577d30d2600988ae7aa30c6e2982061cfbedde12121e",
+        "path_count": 6,
+        "raw_shape": [
+          37,
+          534512
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 58851,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 0,
+            "state": "rest",
+            "subject_id": "acq10"
+          },
+          {
+            "complete": true,
+            "end_sample": 90067,
+            "path_score": 16.0,
+            "route_id": 20,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 58851,
+            "state": "task",
+            "subject_id": "acq10"
+          },
+          {
+            "complete": true,
+            "end_sample": 140652,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 90067,
+            "state": "rest",
+            "subject_id": "acq10"
+          },
+          {
+            "complete": true,
+            "end_sample": 187158,
+            "path_score": 36.0,
+            "route_id": 11,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 140652,
+            "state": "task",
+            "subject_id": "acq10"
+          },
+          {
+            "complete": true,
+            "end_sample": 235751,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 3,
+            "session": "rest03",
+            "start_sample": 187158,
+            "state": "rest",
+            "subject_id": "acq10"
+          },
+          {
+            "complete": true,
+            "end_sample": 270704,
+            "path_score": 18.0,
+            "route_id": 5,
+            "route_order": 3,
+            "segment_index": 3,
+            "session": "task03",
+            "start_sample": 235751,
+            "state": "task",
+            "subject_id": "acq10"
+          },
+          {
+            "complete": true,
+            "end_sample": 321030,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 4,
+            "session": "rest04",
+            "start_sample": 270704,
+            "state": "rest",
+            "subject_id": "acq10"
+          },
+          {
+            "complete": true,
+            "end_sample": 353328,
+            "path_score": 32.0,
+            "route_id": 8,
+            "route_order": 4,
+            "segment_index": 4,
+            "session": "task04",
+            "start_sample": 321030,
+            "state": "task",
+            "subject_id": "acq10"
+          },
+          {
+            "complete": true,
+            "end_sample": 402927,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 5,
+            "session": "rest05",
+            "start_sample": 353328,
+            "state": "rest",
+            "subject_id": "acq10"
+          },
+          {
+            "complete": true,
+            "end_sample": 436295,
+            "path_score": 40.0,
+            "route_id": 1,
+            "route_order": 5,
+            "segment_index": 5,
+            "session": "task05",
+            "start_sample": 402927,
+            "state": "task",
+            "subject_id": "acq10"
+          },
+          {
+            "complete": true,
+            "end_sample": 485220,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 6,
+            "session": "rest06",
+            "start_sample": 436295,
+            "state": "rest",
+            "subject_id": "acq10"
+          },
+          {
+            "complete": true,
+            "end_sample": 519092,
+            "path_score": 62.0,
+            "route_id": 21,
+            "route_order": 6,
+            "segment_index": 6,
+            "session": "task06",
+            "start_sample": 485220,
+            "state": "task",
+            "subject_id": "acq10"
+          },
+          {
+            "complete": true,
+            "end_sample": 523156,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 7,
+            "session": "rest07",
+            "start_sample": 519092,
+            "state": "rest",
+            "subject_id": "acq10"
+          }
+        ],
+        "trigger_events": [
+          [
+            58851,
+            20
+          ],
+          [
+            90067,
+            22
+          ],
+          [
+            140652,
+            20
+          ],
+          [
+            187158,
+            22
+          ],
+          [
+            235751,
+            20
+          ],
+          [
+            270704,
+            22
+          ],
+          [
+            321030,
+            20
+          ],
+          [
+            353328,
+            22
+          ],
+          [
+            402927,
+            20
+          ],
+          [
+            436295,
+            22
+          ],
+          [
+            485220,
+            20
+          ],
+          [
+            519092,
+            22
+          ],
+          [
+            523156,
+            20
+          ]
+        ]
+      },
+      "acq11": {
+        "anchor_session": "rest02",
+        "delta_ssq": {
+          "delta_label": 1,
+          "delta_ssq": 145.86,
+          "post_ssq": 149.6,
+          "pre_ssq": 3.74,
+          "subject_id": "acq11"
+        },
+        "included": true,
+        "mat_path": "Acquisition 11.mat",
+        "mat_sha256": "a3065ff279a3cba05ae245dbf5c8cd2acbb143b6c86f05e48ef450b8a3dfc989",
+        "path_count": 3,
+        "raw_shape": [
+          37,
+          222400
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 6146,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 0,
+            "state": "rest",
+            "subject_id": "acq11"
+          },
+          {
+            "complete": true,
+            "end_sample": 38021,
+            "path_score": 44.0,
+            "route_id": 6,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 6146,
+            "state": "task",
+            "subject_id": "acq11"
+          },
+          {
+            "complete": true,
+            "end_sample": 87022,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 38021,
+            "state": "rest",
+            "subject_id": "acq11"
+          },
+          {
+            "complete": true,
+            "end_sample": 127867,
+            "path_score": 70.0,
+            "route_id": 12,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 87022,
+            "state": "task",
+            "subject_id": "acq11"
+          },
+          {
+            "complete": true,
+            "end_sample": 177778,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 3,
+            "session": "rest03",
+            "start_sample": 127867,
+            "state": "rest",
+            "subject_id": "acq11"
+          },
+          {
+            "complete": true,
+            "end_sample": 211759,
+            "path_score": 84.0,
+            "route_id": 18,
+            "route_order": 3,
+            "segment_index": 3,
+            "session": "task03",
+            "start_sample": 177778,
+            "state": "task",
+            "subject_id": "acq11"
+          }
+        ],
+        "trigger_events": [
+          [
+            6146,
+            20
+          ],
+          [
+            38021,
+            22
+          ],
+          [
+            87022,
+            20
+          ],
+          [
+            127867,
+            22
+          ],
+          [
+            177778,
+            20
+          ],
+          [
+            211759,
+            22
+          ]
+        ]
+      },
+      "acq12": {
+        "anchor_session": "rest01",
+        "delta_ssq": {
+          "delta_label": 0,
+          "delta_ssq": 63.58,
+          "post_ssq": 67.32,
+          "pre_ssq": 3.74,
+          "subject_id": "acq12"
+        },
+        "included": true,
+        "mat_path": "Acquisition 12.mat",
+        "mat_sha256": "99171ad4335dc0c08b8a57773a3419b7ad0fe6352cfe705e9a098d92c1af0f56",
+        "path_count": 5,
+        "raw_shape": [
+          37,
+          392272
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 32911,
+            "path_score": 36.0,
+            "route_id": 2,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 2939,
+            "state": "task",
+            "subject_id": "acq12"
+          },
+          {
+            "complete": true,
+            "end_sample": 83916,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 32911,
+            "state": "rest",
+            "subject_id": "acq12"
+          },
+          {
+            "complete": true,
+            "end_sample": 116215,
+            "path_score": 46.0,
+            "route_id": 8,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 83916,
+            "state": "task",
+            "subject_id": "acq12"
+          },
+          {
+            "complete": true,
+            "end_sample": 166382,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 116215,
+            "state": "rest",
+            "subject_id": "acq12"
+          },
+          {
+            "complete": true,
+            "end_sample": 200373,
+            "path_score": 46.0,
+            "route_id": 14,
+            "route_order": 3,
+            "segment_index": 3,
+            "session": "task03",
+            "start_sample": 166382,
+            "state": "task",
+            "subject_id": "acq12"
+          },
+          {
+            "complete": true,
+            "end_sample": 250858,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 3,
+            "session": "rest03",
+            "start_sample": 200373,
+            "state": "rest",
+            "subject_id": "acq12"
+          },
+          {
+            "complete": true,
+            "end_sample": 285329,
+            "path_score": 83.0,
+            "route_id": 17,
+            "route_order": 4,
+            "segment_index": 4,
+            "session": "task04",
+            "start_sample": 250858,
+            "state": "task",
+            "subject_id": "acq12"
+          },
+          {
+            "complete": true,
+            "end_sample": 336943,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 4,
+            "session": "rest04",
+            "start_sample": 285329,
+            "state": "rest",
+            "subject_id": "acq12"
+          },
+          {
+            "complete": true,
+            "end_sample": 377788,
+            "path_score": 77.0,
+            "route_id": 12,
+            "route_order": 5,
+            "segment_index": 5,
+            "session": "task05",
+            "start_sample": 336943,
+            "state": "task",
+            "subject_id": "acq12"
+          }
+        ],
+        "trigger_events": [
+          [
+            2939,
+            20
+          ],
+          [
+            32911,
+            22
+          ],
+          [
+            83916,
+            20
+          ],
+          [
+            116215,
+            22
+          ],
+          [
+            166382,
+            20
+          ],
+          [
+            200373,
+            22
+          ],
+          [
+            250858,
+            20
+          ],
+          [
+            285329,
+            22
+          ],
+          [
+            336943,
+            20
+          ],
+          [
+            377788,
+            22
+          ]
+        ]
+      },
+      "acq13": {
+        "anchor_session": "rest02",
+        "delta_ssq": {
+          "delta_label": 0,
+          "delta_ssq": 41.14,
+          "post_ssq": 59.84,
+          "pre_ssq": 18.7,
+          "subject_id": "acq13"
+        },
+        "included": true,
+        "mat_path": "Acquisition 13.mat",
+        "mat_sha256": "6f8d842a238c97ba96ba5fd3bc328131935f58a4783532b67c104bfad0881c8b",
+        "path_count": 9,
+        "raw_shape": [
+          37,
+          775696
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 35998,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 0,
+            "state": "rest",
+            "subject_id": "acq13"
+          },
+          {
+            "complete": true,
+            "end_sample": 67312,
+            "path_score": 15.0,
+            "route_id": 13,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 35998,
+            "state": "task",
+            "subject_id": "acq13"
+          },
+          {
+            "complete": true,
+            "end_sample": 129069,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 67312,
+            "state": "rest",
+            "subject_id": "acq13"
+          },
+          {
+            "complete": true,
+            "end_sample": 163762,
+            "path_score": 12.0,
+            "route_id": 16,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 129069,
+            "state": "task",
+            "subject_id": "acq13"
+          },
+          {
+            "complete": true,
+            "end_sample": 217785,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 3,
+            "session": "rest03",
+            "start_sample": 163762,
+            "state": "rest",
+            "subject_id": "acq13"
+          },
+          {
+            "complete": true,
+            "end_sample": 245955,
+            "path_score": 18.0,
+            "route_id": 15,
+            "route_order": 3,
+            "segment_index": 3,
+            "session": "task03",
+            "start_sample": 217785,
+            "state": "task",
+            "subject_id": "acq13"
+          },
+          {
+            "complete": true,
+            "end_sample": 300287,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 4,
+            "session": "rest04",
+            "start_sample": 245955,
+            "state": "rest",
+            "subject_id": "acq13"
+          },
+          {
+            "complete": true,
+            "end_sample": 332999,
+            "path_score": 18.0,
+            "route_id": 9,
+            "route_order": 4,
+            "segment_index": 4,
+            "session": "task04",
+            "start_sample": 300287,
+            "state": "task",
+            "subject_id": "acq13"
+          },
+          {
+            "complete": true,
+            "end_sample": 385406,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 5,
+            "session": "rest05",
+            "start_sample": 332999,
+            "state": "rest",
+            "subject_id": "acq13"
+          },
+          {
+            "complete": true,
+            "end_sample": 418812,
+            "path_score": 21.0,
+            "route_id": 7,
+            "route_order": 5,
+            "segment_index": 5,
+            "session": "task05",
+            "start_sample": 385406,
+            "state": "task",
+            "subject_id": "acq13"
+          },
+          {
+            "complete": true,
+            "end_sample": 470508,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 6,
+            "session": "rest06",
+            "start_sample": 418812,
+            "state": "rest",
+            "subject_id": "acq13"
+          },
+          {
+            "complete": true,
+            "end_sample": 503873,
+            "path_score": 8.0,
+            "route_id": 1,
+            "route_order": 6,
+            "segment_index": 6,
+            "session": "task06",
+            "start_sample": 470508,
+            "state": "task",
+            "subject_id": "acq13"
+          },
+          {
+            "complete": true,
+            "end_sample": 554045,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 7,
+            "session": "rest07",
+            "start_sample": 503873,
+            "state": "rest",
+            "subject_id": "acq13"
+          },
+          {
+            "complete": true,
+            "end_sample": 586345,
+            "path_score": 4.0,
+            "route_id": 8,
+            "route_order": 7,
+            "segment_index": 7,
+            "session": "task07",
+            "start_sample": 554045,
+            "state": "task",
+            "subject_id": "acq13"
+          },
+          {
+            "complete": true,
+            "end_sample": 636202,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 8,
+            "session": "rest08",
+            "start_sample": 586345,
+            "state": "rest",
+            "subject_id": "acq13"
+          },
+          {
+            "complete": true,
+            "end_sample": 677046,
+            "path_score": 0.0,
+            "route_id": 12,
+            "route_order": 8,
+            "segment_index": 8,
+            "session": "task08",
+            "start_sample": 636202,
+            "state": "task",
+            "subject_id": "acq13"
+          },
+          {
+            "complete": true,
+            "end_sample": 725982,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 9,
+            "session": "rest09",
+            "start_sample": 677046,
+            "state": "rest",
+            "subject_id": "acq13"
+          },
+          {
+            "complete": true,
+            "end_sample": 760447,
+            "path_score": 88.0,
+            "route_id": 6,
+            "route_order": 9,
+            "segment_index": 9,
+            "session": "task09",
+            "start_sample": 725982,
+            "state": "task",
+            "subject_id": "acq13"
+          }
+        ],
+        "trigger_events": [
+          [
+            35998,
+            20
+          ],
+          [
+            67312,
+            22
+          ],
+          [
+            129069,
+            20
+          ],
+          [
+            163762,
+            22
+          ],
+          [
+            217785,
+            20
+          ],
+          [
+            245955,
+            22
+          ],
+          [
+            300287,
+            20
+          ],
+          [
+            332999,
+            22
+          ],
+          [
+            385406,
+            20
+          ],
+          [
+            418812,
+            22
+          ],
+          [
+            470508,
+            20
+          ],
+          [
+            503873,
+            22
+          ],
+          [
+            554045,
+            20
+          ],
+          [
+            586345,
+            22
+          ],
+          [
+            636202,
+            20
+          ],
+          [
+            677046,
+            22
+          ],
+          [
+            725982,
+            20
+          ],
+          [
+            760447,
+            22
+          ]
+        ]
+      },
+      "acq14": {
+        "anchor_session": "rest02",
+        "delta_ssq": {
+          "delta_label": 1,
+          "delta_ssq": 93.5,
+          "post_ssq": 93.5,
+          "pre_ssq": 0.0,
+          "subject_id": "acq14"
+        },
+        "included": true,
+        "mat_path": "Acquisition 14.mat",
+        "mat_sha256": "b66b18f9938ae8f28935a7d5ecafc7c3f17b9f840cd59fda82e8f91a293cb481",
+        "path_count": 5,
+        "raw_shape": [
+          37,
+          401776
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 15649,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 0,
+            "state": "rest",
+            "subject_id": "acq14"
+          },
+          {
+            "complete": true,
+            "end_sample": 45624,
+            "path_score": 19.0,
+            "route_id": 2,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 15649,
+            "state": "task",
+            "subject_id": "acq14"
+          },
+          {
+            "complete": true,
+            "end_sample": 95975,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 45624,
+            "state": "rest",
+            "subject_id": "acq14"
+          },
+          {
+            "complete": true,
+            "end_sample": 144831,
+            "path_score": 31.0,
+            "route_id": 10,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 95975,
+            "state": "task",
+            "subject_id": "acq14"
+          },
+          {
+            "complete": true,
+            "end_sample": 194800,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 3,
+            "session": "rest03",
+            "start_sample": 144831,
+            "state": "rest",
+            "subject_id": "acq14"
+          },
+          {
+            "complete": true,
+            "end_sample": 229754,
+            "path_score": 24.0,
+            "route_id": 5,
+            "route_order": 3,
+            "segment_index": 3,
+            "session": "task03",
+            "start_sample": 194800,
+            "state": "task",
+            "subject_id": "acq14"
+          },
+          {
+            "complete": true,
+            "end_sample": 280036,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 4,
+            "session": "rest04",
+            "start_sample": 229754,
+            "state": "rest",
+            "subject_id": "acq14"
+          },
+          {
+            "complete": true,
+            "end_sample": 313440,
+            "path_score": 45.0,
+            "route_id": 7,
+            "route_order": 4,
+            "segment_index": 4,
+            "session": "task04",
+            "start_sample": 280036,
+            "state": "task",
+            "subject_id": "acq14"
+          },
+          {
+            "complete": true,
+            "end_sample": 362588,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 5,
+            "session": "rest05",
+            "start_sample": 313440,
+            "state": "rest",
+            "subject_id": "acq14"
+          },
+          {
+            "complete": true,
+            "end_sample": 395965,
+            "path_score": 81.0,
+            "route_id": 19,
+            "route_order": 5,
+            "segment_index": 5,
+            "session": "task05",
+            "start_sample": 362588,
+            "state": "task",
+            "subject_id": "acq14"
+          }
+        ],
+        "trigger_events": [
+          [
+            15649,
+            20
+          ],
+          [
+            45624,
+            22
+          ],
+          [
+            95975,
+            20
+          ],
+          [
+            144831,
+            22
+          ],
+          [
+            194800,
+            20
+          ],
+          [
+            229754,
+            22
+          ],
+          [
+            280036,
+            20
+          ],
+          [
+            313440,
+            22
+          ],
+          [
+            362588,
+            20
+          ],
+          [
+            395965,
+            22
+          ]
+        ]
+      },
+      "acq15": {
+        "anchor_session": "rest03",
+        "delta_ssq": {
+          "delta_label": 0,
+          "delta_ssq": 18.7,
+          "post_ssq": 18.7,
+          "pre_ssq": 0.0,
+          "subject_id": "acq15"
+        },
+        "included": true,
+        "mat_path": "Acquisition 15.mat",
+        "mat_sha256": "ee3b800b589554fdb86aaccdd5c71985bf7ef219856de97f0079660149401025",
+        "path_count": 9,
+        "raw_shape": [
+          37,
+          698912
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 9842,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 0,
+            "state": "rest",
+            "subject_id": "acq15"
+          },
+          {
+            "complete": true,
+            "end_sample": 42204,
+            "path_score": 0.0,
+            "route_id": 5,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 9842,
+            "state": "task",
+            "subject_id": "acq15"
+          },
+          {
+            "complete": true,
+            "end_sample": 46692,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 42204,
+            "state": "rest",
+            "subject_id": "acq15"
+          },
+          {
+            "complete": true,
+            "end_sample": 79696,
+            "path_score": 20.0,
+            "route_id": 3,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 46692,
+            "state": "task",
+            "subject_id": "acq15"
+          },
+          {
+            "complete": true,
+            "end_sample": 128187,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 3,
+            "session": "rest03",
+            "start_sample": 79696,
+            "state": "rest",
+            "subject_id": "acq15"
+          },
+          {
+            "complete": true,
+            "end_sample": 162166,
+            "path_score": 20.0,
+            "route_id": 18,
+            "route_order": 3,
+            "segment_index": 3,
+            "session": "task03",
+            "start_sample": 128187,
+            "state": "task",
+            "subject_id": "acq15"
+          },
+          {
+            "complete": true,
+            "end_sample": 210677,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 4,
+            "session": "rest04",
+            "start_sample": 162166,
+            "state": "rest",
+            "subject_id": "acq15"
+          },
+          {
+            "complete": true,
+            "end_sample": 242976,
+            "path_score": 0.0,
+            "route_id": 8,
+            "route_order": 4,
+            "segment_index": 4,
+            "session": "task04",
+            "start_sample": 210677,
+            "state": "task",
+            "subject_id": "acq15"
+          },
+          {
+            "complete": true,
+            "end_sample": 296347,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 5,
+            "session": "rest05",
+            "start_sample": 242976,
+            "state": "rest",
+            "subject_id": "acq15"
+          },
+          {
+            "complete": true,
+            "end_sample": 345202,
+            "path_score": 0.0,
+            "route_id": 10,
+            "route_order": 5,
+            "segment_index": 5,
+            "session": "task05",
+            "start_sample": 296347,
+            "state": "task",
+            "subject_id": "acq15"
+          },
+          {
+            "complete": true,
+            "end_sample": 393501,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 6,
+            "session": "rest06",
+            "start_sample": 345202,
+            "state": "rest",
+            "subject_id": "acq15"
+          },
+          {
+            "complete": true,
+            "end_sample": 418889,
+            "path_score": 5.0,
+            "route_id": 4,
+            "route_order": 6,
+            "segment_index": 6,
+            "session": "task06",
+            "start_sample": 393501,
+            "state": "task",
+            "subject_id": "acq15"
+          },
+          {
+            "complete": true,
+            "end_sample": 469303,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 7,
+            "session": "rest07",
+            "start_sample": 418889,
+            "state": "rest",
+            "subject_id": "acq15"
+          },
+          {
+            "complete": true,
+            "end_sample": 503208,
+            "path_score": 5.0,
+            "route_id": 13,
+            "route_order": 7,
+            "segment_index": 7,
+            "session": "task07",
+            "start_sample": 469303,
+            "state": "task",
+            "subject_id": "acq15"
+          },
+          {
+            "complete": true,
+            "end_sample": 550609,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 8,
+            "session": "rest08",
+            "start_sample": 503208,
+            "state": "rest",
+            "subject_id": "acq15"
+          },
+          {
+            "complete": true,
+            "end_sample": 583986,
+            "path_score": 20.0,
+            "route_id": 19,
+            "route_order": 8,
+            "segment_index": 8,
+            "session": "task08",
+            "start_sample": 550609,
+            "state": "task",
+            "subject_id": "acq15"
+          },
+          {
+            "complete": true,
+            "end_sample": 633471,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 9,
+            "session": "rest09",
+            "start_sample": 583986,
+            "state": "rest",
+            "subject_id": "acq15"
+          },
+          {
+            "complete": true,
+            "end_sample": 666033,
+            "path_score": 0.0,
+            "route_id": 2,
+            "route_order": 9,
+            "segment_index": 9,
+            "session": "task09",
+            "start_sample": 633471,
+            "state": "task",
+            "subject_id": "acq15"
+          },
+          {
+            "complete": true,
+            "end_sample": 686093,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 10,
+            "session": "rest10",
+            "start_sample": 666033,
+            "state": "rest",
+            "subject_id": "acq15"
+          }
+        ],
+        "trigger_events": [
+          [
+            9842,
+            20
+          ],
+          [
+            42204,
+            22
+          ],
+          [
+            46692,
+            20
+          ],
+          [
+            79696,
+            22
+          ],
+          [
+            128187,
+            20
+          ],
+          [
+            162166,
+            22
+          ],
+          [
+            210677,
+            20
+          ],
+          [
+            242976,
+            22
+          ],
+          [
+            296347,
+            20
+          ],
+          [
+            345202,
+            22
+          ],
+          [
+            393501,
+            20
+          ],
+          [
+            418889,
+            22
+          ],
+          [
+            469303,
+            20
+          ],
+          [
+            503208,
+            22
+          ],
+          [
+            550609,
+            20
+          ],
+          [
+            583986,
+            22
+          ],
+          [
+            633471,
+            20
+          ],
+          [
+            666033,
+            22
+          ],
+          [
+            686093,
+            20
+          ]
+        ]
+      },
+      "acq16": {
+        "anchor_session": "rest02",
+        "delta_ssq": {
+          "delta_label": 0,
+          "delta_ssq": 41.14,
+          "post_ssq": 44.88,
+          "pre_ssq": 3.74,
+          "subject_id": "acq16"
+        },
+        "included": true,
+        "mat_path": "Acquisition 16.mat",
+        "mat_sha256": "19730b230a154e2dc17efa832acbb5177a90dd048235c7bafd2cc8985d6dbd01",
+        "path_count": 5,
+        "raw_shape": [
+          37,
+          418640
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 3946,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 0,
+            "state": "rest",
+            "subject_id": "acq16"
+          },
+          {
+            "complete": true,
+            "end_sample": 35827,
+            "path_score": 18.0,
+            "route_id": 17,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 3946,
+            "state": "task",
+            "subject_id": "acq16"
+          },
+          {
+            "complete": true,
+            "end_sample": 91331,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 35827,
+            "state": "rest",
+            "subject_id": "acq16"
+          },
+          {
+            "complete": true,
+            "end_sample": 125311,
+            "path_score": 30.0,
+            "route_id": 18,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 91331,
+            "state": "task",
+            "subject_id": "acq16"
+          },
+          {
+            "complete": true,
+            "end_sample": 177225,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 3,
+            "session": "rest03",
+            "start_sample": 125311,
+            "state": "rest",
+            "subject_id": "acq16"
+          },
+          {
+            "complete": true,
+            "end_sample": 211099,
+            "path_score": 22.0,
+            "route_id": 21,
+            "route_order": 3,
+            "segment_index": 3,
+            "session": "task03",
+            "start_sample": 177225,
+            "state": "task",
+            "subject_id": "acq16"
+          },
+          {
+            "complete": true,
+            "end_sample": 260210,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 4,
+            "session": "rest04",
+            "start_sample": 211099,
+            "state": "rest",
+            "subject_id": "acq16"
+          },
+          {
+            "complete": true,
+            "end_sample": 292776,
+            "path_score": 7.0,
+            "route_id": 2,
+            "route_order": 4,
+            "segment_index": 4,
+            "session": "task04",
+            "start_sample": 260210,
+            "state": "task",
+            "subject_id": "acq16"
+          },
+          {
+            "complete": true,
+            "end_sample": 343313,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 5,
+            "session": "rest05",
+            "start_sample": 292776,
+            "state": "rest",
+            "subject_id": "acq16"
+          },
+          {
+            "complete": true,
+            "end_sample": 368700,
+            "path_score": 7.0,
+            "route_id": 4,
+            "route_order": 5,
+            "segment_index": 5,
+            "session": "task05",
+            "start_sample": 343313,
+            "state": "task",
+            "subject_id": "acq16"
+          }
+        ],
+        "trigger_events": [
+          [
+            3946,
+            20
+          ],
+          [
+            35827,
+            22
+          ],
+          [
+            91331,
+            20
+          ],
+          [
+            125311,
+            22
+          ],
+          [
+            177225,
+            20
+          ],
+          [
+            211099,
+            22
+          ],
+          [
+            260210,
+            20
+          ],
+          [
+            292776,
+            22
+          ],
+          [
+            343313,
+            20
+          ],
+          [
+            368700,
+            22
+          ]
+        ]
+      },
+      "acq17": {
+        "anchor_session": "rest02",
+        "delta_ssq": {
+          "delta_label": 1,
+          "delta_ssq": 89.76,
+          "post_ssq": 89.76,
+          "pre_ssq": 0.0,
+          "subject_id": "acq17"
+        },
+        "included": true,
+        "mat_path": "Acquisition 17.mat",
+        "mat_sha256": "a163f006a290eb10ad63cf557055d45a9ab7276b247f2e7b6adb27ff1a39b817",
+        "path_count": 9,
+        "raw_shape": [
+          37,
+          773280
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 14177,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 0,
+            "state": "rest",
+            "subject_id": "acq17"
+          },
+          {
+            "complete": true,
+            "end_sample": 58095,
+            "path_score": 5.0,
+            "route_id": 11,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 14177,
+            "state": "task",
+            "subject_id": "acq17"
+          },
+          {
+            "complete": true,
+            "end_sample": 109835,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 58095,
+            "state": "rest",
+            "subject_id": "acq17"
+          },
+          {
+            "complete": true,
+            "end_sample": 143200,
+            "path_score": 9.0,
+            "route_id": 1,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 109835,
+            "state": "task",
+            "subject_id": "acq17"
+          },
+          {
+            "complete": true,
+            "end_sample": 197706,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 3,
+            "session": "rest03",
+            "start_sample": 143200,
+            "state": "rest",
+            "subject_id": "acq17"
+          },
+          {
+            "complete": true,
+            "end_sample": 230417,
+            "path_score": 15.0,
+            "route_id": 9,
+            "route_order": 3,
+            "segment_index": 3,
+            "session": "task03",
+            "start_sample": 197706,
+            "state": "task",
+            "subject_id": "acq17"
+          },
+          {
+            "complete": true,
+            "end_sample": 285541,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 4,
+            "session": "rest04",
+            "start_sample": 230417,
+            "state": "rest",
+            "subject_id": "acq17"
+          },
+          {
+            "complete": true,
+            "end_sample": 320012,
+            "path_score": 33.0,
+            "route_id": 17,
+            "route_order": 4,
+            "segment_index": 4,
+            "session": "task04",
+            "start_sample": 285541,
+            "state": "task",
+            "subject_id": "acq17"
+          },
+          {
+            "complete": true,
+            "end_sample": 377619,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 5,
+            "session": "rest05",
+            "start_sample": 320012,
+            "state": "rest",
+            "subject_id": "acq17"
+          },
+          {
+            "complete": true,
+            "end_sample": 409919,
+            "path_score": 34.0,
+            "route_id": 8,
+            "route_order": 5,
+            "segment_index": 5,
+            "session": "task05",
+            "start_sample": 377619,
+            "state": "task",
+            "subject_id": "acq17"
+          },
+          {
+            "complete": true,
+            "end_sample": 465049,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 6,
+            "session": "rest06",
+            "start_sample": 409919,
+            "state": "rest",
+            "subject_id": "acq17"
+          },
+          {
+            "complete": true,
+            "end_sample": 498455,
+            "path_score": 38.0,
+            "route_id": 7,
+            "route_order": 6,
+            "segment_index": 6,
+            "session": "task06",
+            "start_sample": 465049,
+            "state": "task",
+            "subject_id": "acq17"
+          },
+          {
+            "complete": true,
+            "end_sample": 552725,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 7,
+            "session": "rest07",
+            "start_sample": 498455,
+            "state": "rest",
+            "subject_id": "acq17"
+          },
+          {
+            "complete": true,
+            "end_sample": 587677,
+            "path_score": 42.0,
+            "route_id": 5,
+            "route_order": 7,
+            "segment_index": 7,
+            "session": "task07",
+            "start_sample": 552725,
+            "state": "task",
+            "subject_id": "acq17"
+          },
+          {
+            "complete": true,
+            "end_sample": 640859,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 8,
+            "session": "rest08",
+            "start_sample": 587677,
+            "state": "rest",
+            "subject_id": "acq17"
+          },
+          {
+            "complete": true,
+            "end_sample": 674837,
+            "path_score": 55.0,
+            "route_id": 18,
+            "route_order": 8,
+            "segment_index": 8,
+            "session": "task08",
+            "start_sample": 640859,
+            "state": "task",
+            "subject_id": "acq17"
+          },
+          {
+            "complete": true,
+            "end_sample": 730595,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 9,
+            "session": "rest09",
+            "start_sample": 674837,
+            "state": "rest",
+            "subject_id": "acq17"
+          },
+          {
+            "complete": true,
+            "end_sample": 765286,
+            "path_score": 65.0,
+            "route_id": 16,
+            "route_order": 9,
+            "segment_index": 9,
+            "session": "task09",
+            "start_sample": 730595,
+            "state": "task",
+            "subject_id": "acq17"
+          },
+          {
+            "complete": true,
+            "end_sample": 772595,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 10,
+            "session": "rest10",
+            "start_sample": 765286,
+            "state": "rest",
+            "subject_id": "acq17"
+          }
+        ],
+        "trigger_events": [
+          [
+            14177,
+            20
+          ],
+          [
+            58095,
+            22
+          ],
+          [
+            109835,
+            20
+          ],
+          [
+            143200,
+            22
+          ],
+          [
+            197706,
+            20
+          ],
+          [
+            230417,
+            22
+          ],
+          [
+            285541,
+            20
+          ],
+          [
+            320012,
+            22
+          ],
+          [
+            377619,
+            20
+          ],
+          [
+            409919,
+            22
+          ],
+          [
+            465049,
+            20
+          ],
+          [
+            498455,
+            22
+          ],
+          [
+            552725,
+            20
+          ],
+          [
+            587677,
+            22
+          ],
+          [
+            640859,
+            20
+          ],
+          [
+            674837,
+            22
+          ],
+          [
+            730595,
+            20
+          ],
+          [
+            765286,
+            22
+          ],
+          [
+            772595,
+            20
+          ]
+        ]
+      },
+      "acq18": {
+        "anchor_session": "rest02",
+        "delta_ssq": {
+          "delta_label": 1,
+          "delta_ssq": 108.46,
+          "post_ssq": 108.46,
+          "pre_ssq": 0.0,
+          "subject_id": "acq18"
+        },
+        "included": true,
+        "mat_path": "Acquisition 18.mat",
+        "mat_sha256": "07c357588dd78101b8b4f77dfe8d916360d8750641530b4e864c96ec4d204ab7",
+        "path_count": 4,
+        "raw_shape": [
+          37,
+          488384
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 7084,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 0,
+            "state": "rest",
+            "subject_id": "acq18"
+          },
+          {
+            "complete": true,
+            "end_sample": 53347,
+            "path_score": 0.0,
+            "route_id": 10,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 7084,
+            "state": "task",
+            "subject_id": "acq18"
+          },
+          {
+            "complete": true,
+            "end_sample": 106747,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 53347,
+            "state": "rest",
+            "subject_id": "acq18"
+          },
+          {
+            "complete": true,
+            "end_sample": 139312,
+            "path_score": 16.0,
+            "route_id": 2,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 106747,
+            "state": "task",
+            "subject_id": "acq18"
+          },
+          {
+            "complete": true,
+            "end_sample": 188794,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 3,
+            "session": "rest03",
+            "start_sample": 139312,
+            "state": "rest",
+            "subject_id": "acq18"
+          },
+          {
+            "complete": true,
+            "end_sample": 222782,
+            "path_score": 21.0,
+            "route_id": 14,
+            "route_order": 3,
+            "segment_index": 3,
+            "session": "task03",
+            "start_sample": 188794,
+            "state": "task",
+            "subject_id": "acq18"
+          },
+          {
+            "complete": true,
+            "end_sample": 271279,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 4,
+            "session": "rest04",
+            "start_sample": 222782,
+            "state": "rest",
+            "subject_id": "acq18"
+          },
+          {
+            "complete": true,
+            "end_sample": 304644,
+            "path_score": 83.0,
+            "route_id": 1,
+            "route_order": 4,
+            "segment_index": 4,
+            "session": "task04",
+            "start_sample": 271279,
+            "state": "task",
+            "subject_id": "acq18"
+          },
+          {
+            "complete": true,
+            "end_sample": 344887,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 5,
+            "session": "rest05",
+            "start_sample": 304644,
+            "state": "rest",
+            "subject_id": "acq18"
+          }
+        ],
+        "trigger_events": [
+          [
+            7084,
+            20
+          ],
+          [
+            53347,
+            22
+          ],
+          [
+            106747,
+            20
+          ],
+          [
+            139312,
+            22
+          ],
+          [
+            188794,
+            20
+          ],
+          [
+            222782,
+            22
+          ],
+          [
+            271279,
+            20
+          ],
+          [
+            304644,
+            22
+          ],
+          [
+            344887,
+            20
+          ],
+          [
+            378770,
+            22
+          ]
+        ]
+      },
+      "acq19": {
+        "anchor_session": "rest03",
+        "delta_ssq": {
+          "delta_label": 1,
+          "delta_ssq": 100.98,
+          "post_ssq": 100.98,
+          "pre_ssq": 0.0,
+          "subject_id": "acq19"
+        },
+        "included": true,
+        "mat_path": "Acquisition 19.mat",
+        "mat_sha256": "40716d7b5d231b0b06f26a302cc20de07bf121def7d1a16044d8cd846b15771d",
+        "path_count": 2,
+        "raw_shape": [
+          37,
+          172464
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 15208,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 0,
+            "state": "rest",
+            "subject_id": "acq19"
+          },
+          {
+            "complete": true,
+            "end_sample": 59129,
+            "path_score": 30.0,
+            "route_id": 11,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 15208,
+            "state": "task",
+            "subject_id": "acq19"
+          },
+          {
+            "complete": true,
+            "end_sample": 64707,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 59129,
+            "state": "rest",
+            "subject_id": "acq19"
+          },
+          {
+            "complete": true,
+            "end_sample": 97006,
+            "path_score": 49.0,
+            "route_id": 8,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 64707,
+            "state": "task",
+            "subject_id": "acq19"
+          },
+          {
+            "complete": true,
+            "end_sample": 148842,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 3,
+            "session": "rest03",
+            "start_sample": 97006,
+            "state": "rest",
+            "subject_id": "acq19"
+          }
+        ],
+        "trigger_events": [
+          [
+            15208,
+            20
+          ],
+          [
+            59129,
+            22
+          ],
+          [
+            64707,
+            20
+          ],
+          [
+            97006,
+            22
+          ],
+          [
+            148842,
+            20
+          ]
+        ]
+      },
+      "acq20": {
+        "anchor_session": "rest02",
+        "delta_ssq": {
+          "delta_label": 0,
+          "delta_ssq": 41.14,
+          "post_ssq": 41.14,
+          "pre_ssq": 0.0,
+          "subject_id": "acq20"
+        },
+        "included": true,
+        "mat_path": "Acquisition 20.mat",
+        "mat_sha256": "421fd87a6404c1f7c76fc7b3d6fb965b94e0894cef3594d0820c56d571ac2d91",
+        "path_count": 10,
+        "raw_shape": [
+          37,
+          848576
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 6289,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 0,
+            "state": "rest",
+            "subject_id": "acq20"
+          },
+          {
+            "complete": true,
+            "end_sample": 29085,
+            "path_score": 0.0,
+            "route_id": 4,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 6289,
+            "state": "task",
+            "subject_id": "acq20"
+          },
+          {
+            "complete": true,
+            "end_sample": 77871,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 29085,
+            "state": "rest",
+            "subject_id": "acq20"
+          },
+          {
+            "complete": true,
+            "end_sample": 111741,
+            "path_score": 21.0,
+            "route_id": 21,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 77871,
+            "state": "task",
+            "subject_id": "acq20"
+          },
+          {
+            "complete": true,
+            "end_sample": 161140,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 3,
+            "session": "rest03",
+            "start_sample": 111741,
+            "state": "rest",
+            "subject_id": "acq20"
+          },
+          {
+            "complete": true,
+            "end_sample": 194546,
+            "path_score": 10.0,
+            "route_id": 7,
+            "route_order": 3,
+            "segment_index": 3,
+            "session": "task03",
+            "start_sample": 161140,
+            "state": "task",
+            "subject_id": "acq20"
+          },
+          {
+            "complete": true,
+            "end_sample": 247569,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 4,
+            "session": "rest04",
+            "start_sample": 194546,
+            "state": "rest",
+            "subject_id": "acq20"
+          },
+          {
+            "complete": true,
+            "end_sample": 279868,
+            "path_score": 0.0,
+            "route_id": 8,
+            "route_order": 4,
+            "segment_index": 4,
+            "session": "task04",
+            "start_sample": 247569,
+            "state": "task",
+            "subject_id": "acq20"
+          },
+          {
+            "complete": true,
+            "end_sample": 329145,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 5,
+            "session": "rest05",
+            "start_sample": 279868,
+            "state": "rest",
+            "subject_id": "acq20"
+          },
+          {
+            "complete": true,
+            "end_sample": 362508,
+            "path_score": 10.0,
+            "route_id": 1,
+            "route_order": 5,
+            "segment_index": 5,
+            "session": "task05",
+            "start_sample": 329145,
+            "state": "task",
+            "subject_id": "acq20"
+          },
+          {
+            "complete": true,
+            "end_sample": 412320,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 6,
+            "session": "rest06",
+            "start_sample": 362508,
+            "state": "rest",
+            "subject_id": "acq20"
+          },
+          {
+            "complete": true,
+            "end_sample": 446792,
+            "path_score": 10.0,
+            "route_id": 17,
+            "route_order": 6,
+            "segment_index": 6,
+            "session": "task06",
+            "start_sample": 412320,
+            "state": "task",
+            "subject_id": "acq20"
+          },
+          {
+            "complete": true,
+            "end_sample": 497589,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 7,
+            "session": "rest07",
+            "start_sample": 446792,
+            "state": "rest",
+            "subject_id": "acq20"
+          },
+          {
+            "complete": true,
+            "end_sample": 530301,
+            "path_score": 20.0,
+            "route_id": 9,
+            "route_order": 7,
+            "segment_index": 7,
+            "session": "task07",
+            "start_sample": 497589,
+            "state": "task",
+            "subject_id": "acq20"
+          },
+          {
+            "complete": true,
+            "end_sample": 579680,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 8,
+            "session": "rest08",
+            "start_sample": 530301,
+            "state": "rest",
+            "subject_id": "acq20"
+          },
+          {
+            "complete": true,
+            "end_sample": 607849,
+            "path_score": 20.0,
+            "route_id": 15,
+            "route_order": 8,
+            "segment_index": 8,
+            "session": "task08",
+            "start_sample": 579680,
+            "state": "task",
+            "subject_id": "acq20"
+          },
+          {
+            "complete": true,
+            "end_sample": 656189,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 9,
+            "session": "rest09",
+            "start_sample": 607849,
+            "state": "rest",
+            "subject_id": "acq20"
+          },
+          {
+            "complete": true,
+            "end_sample": 690167,
+            "path_score": 20.0,
+            "route_id": 18,
+            "route_order": 9,
+            "segment_index": 9,
+            "session": "task09",
+            "start_sample": 656189,
+            "state": "task",
+            "subject_id": "acq20"
+          },
+          {
+            "complete": true,
+            "end_sample": 738021,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 10,
+            "session": "rest10",
+            "start_sample": 690167,
+            "state": "rest",
+            "subject_id": "acq20"
+          },
+          {
+            "complete": true,
+            "end_sample": 772008,
+            "path_score": 10.0,
+            "route_id": 14,
+            "route_order": 10,
+            "segment_index": 10,
+            "session": "task10",
+            "start_sample": 738021,
+            "state": "task",
+            "subject_id": "acq20"
+          },
+          {
+            "complete": true,
+            "end_sample": 820774,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 11,
+            "session": "rest11",
+            "start_sample": 772008,
+            "state": "rest",
+            "subject_id": "acq20"
+          }
+        ],
+        "trigger_events": [
+          [
+            6289,
+            20
+          ],
+          [
+            29085,
+            22
+          ],
+          [
+            77871,
+            20
+          ],
+          [
+            111741,
+            22
+          ],
+          [
+            161140,
+            20
+          ],
+          [
+            194546,
+            22
+          ],
+          [
+            247569,
+            20
+          ],
+          [
+            279868,
+            22
+          ],
+          [
+            329145,
+            20
+          ],
+          [
+            362508,
+            22
+          ],
+          [
+            412320,
+            20
+          ],
+          [
+            446792,
+            22
+          ],
+          [
+            497589,
+            20
+          ],
+          [
+            530301,
+            22
+          ],
+          [
+            579680,
+            20
+          ],
+          [
+            607849,
+            22
+          ],
+          [
+            656189,
+            20
+          ],
+          [
+            690167,
+            22
+          ],
+          [
+            738021,
+            20
+          ],
+          [
+            772008,
+            22
+          ],
+          [
+            820774,
+            20
+          ]
+        ]
+      },
+      "acq21": {
+        "anchor_session": "rest02",
+        "delta_ssq": {
+          "delta_label": 0,
+          "delta_ssq": 48.62,
+          "post_ssq": 48.62,
+          "pre_ssq": 0.0,
+          "subject_id": "acq21"
+        },
+        "included": true,
+        "mat_path": "Acquisition 21.mat",
+        "mat_sha256": "bcb8a37810b0aa9e385098cc259599ba467d85bc6b2671b7af0920193ca0af58",
+        "path_count": 7,
+        "raw_shape": [
+          37,
+          552320
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 5445,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 0,
+            "state": "rest",
+            "subject_id": "acq21"
+          },
+          {
+            "complete": true,
+            "end_sample": 28242,
+            "path_score": 0.0,
+            "route_id": 4,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 5445,
+            "state": "task",
+            "subject_id": "acq21"
+          },
+          {
+            "complete": true,
+            "end_sample": 78933,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 28242,
+            "state": "rest",
+            "subject_id": "acq21"
+          },
+          {
+            "complete": true,
+            "end_sample": 111232,
+            "path_score": 10.0,
+            "route_id": 8,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 78933,
+            "state": "task",
+            "subject_id": "acq21"
+          },
+          {
+            "complete": true,
+            "end_sample": 163340,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 3,
+            "session": "rest03",
+            "start_sample": 111232,
+            "state": "rest",
+            "subject_id": "acq21"
+          },
+          {
+            "complete": true,
+            "end_sample": 197144,
+            "path_score": 41.0,
+            "route_id": 20,
+            "route_order": 3,
+            "segment_index": 3,
+            "session": "task03",
+            "start_sample": 163340,
+            "state": "task",
+            "subject_id": "acq21"
+          },
+          {
+            "complete": true,
+            "end_sample": 247667,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 4,
+            "session": "rest04",
+            "start_sample": 197144,
+            "state": "rest",
+            "subject_id": "acq21"
+          },
+          {
+            "complete": true,
+            "end_sample": 275837,
+            "path_score": 41.0,
+            "route_id": 15,
+            "route_order": 4,
+            "segment_index": 4,
+            "session": "task04",
+            "start_sample": 247667,
+            "state": "task",
+            "subject_id": "acq21"
+          },
+          {
+            "complete": true,
+            "end_sample": 324566,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 5,
+            "session": "rest05",
+            "start_sample": 275837,
+            "state": "rest",
+            "subject_id": "acq21"
+          },
+          {
+            "complete": true,
+            "end_sample": 358554,
+            "path_score": 54.0,
+            "route_id": 14,
+            "route_order": 5,
+            "segment_index": 5,
+            "session": "task05",
+            "start_sample": 324566,
+            "state": "task",
+            "subject_id": "acq21"
+          },
+          {
+            "complete": true,
+            "end_sample": 410310,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 6,
+            "session": "rest06",
+            "start_sample": 358554,
+            "state": "rest",
+            "subject_id": "acq21"
+          },
+          {
+            "complete": true,
+            "end_sample": 451154,
+            "path_score": 80.0,
+            "route_id": 12,
+            "route_order": 6,
+            "segment_index": 6,
+            "session": "task06",
+            "start_sample": 410310,
+            "state": "task",
+            "subject_id": "acq21"
+          },
+          {
+            "complete": true,
+            "end_sample": 502524,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 7,
+            "session": "rest07",
+            "start_sample": 451154,
+            "state": "rest",
+            "subject_id": "acq21"
+          },
+          {
+            "complete": true,
+            "end_sample": 537215,
+            "path_score": 91.0,
+            "route_id": 16,
+            "route_order": 7,
+            "segment_index": 7,
+            "session": "task07",
+            "start_sample": 502524,
+            "state": "task",
+            "subject_id": "acq21"
+          }
+        ],
+        "trigger_events": [
+          [
+            5445,
+            20
+          ],
+          [
+            28242,
+            22
+          ],
+          [
+            78933,
+            20
+          ],
+          [
+            111232,
+            22
+          ],
+          [
+            163340,
+            20
+          ],
+          [
+            197144,
+            22
+          ],
+          [
+            247667,
+            20
+          ],
+          [
+            275837,
+            22
+          ],
+          [
+            324566,
+            20
+          ],
+          [
+            358554,
+            22
+          ],
+          [
+            410310,
+            20
+          ],
+          [
+            451154,
+            22
+          ],
+          [
+            502524,
+            20
+          ],
+          [
+            537215,
+            22
+          ]
+        ]
+      },
+      "acq23": {
+        "anchor_session": "rest02",
+        "delta_ssq": {
+          "delta_label": 0,
+          "delta_ssq": 74.8,
+          "post_ssq": 74.8,
+          "pre_ssq": 0.0,
+          "subject_id": "acq23"
+        },
+        "included": true,
+        "mat_path": "Acquisition 23.mat",
+        "mat_sha256": "ab0300c1d716be4463dc37bd4da741588a60d6d10d324fd0f41155ed7de0fc38",
+        "path_count": 2,
+        "raw_shape": [
+          37,
+          129536
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 6651,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 0,
+            "state": "rest",
+            "subject_id": "acq23"
+          },
+          {
+            "complete": true,
+            "end_sample": 36771,
+            "path_score": 36.0,
+            "route_id": 9,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 6651,
+            "state": "task",
+            "subject_id": "acq23"
+          },
+          {
+            "complete": true,
+            "end_sample": 91092,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 36771,
+            "state": "rest",
+            "subject_id": "acq23"
+          },
+          {
+            "complete": true,
+            "end_sample": 125073,
+            "path_score": 59.0,
+            "route_id": 18,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 91092,
+            "state": "task",
+            "subject_id": "acq23"
+          }
+        ],
+        "trigger_events": [
+          [
+            6651,
+            20
+          ],
+          [
+            36771,
+            22
+          ],
+          [
+            91092,
+            20
+          ],
+          [
+            125073,
+            22
+          ],
+          [
+            128859,
+            20
+          ]
+        ]
+      },
+      "acq24": {
+        "anchor_session": "rest02",
+        "delta_ssq": {
+          "delta_label": 1,
+          "delta_ssq": 78.54,
+          "post_ssq": 86.02,
+          "pre_ssq": 7.48,
+          "subject_id": "acq24"
+        },
+        "included": true,
+        "mat_path": "Acquisition 24.mat",
+        "mat_sha256": "82f924dd627ec61d36cb0b242f205fc1038080dd7de53f59e09aca9c48a78b40",
+        "path_count": 9,
+        "raw_shape": [
+          37,
+          747024
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 20681,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 0,
+            "state": "rest",
+            "subject_id": "acq24"
+          },
+          {
+            "complete": true,
+            "end_sample": 50656,
+            "path_score": 0.0,
+            "route_id": 2,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 20681,
+            "state": "task",
+            "subject_id": "acq24"
+          },
+          {
+            "complete": true,
+            "end_sample": 101568,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 50656,
+            "state": "rest",
+            "subject_id": "acq24"
+          },
+          {
+            "complete": true,
+            "end_sample": 134944,
+            "path_score": 10.0,
+            "route_id": 19,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 101568,
+            "state": "task",
+            "subject_id": "acq24"
+          },
+          {
+            "complete": true,
+            "end_sample": 193158,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 3,
+            "session": "rest03",
+            "start_sample": 134944,
+            "state": "rest",
+            "subject_id": "acq24"
+          },
+          {
+            "complete": true,
+            "end_sample": 227630,
+            "path_score": 30.0,
+            "route_id": 17,
+            "route_order": 3,
+            "segment_index": 3,
+            "session": "task03",
+            "start_sample": 193158,
+            "state": "task",
+            "subject_id": "acq24"
+          },
+          {
+            "complete": true,
+            "end_sample": 277559,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 4,
+            "session": "rest04",
+            "start_sample": 227630,
+            "state": "rest",
+            "subject_id": "acq24"
+          },
+          {
+            "complete": true,
+            "end_sample": 312512,
+            "path_score": 10.0,
+            "route_id": 5,
+            "route_order": 4,
+            "segment_index": 4,
+            "session": "task04",
+            "start_sample": 277559,
+            "state": "task",
+            "subject_id": "acq24"
+          },
+          {
+            "complete": true,
+            "end_sample": 363360,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 5,
+            "session": "rest05",
+            "start_sample": 312512,
+            "state": "rest",
+            "subject_id": "acq24"
+          },
+          {
+            "complete": true,
+            "end_sample": 397823,
+            "path_score": 60.0,
+            "route_id": 6,
+            "route_order": 5,
+            "segment_index": 5,
+            "session": "task05",
+            "start_sample": 363360,
+            "state": "task",
+            "subject_id": "acq24"
+          },
+          {
+            "complete": true,
+            "end_sample": 449887,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 6,
+            "session": "rest06",
+            "start_sample": 397823,
+            "state": "rest",
+            "subject_id": "acq24"
+          },
+          {
+            "complete": true,
+            "end_sample": 475273,
+            "path_score": 40.0,
+            "route_id": 4,
+            "route_order": 6,
+            "segment_index": 6,
+            "session": "task06",
+            "start_sample": 449887,
+            "state": "task",
+            "subject_id": "acq24"
+          },
+          {
+            "complete": true,
+            "end_sample": 526519,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 7,
+            "session": "rest07",
+            "start_sample": 475273,
+            "state": "rest",
+            "subject_id": "acq24"
+          },
+          {
+            "complete": true,
+            "end_sample": 560392,
+            "path_score": 90.0,
+            "route_id": 21,
+            "route_order": 7,
+            "segment_index": 7,
+            "session": "task07",
+            "start_sample": 526519,
+            "state": "task",
+            "subject_id": "acq24"
+          },
+          {
+            "complete": true,
+            "end_sample": 612072,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 8,
+            "session": "rest08",
+            "start_sample": 560392,
+            "state": "rest",
+            "subject_id": "acq24"
+          },
+          {
+            "complete": true,
+            "end_sample": 644371,
+            "path_score": 95.0,
+            "route_id": 8,
+            "route_order": 8,
+            "segment_index": 8,
+            "session": "task08",
+            "start_sample": 612072,
+            "state": "task",
+            "subject_id": "acq24"
+          },
+          {
+            "complete": true,
+            "end_sample": 698393,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 9,
+            "session": "rest09",
+            "start_sample": 644371,
+            "state": "rest",
+            "subject_id": "acq24"
+          },
+          {
+            "complete": true,
+            "end_sample": 732297,
+            "path_score": 100.0,
+            "route_id": 13,
+            "route_order": 9,
+            "segment_index": 9,
+            "session": "task09",
+            "start_sample": 698393,
+            "state": "task",
+            "subject_id": "acq24"
+          }
+        ],
+        "trigger_events": [
+          [
+            20681,
+            20
+          ],
+          [
+            50656,
+            22
+          ],
+          [
+            101568,
+            20
+          ],
+          [
+            134944,
+            22
+          ],
+          [
+            193158,
+            20
+          ],
+          [
+            227630,
+            22
+          ],
+          [
+            277559,
+            20
+          ],
+          [
+            312512,
+            22
+          ],
+          [
+            363360,
+            20
+          ],
+          [
+            397823,
+            22
+          ],
+          [
+            449887,
+            20
+          ],
+          [
+            475273,
+            22
+          ],
+          [
+            526519,
+            20
+          ],
+          [
+            560392,
+            22
+          ],
+          [
+            612072,
+            20
+          ],
+          [
+            644371,
+            22
+          ],
+          [
+            698393,
+            20
+          ],
+          [
+            732297,
+            22
+          ]
+        ]
+      },
+      "acq25": {
+        "anchor_session": "rest03",
+        "delta_ssq": {
+          "delta_label": 0,
+          "delta_ssq": 63.58,
+          "post_ssq": 63.58,
+          "pre_ssq": 0.0,
+          "subject_id": "acq25"
+        },
+        "included": true,
+        "mat_path": "Acquisition 25.mat",
+        "mat_sha256": "8c96ddae31ddb1a340031c8e3405c5db8f4b1a762e8ec7c6e58246214c6f417d",
+        "path_count": 10,
+        "raw_shape": [
+          37,
+          782160
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 14227,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 0,
+            "state": "rest",
+            "subject_id": "acq25"
+          },
+          {
+            "complete": true,
+            "end_sample": 52481,
+            "path_score": 0.0,
+            "route_id": 12,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 14227,
+            "state": "task",
+            "subject_id": "acq25"
+          },
+          {
+            "complete": true,
+            "end_sample": 56841,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 52481,
+            "state": "rest",
+            "subject_id": "acq25"
+          },
+          {
+            "complete": true,
+            "end_sample": 103349,
+            "path_score": 18.0,
+            "route_id": 11,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 56841,
+            "state": "task",
+            "subject_id": "acq25"
+          },
+          {
+            "complete": true,
+            "end_sample": 153755,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 3,
+            "session": "rest03",
+            "start_sample": 103349,
+            "state": "rest",
+            "subject_id": "acq25"
+          },
+          {
+            "complete": true,
+            "end_sample": 187657,
+            "path_score": 10.0,
+            "route_id": 13,
+            "route_order": 3,
+            "segment_index": 3,
+            "session": "task03",
+            "start_sample": 153755,
+            "state": "task",
+            "subject_id": "acq25"
+          },
+          {
+            "complete": true,
+            "end_sample": 236662,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 4,
+            "session": "rest04",
+            "start_sample": 187657,
+            "state": "rest",
+            "subject_id": "acq25"
+          },
+          {
+            "complete": true,
+            "end_sample": 262049,
+            "path_score": 14.0,
+            "route_id": 4,
+            "route_order": 4,
+            "segment_index": 4,
+            "session": "task04",
+            "start_sample": 236662,
+            "state": "task",
+            "subject_id": "acq25"
+          },
+          {
+            "complete": true,
+            "end_sample": 311875,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 5,
+            "session": "rest05",
+            "start_sample": 262049,
+            "state": "rest",
+            "subject_id": "acq25"
+          },
+          {
+            "complete": true,
+            "end_sample": 360730,
+            "path_score": 25.0,
+            "route_id": 10,
+            "route_order": 5,
+            "segment_index": 5,
+            "session": "task05",
+            "start_sample": 311875,
+            "state": "task",
+            "subject_id": "acq25"
+          },
+          {
+            "complete": true,
+            "end_sample": 410486,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 6,
+            "session": "rest06",
+            "start_sample": 360730,
+            "state": "rest",
+            "subject_id": "acq25"
+          },
+          {
+            "complete": true,
+            "end_sample": 444359,
+            "path_score": 34.0,
+            "route_id": 21,
+            "route_order": 6,
+            "segment_index": 6,
+            "session": "task06",
+            "start_sample": 410486,
+            "state": "task",
+            "subject_id": "acq25"
+          },
+          {
+            "complete": true,
+            "end_sample": 494370,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 7,
+            "session": "rest07",
+            "start_sample": 444359,
+            "state": "rest",
+            "subject_id": "acq25"
+          },
+          {
+            "complete": true,
+            "end_sample": 527735,
+            "path_score": 38.0,
+            "route_id": 1,
+            "route_order": 7,
+            "segment_index": 7,
+            "session": "task07",
+            "start_sample": 494370,
+            "state": "task",
+            "subject_id": "acq25"
+          },
+          {
+            "complete": true,
+            "end_sample": 576957,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 8,
+            "session": "rest08",
+            "start_sample": 527735,
+            "state": "rest",
+            "subject_id": "acq25"
+          },
+          {
+            "complete": true,
+            "end_sample": 610939,
+            "path_score": 47.0,
+            "route_id": 18,
+            "route_order": 8,
+            "segment_index": 8,
+            "session": "task08",
+            "start_sample": 576957,
+            "state": "task",
+            "subject_id": "acq25"
+          },
+          {
+            "complete": true,
+            "end_sample": 661971,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 9,
+            "session": "rest09",
+            "start_sample": 610939,
+            "state": "rest",
+            "subject_id": "acq25"
+          },
+          {
+            "complete": true,
+            "end_sample": 690141,
+            "path_score": 49.0,
+            "route_id": 15,
+            "route_order": 9,
+            "segment_index": 9,
+            "session": "task09",
+            "start_sample": 661971,
+            "state": "task",
+            "subject_id": "acq25"
+          },
+          {
+            "complete": true,
+            "end_sample": 739164,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 10,
+            "session": "rest10",
+            "start_sample": 690141,
+            "state": "rest",
+            "subject_id": "acq25"
+          },
+          {
+            "complete": true,
+            "end_sample": 772570,
+            "path_score": 38.0,
+            "route_id": 7,
+            "route_order": 10,
+            "segment_index": 10,
+            "session": "task10",
+            "start_sample": 739164,
+            "state": "task",
+            "subject_id": "acq25"
+          }
+        ],
+        "trigger_events": [
+          [
+            14227,
+            20
+          ],
+          [
+            52481,
+            22
+          ],
+          [
+            56841,
+            20
+          ],
+          [
+            103349,
+            22
+          ],
+          [
+            153755,
+            20
+          ],
+          [
+            187657,
+            22
+          ],
+          [
+            236662,
+            20
+          ],
+          [
+            262049,
+            22
+          ],
+          [
+            311875,
+            20
+          ],
+          [
+            360730,
+            22
+          ],
+          [
+            410486,
+            20
+          ],
+          [
+            444359,
+            22
+          ],
+          [
+            494370,
+            20
+          ],
+          [
+            527735,
+            22
+          ],
+          [
+            576957,
+            20
+          ],
+          [
+            610939,
+            22
+          ],
+          [
+            661971,
+            20
+          ],
+          [
+            690141,
+            22
+          ],
+          [
+            739164,
+            20
+          ],
+          [
+            772570,
+            22
+          ]
+        ]
+      },
+      "acq26": {
+        "anchor_session": "rest02",
+        "delta_ssq": {
+          "delta_label": 0,
+          "delta_ssq": 26.18,
+          "post_ssq": 41.14,
+          "pre_ssq": 14.96,
+          "subject_id": "acq26"
+        },
+        "included": true,
+        "mat_path": "Acquisition 26.mat",
+        "mat_sha256": "33899efc7980b77c76e07ec9a2b945d714942f33dbd0c48225ab177953999404",
+        "path_count": 7,
+        "raw_shape": [
+          37,
+          593504
+        ],
+        "segments": [
+          {
+            "complete": true,
+            "end_sample": 30307,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 1,
+            "session": "rest01",
+            "start_sample": 0,
+            "state": "rest",
+            "subject_id": "acq26"
+          },
+          {
+            "complete": true,
+            "end_sample": 62187,
+            "path_score": 14.0,
+            "route_id": 6,
+            "route_order": 1,
+            "segment_index": 1,
+            "session": "task01",
+            "start_sample": 30307,
+            "state": "task",
+            "subject_id": "acq26"
+          },
+          {
+            "complete": true,
+            "end_sample": 114012,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 2,
+            "session": "rest02",
+            "start_sample": 62187,
+            "state": "rest",
+            "subject_id": "acq26"
+          },
+          {
+            "complete": true,
+            "end_sample": 148966,
+            "path_score": 11.0,
+            "route_id": 13,
+            "route_order": 2,
+            "segment_index": 2,
+            "session": "task02",
+            "start_sample": 114012,
+            "state": "task",
+            "subject_id": "acq26"
+          },
+          {
+            "complete": true,
+            "end_sample": 198104,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 3,
+            "session": "rest03",
+            "start_sample": 148966,
+            "state": "rest",
+            "subject_id": "acq26"
+          },
+          {
+            "complete": true,
+            "end_sample": 230815,
+            "path_score": 12.0,
+            "route_id": 1,
+            "route_order": 3,
+            "segment_index": 3,
+            "session": "task03",
+            "start_sample": 198104,
+            "state": "task",
+            "subject_id": "acq26"
+          },
+          {
+            "complete": true,
+            "end_sample": 280919,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 4,
+            "session": "rest04",
+            "start_sample": 230815,
+            "state": "rest",
+            "subject_id": "acq26"
+          },
+          {
+            "complete": true,
+            "end_sample": 329773,
+            "path_score": 18.0,
+            "route_id": 3,
+            "route_order": 4,
+            "segment_index": 4,
+            "session": "task04",
+            "start_sample": 280919,
+            "state": "task",
+            "subject_id": "acq26"
+          },
+          {
+            "complete": true,
+            "end_sample": 379220,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 5,
+            "session": "rest05",
+            "start_sample": 329773,
+            "state": "rest",
+            "subject_id": "acq26"
+          },
+          {
+            "complete": true,
+            "end_sample": 404609,
+            "path_score": 27.0,
+            "route_id": 10,
+            "route_order": 5,
+            "segment_index": 5,
+            "session": "task05",
+            "start_sample": 379220,
+            "state": "task",
+            "subject_id": "acq26"
+          },
+          {
+            "complete": true,
+            "end_sample": 454659,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 6,
+            "session": "rest06",
+            "start_sample": 404609,
+            "state": "rest",
+            "subject_id": "acq26"
+          },
+          {
+            "complete": true,
+            "end_sample": 488025,
+            "path_score": 27.0,
+            "route_id": 5,
+            "route_order": 6,
+            "segment_index": 6,
+            "session": "task06",
+            "start_sample": 454659,
+            "state": "task",
+            "subject_id": "acq26"
+          },
+          {
+            "complete": true,
+            "end_sample": 536611,
+            "path_score": null,
+            "route_id": null,
+            "route_order": null,
+            "segment_index": 7,
+            "session": "rest07",
+            "start_sample": 488025,
+            "state": "rest",
+            "subject_id": "acq26"
+          },
+          {
+            "complete": true,
+            "end_sample": 570592,
+            "path_score": 52.0,
+            "route_id": 2,
+            "route_order": 7,
+            "segment_index": 7,
+            "session": "task07",
+            "start_sample": 536611,
+            "state": "task",
+            "subject_id": "acq26"
+          }
+        ],
+        "trigger_events": [
+          [
+            30307,
+            20
+          ],
+          [
+            62187,
+            22
+          ],
+          [
+            114012,
+            20
+          ],
+          [
+            148966,
+            22
+          ],
+          [
+            198104,
+            20
+          ],
+          [
+            230815,
+            22
+          ],
+          [
+            280919,
+            20
+          ],
+          [
+            329773,
+            22
+          ],
+          [
+            379220,
+            20
+          ],
+          [
+            404609,
+            22
+          ],
+          [
+            454659,
+            20
+          ],
+          [
+            488025,
+            22
+          ],
+          [
+            536611,
+            20
+          ],
+          [
+            570592,
+            22
+          ]
+        ]
+      }
+    }
+  },
+  "fold_manifest": {
+    "folds": {
+      "fold_1": {
+        "test_delta_counts": [
+          2,
+          3
+        ],
+        "test_path_counts": [
+          15,
+          15
+        ],
+        "test_subjects": [
+          "acq07",
+          "acq08",
+          "acq13",
+          "acq19",
+          "acq25"
+        ],
+        "train_delta_counts": [
+          7,
+          8
+        ],
+        "train_path_counts": [
+          47,
+          48
+        ],
+        "train_subjects": [
+          "acq01",
+          "acq02",
+          "acq04",
+          "acq05",
+          "acq09",
+          "acq10",
+          "acq11",
+          "acq12",
+          "acq14",
+          "acq15",
+          "acq17",
+          "acq18",
+          "acq21",
+          "acq24",
+          "acq26"
+        ],
+        "val_delta_counts": [
+          3,
+          2
+        ],
+        "val_path_counts": [
+          15,
+          14
+        ],
+        "val_subjects": [
+          "acq03",
+          "acq06",
+          "acq16",
+          "acq20",
+          "acq23"
+        ]
+      },
+      "fold_2": {
+        "test_delta_counts": [
+          3,
+          2
+        ],
+        "test_path_counts": [
+          15,
+          14
+        ],
+        "test_subjects": [
+          "acq03",
+          "acq06",
+          "acq16",
+          "acq20",
+          "acq23"
+        ],
+        "train_delta_counts": [
+          7,
+          8
+        ],
+        "train_path_counts": [
+          47,
+          48
+        ],
+        "train_subjects": [
+          "acq01",
+          "acq02",
+          "acq04",
+          "acq05",
+          "acq07",
+          "acq08",
+          "acq09",
+          "acq10",
+          "acq13",
+          "acq14",
+          "acq17",
+          "acq19",
+          "acq21",
+          "acq25",
+          "acq26"
+        ],
+        "val_delta_counts": [
+          2,
+          3
+        ],
+        "val_path_counts": [
+          15,
+          15
+        ],
+        "val_subjects": [
+          "acq11",
+          "acq12",
+          "acq15",
+          "acq18",
+          "acq24"
+        ]
+      },
+      "fold_3": {
+        "test_delta_counts": [
+          2,
+          3
+        ],
+        "test_path_counts": [
+          15,
+          15
+        ],
+        "test_subjects": [
+          "acq11",
+          "acq12",
+          "acq15",
+          "acq18",
+          "acq24"
+        ],
+        "train_delta_counts": [
+          8,
+          7
+        ],
+        "train_path_counts": [
+          45,
+          46
+        ],
+        "train_subjects": [
+          "acq03",
+          "acq04",
+          "acq05",
+          "acq06",
+          "acq07",
+          "acq08",
+          "acq09",
+          "acq13",
+          "acq14",
+          "acq16",
+          "acq19",
+          "acq20",
+          "acq21",
+          "acq23",
+          "acq25"
+        ],
+        "val_delta_counts": [
+          2,
+          3
+        ],
+        "val_path_counts": [
+          17,
+          16
+        ],
+        "val_subjects": [
+          "acq01",
+          "acq02",
+          "acq10",
+          "acq17",
+          "acq26"
+        ]
+      },
+      "fold_4": {
+        "test_delta_counts": [
+          2,
+          3
+        ],
+        "test_path_counts": [
+          17,
+          16
+        ],
+        "test_subjects": [
+          "acq01",
+          "acq02",
+          "acq10",
+          "acq17",
+          "acq26"
+        ],
+        "train_delta_counts": [
+          7,
+          8
+        ],
+        "train_path_counts": [
+          45,
+          44
+        ],
+        "train_subjects": [
+          "acq03",
+          "acq06",
+          "acq07",
+          "acq08",
+          "acq11",
+          "acq12",
+          "acq13",
+          "acq15",
+          "acq16",
+          "acq18",
+          "acq19",
+          "acq20",
+          "acq23",
+          "acq24",
+          "acq25"
+        ],
+        "val_delta_counts": [
+          3,
+          2
+        ],
+        "val_path_counts": [
+          15,
+          17
+        ],
+        "val_subjects": [
+          "acq04",
+          "acq05",
+          "acq09",
+          "acq14",
+          "acq21"
+        ]
+      },
+      "fold_5": {
+        "test_delta_counts": [
+          3,
+          2
+        ],
+        "test_path_counts": [
+          15,
+          17
+        ],
+        "test_subjects": [
+          "acq04",
+          "acq05",
+          "acq09",
+          "acq14",
+          "acq21"
+        ],
+        "train_delta_counts": [
+          7,
+          8
+        ],
+        "train_path_counts": [
+          47,
+          45
+        ],
+        "train_subjects": [
+          "acq01",
+          "acq02",
+          "acq03",
+          "acq06",
+          "acq10",
+          "acq11",
+          "acq12",
+          "acq15",
+          "acq16",
+          "acq17",
+          "acq18",
+          "acq20",
+          "acq23",
+          "acq24",
+          "acq26"
+        ],
+        "val_delta_counts": [
+          2,
+          3
+        ],
+        "val_path_counts": [
+          15,
+          15
+        ],
+        "val_subjects": [
+          "acq07",
+          "acq08",
+          "acq13",
+          "acq19",
+          "acq25"
+        ]
+      }
+    },
+    "objective": 0.046803845505144215,
+    "seed": 42
+  },
+  "schema": "vestibular_fusion_city_protocol_v1"
+}

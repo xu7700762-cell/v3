@@ -1,0 +1,127 @@
+{
+  "checkpoint_schema": "femba_kan_mtl_v27",
+  "metric_tolerance_percentage_points": 1.0,
+  "schema": "vestibular_fusion_reference_metrics_v1",
+  "split_seed": 42,
+  "training_seed": 2001,
+  "variants": {
+    "fractional_dog_polykan": {
+      "city": {
+        "fold_checkpoint_sha256": [
+          "1d3a1b01c8467fc868a858d774b76be9c7840bd8bc04f59e822c47b380dde47f",
+          "868e5c6f7effe4f4d4f2b58b1dd7add8660b317fac0af0dd49530538da13fc8f",
+          "873d308d031bbe0037638cee483093fb9b522502ef58973930c294630b45a26f",
+          "2704819dc730f6500d156871f26a9a1596304b15b02d71806751a3a322e1e9b0",
+          "c8d22b2081ded496c193a34c4739cf6c3ffc080b801c82b335d9901f317fdf8f"
+        ],
+        "severity": {
+          "accuracy": 0.7402597402597403,
+          "auroc": 0.7852926294484736,
+          "balanced_accuracy": 0.7402597402597403
+        },
+        "state": {
+          "accuracy": 0.8041314352991544,
+          "auroc": 0.8608679080452029,
+          "balanced_accuracy": 0.8110213266063936
+        }
+      },
+      "monifeixing": {
+        "fold_checkpoint_sha256": [
+          "b7a329cb8fcdaae39c45c6762778453ed9b232a279a33639a8b34d12676c1913",
+          "f87a34a5663ddb0364144fd690852c823529e8bfe7dc1f474513170707b2ffba",
+          "b1ba0688dd88eb0d099421ee0921fa857fd19c22173a40adeaa289c2ecb4b42f",
+          "90b1e8dcead499b186f28e7e22f81d5feacc46431387000bb1d7ab14bd31fb1c",
+          "dfca0e3d7cf359cad5d9ce219ebde8b77141c2e05d7224d5896f7c75b9e15df1"
+        ],
+        "severity": {
+          "accuracy": 0.6666666666666666,
+          "auroc": 0.6296296296296295,
+          "balanced_accuracy": 0.6666666666666666
+        },
+        "state": {
+          "accuracy": 0.8068998562529948,
+          "auroc": 0.8594762587811248,
+          "balanced_accuracy": 0.808895141417485
+        }
+      },
+      "vrq": {
+        "fold_checkpoint_sha256": [
+          "f8608b0629b55cf835eab9fdc7d3e93627f0d087a337f26dc5d3603a11e974a1",
+          "4e3c491d3efba77e9c69ee19b984ec33895136f512cfee84ebd92b5002ef6fda",
+          "6354a39d53d57dbb24086c3d62c3083782444425e8357cdfd1f03b8fd565741e",
+          "f59a1251ae5c1940add490fcf10ca5ec0fc6820ed9806c23fa36515dc6ab0d0d",
+          "df49ba61a9fa9bd4c3a796c0d2a836ad3e6db91d26f0c7768ae12e2feb83fbd4"
+        ],
+        "severity": {
+          "accuracy": 0.8260869565217391,
+          "auroc": 0.856060606060606,
+          "balanced_accuracy": 0.8295454545454546
+        },
+        "state": {
+          "accuracy": 0.8061135371179039,
+          "auroc": 0.8599418522413486,
+          "balanced_accuracy": 0.8115033240469118
+        }
+      }
+    },
+    "mlp": {
+      "city": {
+        "fold_checkpoint_sha256": [
+          "644ca00b6ae91a8d3d3c97e7baaa4625b47ddf787b2b25768e5e95cf17b7962a",
+          "8d44326a1bd14c11c054ca835761cde4af4a00c37f642b7f944f8e7df517a2f0",
+          "dfe1bcc985d0e6a49a916c90cd63e4f15fcbd9dbd31ab7102584c7113fd597b1",
+          "e06e07c7554766b985aa2b179467ef6f1351ef2610fc644d7221b83a6331b8f2",
+          "b0b5923e2b0eefe1353f59f553ffc368d22d12e228000f126c7608724c856de7"
+        ],
+        "severity": {
+          "accuracy": 0.7207792207792207,
+          "auroc": 0.7707876539045371,
+          "balanced_accuracy": 0.7207792207792207
+        },
+        "state": {
+          "accuracy": 0.7974954511398908,
+          "auroc": 0.8584638595349133,
+          "balanced_accuracy": 0.800742353156854
+        }
+      },
+      "monifeixing": {
+        "fold_checkpoint_sha256": [
+          "1b6353b7712e506c17fd901755e863b0dd3182db1f7f29d6770503c74a6c1905",
+          "d95e3213d89326d3cf33de65021f847245ba00f0cb305a7847222628df4568b8",
+          "b64fc446af99dccfd3c6753d985f3fa0d4f6c22ae2c027b10cdb3f23bf4ba988",
+          "2a01bc68cc946197fb9a729a5b71f845a8c699b9d6011801e66ca79c5963ce85",
+          "ca4cc2ff90f3e1b4f3fa906a88752e24e131f43fa6ff3604c489e0de124f2706"
+        ],
+        "severity": {
+          "accuracy": 0.6666666666666666,
+          "auroc": 0.691358024691358,
+          "balanced_accuracy": 0.6666666666666667
+        },
+        "state": {
+          "accuracy": 0.8059415428845232,
+          "auroc": 0.860798484681305,
+          "balanced_accuracy": 0.8068281290227666
+        }
+      },
+      "vrq": {
+        "fold_checkpoint_sha256": [
+          "fd7fc0a47feecc7fa3229b6553d3258e1efe910bb00bc0fc8eab9138ae8e88b0",
+          "5e98b719d5d0140699de9eb7eab3014cbed8af5564b235bddcdda90e2550a08a",
+          "c969aa95c5455656c7a8cb9d6f06f36749cb5e309646c657b5156b74e5cc18ad",
+          "4e5fbcacad2101ced0b9c4f86738647f241d01d8fe1bfe8e83ad509c19c9ba74",
+          "aecae7977f8ffd397f63db0378aa55bf04210ea43db848b7095377052945727a"
+        ],
+        "severity": {
+          "accuracy": 0.782608695652174,
+          "auroc": 0.856060606060606,
+          "balanced_accuracy": 0.7840909090909092
+        },
+        "state": {
+          "accuracy": 0.7851528384279476,
+          "auroc": 0.8499558741228638,
+          "balanced_accuracy": 0.7931734039347368
+        }
+      }
+    }
+  }
+}

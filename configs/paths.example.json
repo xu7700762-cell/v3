@@ -1,0 +1,9 @@
+{
+  "output_root": "outputs/reproduction_v27_seed2001",
+  "paths": {
+    "monifeixing_data_root": "D:/path/to/preprocessed_monifeixing",
+    "vrq_data_root": "D:/path/to/preprocessed_vrq",
+    "city_data_root": "D:/path/to/preprocessed_city",
+    "pretrain_checkpoint": "local_assets/pretrained_femba_v27.ckpt"
+  }
+}

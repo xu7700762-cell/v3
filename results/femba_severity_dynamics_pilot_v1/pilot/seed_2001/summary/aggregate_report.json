@@ -1,0 +1,19 @@
+{
+  "status": "complete",
+  "completed_jobs": 10,
+  "expected_jobs": 10,
+  "full_matrix_completed": true,
+  "evaluation_partition": "source_val",
+  "outer_test_scored": false,
+  "smoke": false,
+  "limits": [
+    "No known-rest calibration, anchor input, rest identity or target-subject label adaptation is used.",
+    "Subject-wide unlabeled EA is retained and is an offline transductive preprocessing step.",
+    "The same inputs, temporal summary, loss, split and optimization budget are used by all downstream controls.",
+    "Single seed and fold_1 source-validation are used for architecture development; these are not independent test results.",
+    "VRQ source-validation has one severity sample per subject and cannot support a stable performance claim.",
+    "Outer-test EEG and labels are not loaded or scored by this pilot.",
+    "Pretraining sample manifest is incomplete, so pretraining overlap has not been excluded.",
+    "A positive validation difference is not called statistically significant or guaranteed to reproduce."
+  ]
+}

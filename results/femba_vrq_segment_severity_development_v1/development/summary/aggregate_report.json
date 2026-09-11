@@ -1,0 +1,26 @@
+{
+  "status": "complete",
+  "completed_jobs": 45,
+  "expected_jobs": 45,
+  "full_matrix_completed": true,
+  "outer_test_scored": false,
+  "evaluation_partition": "nested_source_validation_windows",
+  "smoke": false,
+  "limits": [
+    "City data, code paths, checkpoints and result artifacts are not read or modified by this protocol.",
+    "Windows inherit a subject-level post-task severity label and are correlated weakly supervised samples, not independent subjects.",
+    "Train and validation are strictly subject-disjoint; no subject contributes windows to both partitions.",
+    "Only final-task windows enter severity classification; no rest window or rest identity is a model input.",
+    "Subject-wide unlabeled EA is retained and explicitly transductive.",
+    "Five outer-test subjects remain excluded and no outer-test evaluation is automatically triggered.",
+    "Primary window metrics must be accompanied by subject-clustered or subject-aggregated audit metrics in any paper report."
+  ],
+  "promotion": {
+    "evaluated": true,
+    "passed": true,
+    "dog_minus_mlp_mean_BACC": 0.0045413613657668455,
+    "dog_minus_poly_mean_BACC": 0.006487014774400896,
+    "dog_positive_runs_vs_mlp": 6,
+    "dog_minus_no_dog_mean_BACC": 0.004126476901926172
+  }
+}
